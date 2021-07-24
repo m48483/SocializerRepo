@@ -17,7 +17,7 @@ public class NickName : MonoBehaviour
     // 한글, 영어, 숫자만 입력 가능하게
     public bool CheckNickname()
     {
-        return Regex.IsMatch(NickNameInput.text, "^[0-9a-zA-Z가-힣]*$");
+        return Regex.IsMatch(NickNameInput.text, "^[0-9a-zA-Z가-힣ㄱ-ㅎ]*$");
     }
     //입력 체크
     public bool CheckInput()
