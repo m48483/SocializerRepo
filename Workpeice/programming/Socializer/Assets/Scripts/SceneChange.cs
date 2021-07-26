@@ -13,4 +13,8 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Prologue");
     }
+    public void NameSenceChange()
+    {
+        SceneManager.LoadScene("Name");
+    }
 }
