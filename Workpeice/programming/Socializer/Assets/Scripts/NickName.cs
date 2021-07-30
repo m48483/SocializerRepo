@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class NickName : MonoBehaviour
 {
+    NoticeMsg msg;
     private void Start()
     {
+        msg = FindObjectOfType<NoticeMsg>();  
         PlayerPrefs.DeleteAll();
         Debug.Log("prefs 초기화");
     }
@@ -35,6 +37,7 @@ public class NickName : MonoBehaviour
         if (CheckInput())
         {
             Debug.Log("이름을 입력하지 않음");
+            msg.NotName();
         }
         else
         {
@@ -45,7 +48,7 @@ public class NickName : MonoBehaviour
             if (CheckNickname() == false)
             {
                 Debug.Log("닉네임에 한글, 영어, 숫자를 제외한 문자를 입력함.");
-                //알림창 구현 필요
+                msg.ExMessage();
             }
             else
             {   //씬 전환
