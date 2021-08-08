@@ -100,8 +100,4 @@ public class NoticeUI : MonoBehaviour
         subbox.SetActive(false);
     }
 
-
-
-
-
 }
