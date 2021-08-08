@@ -7,10 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class NickName : MonoBehaviour
 {
-    NoticeMsg msg;
+    public NoticeMsg msg;
+    public SceneChange _sceneChange;
+
     private void Start()
     {
-        msg = FindObjectOfType<NoticeMsg>();  
+        msg = FindObjectOfType<NoticeMsg>();
+        _sceneChange = FindObjectOfType<SceneChange>();
         PlayerPrefs.DeleteAll();
         Debug.Log("prefs 초기화");
     }
@@ -52,7 +55,7 @@ public class NickName : MonoBehaviour
             }
             else
             {   //씬 전환
-                SceneManager.LoadScene("Prologue");
+                _sceneChange.PrologueChange();
             }
         }
         
