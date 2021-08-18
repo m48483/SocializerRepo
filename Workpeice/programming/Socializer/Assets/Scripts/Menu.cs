@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class Menu : MonoBehaviour
     private void Awake()
     {
         _notice = FindObjectOfType<NoticeUI>();
-        btn = transform.Find("MenuButton").GetComponent<Button>();
-        btn.interactable = true; // 버튼 클릭을 활성
+        if (SceneManager.GetActiveScene().name == "Prologue") //프롤로그의 메뉴 버튼 전용
+        {
+            btn = transform.Find("MenuButton").GetComponent<Button>();
+            btn.interactable = true; // 버튼 클릭을 활성
+        }
     }
 
     public void MenuOn()

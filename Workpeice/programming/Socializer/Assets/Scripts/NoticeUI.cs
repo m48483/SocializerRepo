@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 
 public class NoticeUI : MonoBehaviour
@@ -25,7 +25,6 @@ public class NoticeUI : MonoBehaviour
     private void Start()
     {
         subbox.SetActive(false); //알림창은 미리 비활성화
-
     }
     // 서브 메세지 >> string값을 매개변수로 받아와서 2초간 출력
     // 사용법 : _notice.SUB("문자열"); notice는 참조된 변수 이름
@@ -83,8 +82,7 @@ public class NoticeUI : MonoBehaviour
     {
         subani.SetInteger("Select", 2);
         StartCoroutine(SelectOut());
-        //_sceneChange.TitleChange();
-        SceneManager.LoadScene("Title");
+        _sceneChange.TitleChange();
     }
 
     public void QuitButton() //나가기
