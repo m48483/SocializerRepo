@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 
 public class NoticeUI : MonoBehaviour
@@ -11,6 +11,7 @@ public class NoticeUI : MonoBehaviour
     public Text subintext;
     public Animator subani;
     SceneChange _sceneChange;
+    Menu _menu;
 
     //코루틴 딜레이 2개 미리 선언
     private WaitForSeconds _UIDelay1 = new WaitForSeconds(2.0f);
@@ -19,11 +20,11 @@ public class NoticeUI : MonoBehaviour
     private void Awake()
     {
         _sceneChange = FindObjectOfType<SceneChange>();
+        _menu = FindObjectOfType<Menu>();
     }
     private void Start()
     {
         subbox.SetActive(false); //알림창은 미리 비활성화
-
     }
     // 서브 메세지 >> string값을 매개변수로 받아와서 2초간 출력
     // 사용법 : _notice.SUB("문자열"); notice는 참조된 변수 이름
@@ -63,29 +64,28 @@ public class NoticeUI : MonoBehaviour
         StartCoroutine(SelectDelay());
     }
 
-    IEnumerator SelectDelay() //선택지 없은 경우
+    IEnumerator SelectDelay() //선택지 있는 경우
     {
         subbox.SetActive(true);
         subani.SetBool("isOn", true);        
         yield return _UIDelay1;
     }
 
-    //선택지에 따른 메소드
-    public void OptionButton()
+    //선택지에 따른 메소드 
+    public void OptionButton() //옵션 버튼
     {
-        subani.SetInteger("Select", 1); //설정 구현 완료되면 그거 갇다쓰기
+        subani.SetInteger("Select", 1); //설정 구현 완료되면 그거 갖다쓰기
         StartCoroutine(SelectOut());
     }
 
-    public void TitleButton()
+    public void TitleButton() //타이틀로
     {
         subani.SetInteger("Select", 2);
         StartCoroutine(SelectOut());
-        //_sceneChange.TitleChange();
-        SceneManager.LoadScene("Title");
+        _sceneChange.TitleChange();
     }
 
-    public void QuitButton()
+    public void QuitButton() //나가기
     {
         subani.SetInteger("Select", 3);
         StartCoroutine(SelectOut());
@@ -93,11 +93,15 @@ public class NoticeUI : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false; //유니티 에디터에서 플레이모드 false로, 나중에 지울 부분
     }
 
-    IEnumerator SelectOut() //선택지 없은 경우
+    public void CancelButton() //취소 버튼
+    {
+        StartCoroutine(SelectOut());
+    }
+
+    IEnumerator SelectOut() //선택지 있는 경우
     {
         subani.SetBool("isOn", false);
         yield return _UIDelay2;
-        subbox.SetActive(false);
     }
 
 }
