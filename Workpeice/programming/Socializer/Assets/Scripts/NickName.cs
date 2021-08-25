@@ -55,7 +55,7 @@ public class NickName : MonoBehaviour
             }
             else
             {   //씬 전환
-                _sceneChange.PrologueChange();
+                _sceneChange.PopupChange();
             }
         }
         

@@ -12,6 +12,7 @@ public class NoticeUI : MonoBehaviour
     public Animator subani;
     SceneChange _sceneChange;
     Menu _menu;
+    PopUpDebug _pudedug;
 
     //코루틴 딜레이 2개 미리 선언
     private WaitForSeconds _UIDelay1 = new WaitForSeconds(2.0f);
@@ -21,6 +22,7 @@ public class NoticeUI : MonoBehaviour
     {
         _sceneChange = FindObjectOfType<SceneChange>();
         _menu = FindObjectOfType<Menu>();
+        _pudedug = FindObjectOfType<PopUpDebug>();
     }
     private void Start()
     {
@@ -75,25 +77,25 @@ public class NoticeUI : MonoBehaviour
     public void OptionButton() //옵션 버튼
     {
         subani.SetInteger("Select", 1); //설정 구현 완료되면 그거 갖다쓰기
-        StartCoroutine(SelectOut());
+        _menu.MenuOff();
     }
 
     public void TitleButton() //타이틀로
     {
         subani.SetInteger("Select", 2);
-        StartCoroutine(SelectOut());
+        _menu.MenuOff();
         _sceneChange.TitleChange();
     }
 
     public void QuitButton() //나가기
     {
         subani.SetInteger("Select", 3);
-        StartCoroutine(SelectOut());
+        _menu.MenuOff();
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false; //유니티 에디터에서 플레이모드 false로, 나중에 지울 부분
     }
 
-    public void CancelButton() //취소 버튼
+    public void Cancel() //취소 버튼
     {
         StartCoroutine(SelectOut());
     }
@@ -102,6 +104,7 @@ public class NoticeUI : MonoBehaviour
     {
         subani.SetBool("isOn", false);
         yield return _UIDelay2;
+        subbox.SetActive(false);
     }
 
 }
