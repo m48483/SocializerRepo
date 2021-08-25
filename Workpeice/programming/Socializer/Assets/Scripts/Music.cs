@@ -28,5 +28,14 @@ public class Music : MonoBehaviour
 
         backVol = backVolume.value;
         PlayerPrefs.SetFloat("backvol", backVol);
+
+        if (backVol == 0)
+        {
+            AudioListener.pause = true;
+        }
+        else
+        {
+            AudioListener.pause = false;
+        }
     }
 }
