@@ -9,9 +9,9 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
-    public void PrologueChange()
+    public void PopupChange()
     {
-        SceneManager.LoadScene("Prologue");
+        SceneManager.LoadScene("Popup");
     }
     public void NameSenceChange()
     {
