@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &24724030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -504,6 +504,8 @@ GameObject:
   - component: {fileID: 286029157}
   - component: {fileID: 286029155}
   - component: {fileID: 286029143}
+  - component: {fileID: 286029148}
+  - component: {fileID: 286029149}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -569,7 +571,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 70
-    width: 111
+    width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -579,6 +581,8 @@ MonoBehaviour:
   eventHandler: {fileID: 286029144}
   commandList:
   - {fileID: 286029143}
+  - {fileID: 286029148}
+  - {fileID: 286029149}
   suppressAllAutoSelections: 0
 --- !u!114 &286029146
 MonoBehaviour:
@@ -593,21 +597,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 125, y: 55}
+  scrollPos: {x: 143.59686, y: 65.60683}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 408
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 286029145}
-  selectedCommands:
-  - {fileID: 286029143}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -633,6 +635,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286029148
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286029142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 24724029}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &286029149
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286029142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: test
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &286029152
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -649,7 +699,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 260
     y: 129
-    width: 118
+    width: 120.10309
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -676,7 +726,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 230
     y: -1
-    width: 117
+    width: 119.07217
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1470,8 +1520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086c4c79006fa2d4ca0b4d5fb2597acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonName: {fileID: 0}
-  _test1: {fileID: 0}
 --- !u!1 &1104239266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1142427226
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2395,8 +2443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086c4c79006fa2d4ca0b4d5fb2597acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonName: {fileID: 0}
-  _test1: {fileID: 0}
 --- !u!1 &1929731215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,8 +2751,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086c4c79006fa2d4ca0b4d5fb2597acd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonName: {fileID: 0}
-  _test1: {fileID: 0}
 --- !u!114 &1929731228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2719,5 +2763,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11effb7b1f412ce49b27e76f5c0269a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonName: {fileID: 0}
-  Testnumber: 1
