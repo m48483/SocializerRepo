@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    void Start()
+    public static AudioManager instance = null;
+    void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance != null)
+            Destroy(this.gameObject);
+
+        instance = this;
+        DontDestroyOnLoad(this);
     }
 }

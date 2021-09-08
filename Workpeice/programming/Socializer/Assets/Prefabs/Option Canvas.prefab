@@ -843,6 +843,7 @@ GameObject:
   - component: {fileID: 6091470267146298677}
   - component: {fileID: 6091470267146298676}
   - component: {fileID: 6091470267146298679}
+  - component: {fileID: 1504394099433516045}
   - component: {fileID: 6091470267146298571}
   m_Layer: 5
   m_Name: Option Canvas
@@ -931,6 +932,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1504394099433516045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091470267146298678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b538d0849b437364d8ce5003a99df332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6091470267146298571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,6 +969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6091470267304523759}
   - component: {fileID: 6091470267304523756}
+  - component: {fileID: 3312751038577903689}
   m_Layer: 0
   m_Name: Master Volume Slider
   m_TagString: Untagged
@@ -1035,6 +1049,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3312751038577903689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091470267304523758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de357983bb6c0f488a4b1afd8c60345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backVolume: {fileID: 0}
+  audio: {fileID: 0}
 --- !u!1 &6091470267364795401
 GameObject:
   m_ObjectHideFlags: 0
