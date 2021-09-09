@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class OptionPopupSystem : MonoBehaviour
 {
     public GameObject popup;
+    public static bool isOn = false;
 
     public static OptionPopupSystem instance { get; private set; }
 
@@ -14,6 +15,7 @@ public class OptionPopupSystem : MonoBehaviour
 
     private void Awake()
     {
+        isOn = this;
         instance = this;
     }
 
@@ -21,6 +23,8 @@ public class OptionPopupSystem : MonoBehaviour
     {
         this.onClickBtn = onClickBtn;
         popup.SetActive(true);
+        isOn = true;
+        Debug.Log("PopupOn");
     }
 
     public void OnClickBtn()
@@ -31,5 +35,7 @@ public class OptionPopupSystem : MonoBehaviour
     void ClosePopUP()
     {
         popup.SetActive(false);
+        isOn = false;
+        Debug.Log("PopupOff");
     }
 }
