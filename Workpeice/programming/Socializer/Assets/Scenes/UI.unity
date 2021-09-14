@@ -2194,7 +2194,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 70
-    width: 112.8866
+    width: 72.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2235,7 +2235,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 575382131}
   selectedCommands:
-  - {fileID: 575382137}
+  - {fileID: 575382130}
   variables: []
   description: 
   stepPause: 0
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   waitForFrames: 1
 --- !u!114 &575382137
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3180,6 +3180,7 @@ GameObject:
   - component: {fileID: 1104239267}
   - component: {fileID: 1104239270}
   - component: {fileID: 1104239269}
+  - component: {fileID: 1104239271}
   - component: {fileID: 1104239268}
   m_Layer: 5
   m_Name: StoryText
@@ -3269,6 +3270,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104239266}
   m_CullTransparentMesh: 0
+--- !u!114 &1104239271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104239266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2571c947101a05d4581426cc7d27a33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Conversation_text: {fileID: 0}
 --- !u!1 &1110172993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4150,7 +4164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 0}
-  cursorImg: {fileID: 2800000, guid: 09c273924437e7f4fa13ee65e8aa4b29, type: 3}
+  Actiononoff: 0
+  cursorImg1: {fileID: 0}
+  cursorImg2: {fileID: 0}
+  TE: {fileID: 0}
 --- !u!1 &1411337955
 GameObject:
   m_ObjectHideFlags: 0

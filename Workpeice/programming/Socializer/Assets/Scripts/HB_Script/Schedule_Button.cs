@@ -6,16 +6,31 @@ using UnityEngine.EventSystems;
 public class Schedule_Button : MonoBehaviour
 {
     public GameObject Button;
-    [SerializeField] Texture2D cursorImg;
+    public int Actiononoff = 0;
+    [SerializeField] Texture2D cursorImg1;
+    [SerializeField] Texture2D cursorImg2;
+    //public Text_Event TE = FindObjectOfType<Text_Event>();
+    public GameObject TE;
     public void Clicked()
     {
-        Button = EventSystem.current.currentSelectedGameObject;
-
-        if(Button.name == "Observation_btn")
+        TE = GameObject.Find("StoryText");
+        Button = EventSystem.current.currentSelectedGameObject;        
+        if(Button.name == "Observation_btn" || Actiononoff == 0)
         {
-            Cursor.SetCursor(cursorImg, Vector2.zero, CursorMode.ForceSoftware);
-            Debug.Log("관찰 버튼 클릭");
-            //sendmsg
+            switch (Actiononoff) {
+                case 0:
+                    Debug.Log("관찰 활성화");
+                    Actiononoff = 1;
+                    Cursor.SetCursor(cursorImg1, Vector2.zero, CursorMode.ForceSoftware);
+                    TE.GetComponent<Text_Event>().Event();
+                    break;
+
+                case 1:
+                    Debug.Log("관찰 비활성화");
+                    Actiononoff = 0;
+                    Cursor.SetCursor(cursorImg2, Vector2.zero, CursorMode.ForceSoftware);
+                    break;                
+            }
         }
         
         else if(Button.name == "Action_btn")
