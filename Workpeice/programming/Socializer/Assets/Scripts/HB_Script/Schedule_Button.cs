@@ -10,23 +10,27 @@ public class Schedule_Button : MonoBehaviour
     [SerializeField] Texture2D cursorImg1;
     [SerializeField] Texture2D cursorImg2;
     //public Text_Event TE = FindObjectOfType<Text_Event>();
-    public GameObject TE;
+   // public GameObject TE;
+
     public void Clicked()
     {
-        TE = GameObject.Find("StoryText");
-        Button = EventSystem.current.currentSelectedGameObject;        
-        if(Button.name == "Observation_btn" || Actiononoff == 0)
+        //TE = GameObject.Find("StoryText");       
+        GameObject.Find("SayDialog").transform.Find("Panel2");
+        Button = EventSystem.current.currentSelectedGameObject;
+        if(Button.name == "Observation_btn")
         {
             switch (Actiononoff) {
                 case 0:
                     Debug.Log("관찰 활성화");
                     Actiononoff = 1;
                     Cursor.SetCursor(cursorImg1, Vector2.zero, CursorMode.ForceSoftware);
-                    TE.GetComponent<Text_Event>().Event();
+                    GameObject.Find("StoryText").GetComponent<Text_Clickable>().enabled = true;                 
+                    //TE.GetComponent<Text_Event>().Event();
                     break;
 
                 case 1:
                     Debug.Log("관찰 비활성화");
+                    gameObject.GetComponent<Text_Clickable>().enabled = false;
                     Actiononoff = 0;
                     Cursor.SetCursor(cursorImg2, Vector2.zero, CursorMode.ForceSoftware);
                     break;                
