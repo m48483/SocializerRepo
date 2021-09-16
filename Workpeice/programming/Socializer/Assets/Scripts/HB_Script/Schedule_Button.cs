@@ -24,7 +24,8 @@ public class Schedule_Button : MonoBehaviour
                     Debug.Log("관찰 활성화");
                     Actiononoff = 1;
                     Cursor.SetCursor(cursorImg1, Vector2.zero, CursorMode.ForceSoftware);
-                    GameObject.Find("StoryText").GetComponent<Text_Clickable>().enabled = true;                 
+                    GameObject.Find("StoryText").GetComponent<Text_Clickable>().enabled = true;
+                    GameObject.Find("Flowchart").gameObject.SetActive(false);
                     //TE.GetComponent<Text_Event>().Event();
                     break;
 
@@ -33,6 +34,7 @@ public class Schedule_Button : MonoBehaviour
                     gameObject.GetComponent<Text_Clickable>().enabled = false;
                     Actiononoff = 0;
                     Cursor.SetCursor(cursorImg2, Vector2.zero, CursorMode.ForceSoftware);
+                    GameObject.Find("Flowchart").gameObject.SetActive(true);
                     break;                
             }
         }
