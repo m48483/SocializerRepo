@@ -1648,11 +1648,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "\uC554\uD751\uBCF4\uB2E4 \uAC80\uACE0, \uC5B4\uB460\uBCF4\uB2E4 \uC5B4\uB450\uC6B4
-    \uCE60\uD751\uC5D0,\r\n\uB098\uC758 \uC9C4\uD64D\uC774 \uC11E\uC774\uAE30\uB97C
-    \uBC14\uB77C\uB178\uB77C\r\n\uAC01\uC131\uC758 \uB54C\uAC00 \uC654\uC73C\uB2C8\r\n\uBB34\uB958\uC758
-    \uACBD\uACC4\uC5D0 \uB5A8\uC5B4\uC9C4 \uC774\uCE58\uC5EC\r\n\uBB34\uC5C5\uC758
-    \uC77C\uADF8\uB7EC\uC9D0\uC774 \uB418\uC5B4 \uB098\uD0C0\uB098\uB77C\r\n\r\n\uC775\uC2A4\uD50C\uB85C\uC804!"
+  storyText: "\uAE30\uC874 \uC138\uC774\uBE0C \uC0AD\uC81C, \uC0C8 \uAC8C\uC784\uC744
+    \uC2DC\uC791\uD560 \uAC83\uC778\uC9C0 \uBB3C\uC5B4\uBCF4\uB294 \uC54C\uB9BC\uCC3D\uC744
+    \uB744\uC6C1\uB2C8\uB2E4.\r\n\uB124) \uC800\uC7A5\uB41C \uC138\uC774\uBE0C\uB97C
+    \uC0AD\uC81C\uD558\uACE0 \uC0C8 \uAC8C\uC784\uC744 \uC2DC\uC791\uD569\uB2C8\uB2E4\r\n"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1680,8 +1679,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 65.96906
-    y: 74.12372
-    width: 112.8866
+    y: 73.09279
+    width: 72.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1710,7 +1709,7 @@ MonoBehaviour:
   scrollPos: {x: 0.89690715, y: -0.061855584}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 280
   zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
@@ -1720,7 +1719,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 575382131}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 575382130}
   variables: []
   description: 
   stepPause: 0
@@ -1832,7 +1832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 286029146}
+  selectedFlowchart: {fileID: 575382132}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -2426,6 +2426,7 @@ GameObject:
   - component: {fileID: 1104239268}
   - component: {fileID: 1104239269}
   - component: {fileID: 1104239271}
+  - component: {fileID: 1104239272}
   m_Layer: 5
   m_Name: StoryText
   m_TagString: Untagged
@@ -2495,8 +2496,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 04b7527cd573aaf42b494437c0530057, type: 2}
-  m_sharedMaterial: {fileID: -6711657013956802057, guid: 04b7527cd573aaf42b494437c0530057,
+  m_fontAsset: {fileID: 11400000, guid: d87fb576c3637754dbba9ed07e15cc7c, type: 2}
+  m_sharedMaterial: {fileID: 2985486197704075596, guid: d87fb576c3637754dbba9ed07e15cc7c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2608,6 +2609,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1104239269}
   LastClickedWord: 
+--- !u!114 &1104239272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104239266}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2571c947101a05d4581426cc7d27a33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Conversation_text: {fileID: 0}
+  Observation_Text: []
+  str: []
+  separatorChar: 2e0021003f00
 --- !u!1 &1110172993
 GameObject:
   m_ObjectHideFlags: 0
