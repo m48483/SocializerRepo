@@ -17,8 +17,10 @@ public class AudioManager : MonoBehaviour
             Debug.Log(OpenSliders.isSliderOn);
             OptionPopupSystem.isOn = false;
         }
-
-        instance = this;
-        DontDestroyOnLoad(this);
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
     }
 }
