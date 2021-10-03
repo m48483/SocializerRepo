@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class NoticeMsg : MonoBehaviour
 {
-    NoticeUI _notice;
+    MenuUI _notice;
 
     private void Awake()
     {
-        _notice = FindObjectOfType<NoticeUI>();
+        _notice = FindObjectOfType<MenuUI>();
     }
 
     public void NotName()
