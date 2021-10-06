@@ -10,7 +10,7 @@ public class VideoOption : MonoBehaviour
     FullScreenMode screenMode;
     public Toggle windowedscreenBtn;
 
-    public void DropboxOptionChange(int x)
+    public void DropboxOptionChange()
     {
         switch (dropdown.value)
         {
