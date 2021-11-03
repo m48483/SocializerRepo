@@ -2,24 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Text.RegularExpressions;
 
 public class Text_Event : MonoBehaviour
 {
-    public Text Conversation_text;
+    public TextMeshProUGUI Conversation_text;
     public Text[] Observation_Text;
     public string[] str;
-    public char[] separatorChar = {'\n'};
+    public int num = 0;
+    public int[,] starttoend_index = new int[1000, 2];
 
+    public void Store()
+    {
+        Conversation_text = gameObject.GetComponent<TextMeshProUGUI>();
+        str = Conversation_text.text.Split(new string[] { ".", "!", "?", "\n", ".." }, System.StringSplitOptions.RemoveEmptyEntries);
+        MatchCollection matches;
+        for (int i = 0; i < str.Length; i++)
+        {
+            str[i] = str[i].Trim();
+            Debug.Log(str[i]);
+        }
+        for (int i = 0; i < str.Length; i++)
+        {
+            matches = Regex.Matches(str[i], " ");
+            starttoend_index[i, 0] = num;
+            
+            starttoend_index[i, 1] = matches.Count + num;
+            num += matches.Count + 1;
+            Debug.Log(i + "번째" + starttoend_index[i, 0]);
+            Debug.Log(i + "번째" + starttoend_index[i, 1]);
+        }
 
-    public void Awake()
-    {
-        Conversation_text = gameObject.GetComponent<Text>();
-       
-        
-    }
-    public void Event()
-    {
-        str = Conversation_text.text.Split(separatorChar);
-        Debug.Log(str[0]);
     }
 }
