@@ -78,6 +78,7 @@ public class MenuUI : MonoBehaviour
     {
         subani.SetInteger("Select", 1); //설정 구현 완료되면 그거 갖다쓰기
         _menu.MenuOff();
+        Cancel();
     }
 
     public void TitleButton() //타이틀로

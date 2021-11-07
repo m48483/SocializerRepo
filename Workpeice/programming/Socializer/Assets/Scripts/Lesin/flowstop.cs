@@ -17,16 +17,12 @@ public class flowstop : MonoBehaviour
     {
         if (msr.Pause)
         {
-            Debug.Log("플로우차트를 클릭 못해야함");
             btn.SetActive(false);
         }
 
         if (!msr.Pause)
         {
-            Debug.Log("플로우차트 클릭 가능");
             btn.SetActive(true);
         }
     }
-
-
 }
