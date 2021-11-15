@@ -32,7 +32,7 @@ public class PopupSystem : MonoBehaviour
     {
         if (onClickYes != null)
         {
-            SceneManager.LoadScene("Name");
+            SceneManager.LoadScene("name");
         }
 
         ClosePopUP();
