@@ -10,11 +10,12 @@ public class Text_Event : MonoBehaviour
     public TextMeshProUGUI Conversation_text;
     public Text[] Observation_Text;
     public string[] str;
-    public int num = 0;
+    public int num;
     public int[,] starttoend_index = new int[1000, 2];
 
     public void Store()
     {
+        num = 0;
         Conversation_text = gameObject.GetComponent<TextMeshProUGUI>();
         str = Conversation_text.text.Split(new string[] { ".", "!", "?", "\n", ".." }, System.StringSplitOptions.RemoveEmptyEntries);
         MatchCollection matches;
