@@ -17,8 +17,31 @@ public class VarManager : MonoBehaviour
 
     void Awake()
     {
-        dayTxt.text = "Day" + day;
-        reliabilityTxt.text = reliability + "/100";
+        switch (day % 7)
+        {
+            case 0:
+                dayTxt.text = day + "일/일";
+                break;
+            case 1:
+                dayTxt.text = day + "일/월";
+                break;
+            case 2:
+                dayTxt.text = day + "일/화";
+                break;
+            case 3:
+                dayTxt.text = day + "일/수";
+                break;
+            case 4:
+                dayTxt.text = day + "일/목";
+                break;
+            case 5:
+                dayTxt.text = day + "일/금";
+                break;
+            case 6:
+                dayTxt.text = day + "일/토";
+                break;
+        }
+        reliabilityTxt.text = "(" + reliability + "/100)";
     }
 
     public void OnClickGood()
@@ -27,7 +50,7 @@ public class VarManager : MonoBehaviour
             reliability = reliability + (reliability * 0.02f);
         else
             reliability += 1.5f;
-        reliabilityTxt.text = (int)reliability + "/100";
+        reliabilityTxt.text = "(" + (int)reliability + "/100)";
     }
     public void OnClickBad()
     {
@@ -35,7 +58,7 @@ public class VarManager : MonoBehaviour
             reliability -= 1.5f;
         else
             reliability -= 2f;
-        reliabilityTxt.text = (int)reliability + "/100";
+        reliabilityTxt.text = "(" + (int)reliability + "/100)";
     }
     public void OnClickNextDay()
     {
@@ -47,7 +70,31 @@ public class VarManager : MonoBehaviour
         else
         {
             day++;
-            dayTxt.text = "Day" + day;
+            switch (day % 7)
+            {
+                case 0:
+                    dayTxt.text = day + "일/일";
+                    break;
+                case 1:
+                    dayTxt.text = day + "일/월";
+                    break;
+                case 2:
+                    dayTxt.text = day + "일/화";
+                    break;
+                case 3:
+                    dayTxt.text = day + "일/수";
+                    break;
+                case 4:
+                    dayTxt.text = day + "일/목";
+                    break;
+                case 5:
+                    dayTxt.text = day + "일/금";
+                    break;
+                case 6:
+                    dayTxt.text = day + "일/토";
+                    break;
+            }
+            //dayTxt.text = "Day" + day;
         }
 
     }
