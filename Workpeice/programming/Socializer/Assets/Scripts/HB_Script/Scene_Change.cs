@@ -5,17 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Scene_Change : MonoBehaviour
 {
+    Random rand = new Random();
+
     public void OfficeChange()
     {
         SceneManager.LoadScene("Office");
     }
     public void HouseChange()
     {
-        SceneManager.LoadScene("House");
+        int a = Random.Range(1,6);
+        SceneManager.LoadScene("House"+a);
     }
     public void LobbyChange()
     {
-        SceneManager.LoadScene("Lobby");
+        int a = Random.Range(1, 5);       
+        SceneManager.LoadScene("Lobby "+a);
+        Debug.Log("Lobby " + a + "호출");
     }
     public void AMChange()
     {

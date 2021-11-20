@@ -3,24 +3,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
+
 public class testscript : MonoBehaviour
 {
    
-    public void asd()
+    public void Click_D()
     {
         GameObject go = GameObject.Find("SayDialog");
 
-        //GameObject go = GameObject.Find("SayDialog");
 
         GameObject.Find("SayDialog").GetComponent<SayDialog>().enabled = false;
-        if (go)
-        {
-            Debug.Log(go.name);
-        }
-        else
-        {
-            Debug.Log("No game object called wibble found");
-        }
+        //GameObject.Find("Flowchart").GetComponent<Flowchart>().SetStringVariable("Character", "민초단");
+        
+        //int i = GameObject.Find("Flowchart1").GetComponent<Flowchart>().GetIntegerVariable("test");
     }
 
 }
