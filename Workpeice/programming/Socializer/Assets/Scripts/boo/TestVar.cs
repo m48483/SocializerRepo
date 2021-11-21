@@ -33,25 +33,25 @@ public class TestVar : MonoBehaviour
         switch (day % 7)
         {
             case 0:
-                dayTxt.text = day + "일/일";
+                dayTxt.text = day + "일차/일";
                 break;
             case 1:
-                dayTxt.text = day + "일/월";
+                dayTxt.text = day + "일차/월";
                 break;
             case 2:
-                dayTxt.text = day + "일/화";
+                dayTxt.text = day + "일차/화";
                 break;
             case 3:
-                dayTxt.text = day + "일/수";
+                dayTxt.text = day + "일차/수";
                 break;
             case 4:
-                dayTxt.text = day + "일/목";
+                dayTxt.text = day + "일차/목";
                 break;
             case 5:
-                dayTxt.text = day + "일/금";
+                dayTxt.text = day + "일차/금";
                 break;
             case 6:
-                dayTxt.text = day + "일/토";
+                dayTxt.text = day + "일차/토";
                 break;
         }
         reliabilityTxt.text = "(" + reliability + "/100)";
@@ -114,25 +114,25 @@ public class TestVar : MonoBehaviour
                     switch (day % 7)
                     {
                         case 0:
-                            dayTxt.text = day + "일/일";
+                            dayTxt.text = day + "일차/일";
                             break;
                         case 1:
-                            dayTxt.text = day + "일/월";
+                            dayTxt.text = day + "일차/월";
                             break;
                         case 2:
-                            dayTxt.text = day + "일/화";
+                            dayTxt.text = day + "일차/화";
                             break;
                         case 3:
-                            dayTxt.text = day + "일/수";
+                            dayTxt.text = day + "일차/수";
                             break;
                         case 4:
-                            dayTxt.text = day + "일/목";
+                            dayTxt.text = day + "일차/목";
                             break;
                         case 5:
-                            dayTxt.text = day + "일/금";
+                            dayTxt.text = day + "일차/금";
                             break;
                         case 6:
-                            dayTxt.text = day + "일/토";
+                            dayTxt.text = day + "일차/토";
                             break;
                     }
                 }

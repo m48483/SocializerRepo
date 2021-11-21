@@ -33,6 +33,7 @@ public class PopupSystem : MonoBehaviour
         if (onClickYes != null)
         {
             SceneManager.LoadScene("name");
+            //SceneManager.LoadScene("VarEx");
         }
 
         ClosePopUP();
