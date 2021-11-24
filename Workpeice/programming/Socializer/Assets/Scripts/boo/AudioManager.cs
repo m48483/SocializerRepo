@@ -1,69 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance = null;
-    OpenSliders openSliders;
-    void Awake()
+    public Slider backVolume;   // Slider의 Value
+    public AudioSource audio;
+
+    private float backVol = 1f; // 껐다 켰을 떄도 Slider의 값 유지
+
+    void Start()
     {
-        openSliders = GetComponent<OpenSliders>();
-
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-            Debug.Log(OpenSliders.isSliderOn);
-            OptionPopupSystem.isOn = false;
-        }
-        DontDestroyOnLoad(this);
-        Debug.Log(SceneManager.GetActiveScene().name);
-
-
-        //if (SceneManager.GetActiveScene().buildIndex == 0
-        //    || SceneManager.GetActiveScene().buildIndex == 2)
-        //{
-        //    //SceneManager.GetActiveScene().name == "Title"
-        //    if (instance != null)
-        //    {
-        //        Destroy(this.gameObject);
-        //        Debug.Log(OpenSliders.isSliderOn);
-        //        OptionPopupSystem.isOn = false;
-        //    }
-        //    else
-        //    {
-        //        instance = this;
-        //        DontDestroyOnLoad(this);
-        //        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-        //    }
-        //}
-        //else
-        //{
-        //    GameObject.Destroy(this);
-        //    //Destroy(this.gameObject);
-        //}
-
-        //if (instance != null)
-        //{
-        //    Destroy(this.gameObject);
-        //    Debug.Log(OpenSliders.isSliderOn);
-        //    OptionPopupSystem.isOn = false;
-        //}
-        //else
-        //{
-        //    instance = this;
-        //    DontDestroyOnLoad(this);
-        //}
+        backVol = PlayerPrefs.GetFloat("backvol", 1f);
+        backVolume.value = backVol;
+        audio.volume = backVolume.value;
     }
-    private void Update()
+
+    void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Title")
+        SoundSlider();        
+    }
+
+    public void SoundSlider()
+    {
+        audio.volume = backVolume.value;
+
+        backVol = backVolume.value;
+        PlayerPrefs.SetFloat("backvol", backVol);
+
+        if (backVol == 0)
         {
-            if (SceneManager.GetActiveScene().name != "name")
-                Destroy(gameObject);
+            AudioListener.pause = true;
+        }
+        else
+        {
+            AudioListener.pause = false;
         }
     }
 }
