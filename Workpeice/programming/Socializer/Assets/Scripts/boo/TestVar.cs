@@ -9,13 +9,14 @@ public class TestVar : MonoBehaviour
     public GameObject badBtn;
     public GameObject dayBtn;
 
-    public Text reliabilityTxt;
+    public Text reliabilityTxt0;
+    //public Text reliabilityTxt1;
+    //public Text reliabilityTxt2;
     public Text dayTxt;
 
     public int day;             //일차
     public bool done;   //일과
-
-    static public float[] reliability = new float[3];     //신뢰도
+    public float[] reliability = new float[3];     //신뢰도
     // 0 자녀 1중앙정보부 2AM
 
     public struct Var      //하루가 지나면 변경 or 초기화될 것들
@@ -32,29 +33,25 @@ public class TestVar : MonoBehaviour
         Var.passPeople = 2;
         switch (day % 7)
         {
-            case 0:
-                dayTxt.text = day + "일/일";
-                break;
             case 1:
-                dayTxt.text = day + "일/월";
+                dayTxt.text = day + "일차/월";
                 break;
             case 2:
-                dayTxt.text = day + "일/화";
+                dayTxt.text = day + "일차/화";
                 break;
             case 3:
-                dayTxt.text = day + "일/수";
+                dayTxt.text = day + "일차/수";
                 break;
             case 4:
-                dayTxt.text = day + "일/목";
+                dayTxt.text = day + "일차/목";
                 break;
             case 5:
-                dayTxt.text = day + "일/금";
-                break;
-            case 6:
-                dayTxt.text = day + "일/토";
+                dayTxt.text = day + "일차/금";
                 break;
         }
-        reliabilityTxt.text = "(" + reliability + "/100)";
+        reliabilityTxt0.text = "(" + reliability[0] + "/100)";
+        //reliabilityTxt1.text = "(" + reliability[1] + "/100)";
+        //reliabilityTxt2.text = "(" + reliability[2] + "/100)";
     }
 
     // Update is called once per frame
@@ -80,7 +77,7 @@ public class TestVar : MonoBehaviour
             reliability[0] += 1.5f;
             Debug.Log("자녀 신뢰도 상승");
         }
-        reliabilityTxt.text = "(" + (int)reliability[0] + "/100)";
+        reliabilityTxt0.text = "(" + (int)reliability[0] + "/100)";
     }
     public void OnClickBad()
     {
@@ -95,7 +92,7 @@ public class TestVar : MonoBehaviour
             reliability[0] -= 2f;
             Debug.Log("자녀 신뢰도 하락");
         }
-        reliabilityTxt.text = "(" + (int)reliability[0] + "/100)";
+        reliabilityTxt0.text = "(" + (int)reliability[0] + "/100)";
     }
     public void OnClickNextDay()
     {
@@ -113,30 +110,24 @@ public class TestVar : MonoBehaviour
                 {
                     switch (day % 7)
                     {
-                        case 0:
-                            dayTxt.text = day + "일/일";
-                            break;
                         case 1:
-                            dayTxt.text = day + "일/월";
+                            dayTxt.text = day + "일차/월";
                             break;
                         case 2:
-                            dayTxt.text = day + "일/화";
+                            dayTxt.text = day + "일차/화";
                             break;
                         case 3:
-                            dayTxt.text = day + "일/수";
+                            dayTxt.text = day + "일차/수";
                             break;
                         case 4:
-                            dayTxt.text = day + "일/목";
+                            dayTxt.text = day + "일차/목";
                             break;
                         case 5:
-                            dayTxt.text = day + "일/금";
-                            break;
-                        case 6:
-                            dayTxt.text = day + "일/토";
+                            dayTxt.text = day + "일차/금";
+                            day += 2;
                             break;
                     }
                 }
-                //Var.evidence = null;
                 done = false;
             }
             else
