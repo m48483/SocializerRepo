@@ -21,4 +21,9 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
+    public void Init_UiChange()
+    {
+        SceneManager.LoadScene("Init_Ui");
+    }
+    
 }
