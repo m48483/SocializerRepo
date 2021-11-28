@@ -1139,7 +1139,6 @@ GameObject:
   - component: {fileID: 575382130}
   - component: {fileID: 575382135}
   - component: {fileID: 575382136}
-  - component: {fileID: 575382134}
   - component: {fileID: 575382137}
   - component: {fileID: 575382141}
   - component: {fileID: 575382140}
@@ -1196,7 +1195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 72.99999
+    x: 71.99999
     y: 79.24744
     width: 71
     height: 40
@@ -1208,7 +1207,6 @@ MonoBehaviour:
   eventHandler: {fileID: 575382135}
   commandList:
   - {fileID: 575382136}
-  - {fileID: 575382134}
   - {fileID: 575382140}
   - {fileID: 575382138}
   - {fileID: 575382139}
@@ -1243,7 +1241,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 575382131}
   selectedCommands:
-  - {fileID: 575382130}
+  - {fileID: 575382139}
   variables: []
   description: 
   stepPause: 0
@@ -1269,27 +1267,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &575382134
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575382129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &575382135
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1361,8 +1338,8 @@ MonoBehaviour:
     \uCC54\uD53C\uC5B8\uC744 \uC7A1\uC73C\uBA74 \uC6B0\uB9AC\uB294 \uD3EC\uCF13\uBAAC
     \uB9C8\uC2A4\uD130\uAC00 \uB418\uB294\uAC70\uC57C!"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1325137800}
+  portrait: {fileID: 21300000, guid: 1b0e33decb5f17f4cac80a2bef46ece5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1388,8 +1365,8 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\uC544...\n\uD380\uAD6C\uC2A4....\n\uC2DC\uBC1C......"
   description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
+  character: {fileID: 1325137800}
+  portrait: {fileID: 21300000, guid: 1b0e33decb5f17f4cac80a2bef46ece5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1418,7 +1395,7 @@ MonoBehaviour:
     \uB9C8\uC2A4\uD130\uAC00 \uB418\uB294\uAC70\uC57C!"
   description: 
   character: {fileID: 1325137800}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1b0e33decb5f17f4cac80a2bef46ece5, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1

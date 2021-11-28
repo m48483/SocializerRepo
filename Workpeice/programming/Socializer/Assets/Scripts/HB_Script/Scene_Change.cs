@@ -14,7 +14,8 @@ public class Scene_Change : MonoBehaviour
     public void HouseChange()
     {
         int a = Random.Range(1,6);
-        SceneManager.LoadScene("House"+a);
+        SceneManager.LoadScene("House "+a);
+        Debug.Log("House " + a + "호출");
     }
     public void LobbyChange()
     {
