@@ -22,10 +22,10 @@ public class Schedule_Button : MonoBehaviour
                 case 0:
                     Debug.Log("관찰 활성화");
                     Actiononoff = 1;
-                    Cursor.SetCursor(cursorImg1, Vector2.zero, CursorMode.ForceSoftware);
+                    //Cursor.SetCursor(cursorImg1, Vector2.zero, CursorMode.ForceSoftware);
+                    GameObject.Find("SayDialog").transform.Find("Panel").GetComponent<Mousecursor>().CursorChange_On();
                     GameObject.Find("StoryText").GetComponent<Text_Clickable>().enabled = true;
                     GameObject.Find("StoryText").GetComponent<Text_Event>().Store();
-                    //GameObject.Find("SayDialog").GetComponent<SayDialog>().enabled = false;
                     GameObject.Find("SayDialog").GetComponent<DialogInput>().enabled = false;
                     GameObject.Find("SayDialog").transform.Find("Panel").transform.Find("Button").transform.Find("Evidence_btn").gameObject.SetActive(false);
                     break;
@@ -33,9 +33,9 @@ public class Schedule_Button : MonoBehaviour
                 case 1:
                     Debug.Log("관찰 비활성화");
                     Actiononoff = 0;
-                    Cursor.SetCursor(cursorImg2, Vector2.zero, CursorMode.ForceSoftware);
+                    //Cursor.SetCursor(cursorImg2, Vector2.zero, CursorMode.ForceSoftware);
+                    GameObject.Find("SayDialog").transform.Find("Panel").GetComponent<Mousecursor>().CursorChange_Off();
                     GameObject.Find("StoryText").GetComponent<Text_Clickable>().enabled = false;
-                    //GameObject.Find("SayDialog").GetComponent<SayDialog>().enabled = true;
                     GameObject.Find("SayDialog").GetComponent<DialogInput>().enabled = true;
                     GameObject.Find("SayDialog").transform.Find("Panel").transform.Find("Button").transform.Find("Evidence_btn").gameObject.SetActive(true);
                     break;                

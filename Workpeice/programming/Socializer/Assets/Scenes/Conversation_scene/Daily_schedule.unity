@@ -1197,7 +1197,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 71.99999
     y: 79.24744
-    width: 71
+    width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1238,10 +1238,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 575382131}
-  selectedCommands:
-  - {fileID: 575382139}
+  selectedBlocks: []
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1450,7 +1448,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 248.58766
     y: 83.56698
-    width: 77
+    width: 117
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1647,7 +1645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 0}
+  selectedFlowchart: {fileID: 575382132}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -4253,6 +4251,7 @@ GameObject:
   - component: {fileID: 1889421454}
   - component: {fileID: 1889421453}
   - component: {fileID: 1889421452}
+  - component: {fileID: 1889421457}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -4327,7 +4326,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1889421455
 CanvasRenderer:
@@ -4360,6 +4359,20 @@ RectTransform:
   m_AnchoredPosition: {x: -750.0001, y: 0}
   m_SizeDelta: {x: 1685, y: 580}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1889421457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889421451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda58498152b53c4dbdf5b3a14009968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorImg1: {fileID: 2800000, guid: c42b8a1480e813842931debeae9e863d, type: 3}
+  cursorImg2: {fileID: 2800000, guid: 3a5f197a7aba4314daa10216f23e5a27, type: 3}
 --- !u!1 &1929731215
 GameObject:
   m_ObjectHideFlags: 0
