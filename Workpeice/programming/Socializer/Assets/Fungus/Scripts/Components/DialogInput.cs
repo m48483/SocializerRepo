@@ -38,7 +38,8 @@ namespace Fungus
         [Tooltip("Ignore input if a Menu dialog is currently active")]
         [SerializeField] protected bool ignoreMenuClicks = true;
 
-        protected bool dialogClickedFlag;
+        //관찰 버튼 누르고 대화 넘어가는거 방지하기 위해 protected에서 public으로 가져와 외부 스크립트에서 사용하도록 변경함.
+        public bool dialogClickedFlag;
 
         protected bool nextLineInputFlag;
 
