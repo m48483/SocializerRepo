@@ -6,7 +6,6 @@ using System.Collections;
 
 public class testscript : MonoBehaviour
 {
-   
     public void Click_D()
     {
         GameObject go = GameObject.Find("SayDialog");
