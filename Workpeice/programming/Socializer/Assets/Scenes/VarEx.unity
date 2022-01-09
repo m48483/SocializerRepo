@@ -158,12 +158,6 @@ MonoBehaviour:
   dayBtn: {fileID: 2004931785}
   reliabilityTxt0: {fileID: 384685035}
   dayTxt: {fileID: 616910295}
-  day: 1
-  done: 0
-  reliability:
-  - 30
-  - 40
-  - 50
 --- !u!114 &45840234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1395136198}
+  selectedFlowchart: {fileID: 0}
 --- !u!4 &921639000
 Transform:
   m_ObjectHideFlags: 1
@@ -786,9 +780,6 @@ GameObject:
   - component: {fileID: 1395136198}
   - component: {fileID: 1395136197}
   - component: {fileID: 1395136196}
-  - component: {fileID: 1395136195}
-  - component: {fileID: 1395136194}
-  - component: {fileID: 1395136193}
   - component: {fileID: 1395136192}
   - component: {fileID: 1395136191}
   - component: {fileID: 1395136190}
@@ -806,7 +797,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &1395136185
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -819,7 +810,7 @@ MonoBehaviour:
   itemId: 8
   indentLevel: 0
   anyVar:
-    variable: {fileID: 1395136194}
+    variable: {fileID: 0}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -971,7 +962,7 @@ MonoBehaviour:
   itemId: 7
   indentLevel: 0
   anyVar:
-    variable: {fileID: 1395136193}
+    variable: {fileID: 0}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -1123,7 +1114,7 @@ MonoBehaviour:
   itemId: 6
   indentLevel: 0
   anyVar:
-    variable: {fileID: 1395136195}
+    variable: {fileID: 0}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -1275,7 +1266,7 @@ MonoBehaviour:
   itemId: 5
   indentLevel: 0
   anyVar:
-    variable: {fileID: 1395136195}
+    variable: {fileID: 0}
     data:
       animatorData:
         animatorRef: {fileID: 0}
@@ -1428,7 +1419,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 249.13403
     y: 168.45357
-    width: 78.8
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1455,7 +1446,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 245.01038
     y: 112.7834
-    width: 71.6
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1482,7 +1473,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 243.97942
     y: 62.26802
-    width: 71.6
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1509,7 +1500,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 239.85577
     y: 13.814423
-    width: 78.8
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1520,51 +1511,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1395136188}
   suppressAllAutoSelections: 0
---- !u!114 &1395136193
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395136184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 1
-  key: "\uC77C\uCC28"
-  value: 1
---- !u!114 &1395136194
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395136184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 1
-  key: "\uC77C\uACFC"
-  value: 0
---- !u!114 &1395136195
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395136184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 705fa1ac97df74e3a84ff952ffd923f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scope: 1
-  key: "\uC2E0\uB8B0\uB3C4"
-  value: 30
 --- !u!114 &1395136196
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1596,7 +1542,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 70
-    width: 112.4
+    width: 71
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1631,13 +1577,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1395136189}
-  selectedCommands:
-  - {fileID: 1395136185}
-  variables:
-  - {fileID: 1395136195}
-  - {fileID: 1395136194}
-  - {fileID: 1395136193}
+  - {fileID: 1395136192}
+  selectedCommands: []
+  variables: []
   description: 
   stepPause: 0
   colorCommands: 1

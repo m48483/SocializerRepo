@@ -131,11 +131,15 @@ GameObject:
   m_Component:
   - component: {fileID: 365830720}
   - component: {fileID: 365830719}
-  - component: {fileID: 365830718}
-  - component: {fileID: 365830717}
   - component: {fileID: 365830716}
   - component: {fileID: 365830715}
   - component: {fileID: 365830714}
+  - component: {fileID: 365830723}
+  - component: {fileID: 365830718}
+  - component: {fileID: 365830717}
+  - component: {fileID: 365830726}
+  - component: {fileID: 365830725}
+  - component: {fileID: 365830724}
   - component: {fileID: 365830721}
   m_Layer: 0
   m_Name: Variables
@@ -157,8 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scope: 1
-  key: favorability
-  value: 0
+  key: Heather_reliability
+  value: 80
 --- !u!114 &365830715
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -188,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 1
   key: PlayerName
-  value: "\uD0EC\uD0EC\uBC84\uB9B0"
+  value: player
 --- !u!114 &365830717
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -198,12 +202,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 365830713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: 705fa1ac97df74e3a84ff952ffd923f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 365830718}
-  suppressBlockAutoSelect: 0
-  waitForFrames: 1
+  scope: 1
+  key: Frances_reliability
+  value: 10
 --- !u!114 &365830718
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -213,23 +217,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 365830713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Script: {fileID: 11500000, guid: 705fa1ac97df74e3a84ff952ffd923f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 68
-    y: 70
-    width: 71
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 0
-  blockName: New Block
-  description: 
-  eventHandler: {fileID: 365830717}
-  commandList: []
-  suppressAllAutoSelections: 0
+  scope: 1
+  key: Hilda_reliability
+  value: 40
 --- !u!114 &365830719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,24 +236,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 75.12877, y: 56.912907}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.7900002
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 365830718}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 365830716}
   - {fileID: 365830715}
+  - {fileID: 365830724}
+  - {fileID: 365830726}
+  - {fileID: 365830725}
   - {fileID: 365830714}
+  - {fileID: 365830718}
+  - {fileID: 365830717}
+  - {fileID: 365830723}
+  - {fileID: 365830721}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -287,16 +286,79 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &365830721
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365830713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de31c7391e0078845b0876a0208be317, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scope: 1
+  key: Gameover
+  value: 0
+--- !u!114 &365830723
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365830713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Day
+  value: 1
+--- !u!114 &365830724
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365830713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Heather_conversation
+  value: 0
+--- !u!114 &365830725
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365830713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Frances_conversation
+  value: 0
+--- !u!114 &365830726
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365830713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Hilda_conversation
+  value: 0
 --- !u!1 &688414397
 GameObject:
   m_ObjectHideFlags: 1
@@ -326,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 0}
+  selectedFlowchart: {fileID: 365830719}
 --- !u!4 &688414399
 Transform:
   m_ObjectHideFlags: 1

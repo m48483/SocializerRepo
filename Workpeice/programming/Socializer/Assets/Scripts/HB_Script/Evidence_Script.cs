@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Evidence_Script : MonoBehaviour
 {
-    public string[] Saved_conversation = new string[100];
+    //public string[] Saved_conversation = new string[100];
     public Text Txt1;
     public Text Txt2;
     public Text Txt3;

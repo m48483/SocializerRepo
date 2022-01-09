@@ -14,14 +14,13 @@ public class Scene_Change : MonoBehaviour
     public void HouseChange()
     {
         int a = Random.Range(1,6);
-        SceneManager.LoadScene("House "+a);
-        Debug.Log("House " + a + "호출");
+        SceneManager.LoadScene("House");
     }
     public void LobbyChange()
     {
-        int a = Random.Range(1, 5);       
-        SceneManager.LoadScene("Lobby "+a);
-        Debug.Log("Lobby " + a + "호출");
+        LoadingScene.LoadScene("Lobby");
+       // SceneManager.LoadScene("Lobby "+a);
+        
     }
     public void AMChange()
     {
