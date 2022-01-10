@@ -141,6 +141,8 @@ GameObject:
   - component: {fileID: 365830725}
   - component: {fileID: 365830724}
   - component: {fileID: 365830721}
+  - component: {fileID: 365830727}
+  - component: {fileID: 365830722}
   m_Layer: 0
   m_Name: Variables
   m_TagString: Untagged
@@ -260,6 +262,8 @@ MonoBehaviour:
   - {fileID: 365830717}
   - {fileID: 365830723}
   - {fileID: 365830721}
+  - {fileID: 365830727}
+  - {fileID: 365830722}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -299,6 +303,21 @@ MonoBehaviour:
   scope: 1
   key: Gameover
   value: 0
+--- !u!114 &365830722
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365830713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: Citizen
+  value: 1
 --- !u!114 &365830723
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -359,6 +378,21 @@ MonoBehaviour:
   scope: 1
   key: Hilda_conversation
   value: 0
+--- !u!114 &365830727
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365830713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: ReactionaryNPC
+  value: 1
 --- !u!1 &688414397
 GameObject:
   m_ObjectHideFlags: 1
