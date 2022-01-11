@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.31764707, g: 0.31764707, b: 0.31764707, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.2264151, g: 0.2253471, b: 0.2253471, a: 1}
+    m_PressedColor: {r: 0.227451, g: 0.22352943, b: 0.22352943, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75b607c6ac5284e428ed49bc56ca97b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1eb62ceea83efa47a83958187a30f97, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75b607c6ac5284e428ed49bc56ca97b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1eb62ceea83efa47a83958187a30f97, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3089,7 +3089,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8115882717925022983}
   - component: {fileID: 7986348636467410996}
-  - component: {fileID: 146530281245372128}
   m_Layer: 0
   m_Name: Master Volume Slider
   m_TagString: Untagged
@@ -3169,20 +3168,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &146530281245372128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412232320384342649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0de357983bb6c0f488a4b1afd8c60345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backVolume: {fileID: 7986348636467410996}
-  audio: {fileID: 6878200265916188396}
 --- !u!1 &5734925763005897380
 GameObject:
   m_ObjectHideFlags: 0
