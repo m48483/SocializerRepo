@@ -7,17 +7,21 @@ using Fungus;
 public class Remaining_Conversation_Count : MonoBehaviour
 {
     public Text test;
-    int num;
+    int num1, num2;
+    string str;
     public void Get_Num()
     {
-        num = GameObject.Find("Flowchart").GetComponent<Flowchart>().GetIntegerVariable("Conversation_Count");
-        test.text = num.ToString();
+        num1 = GameObject.Find("Flowchart").GetComponent<Flowchart>().GetIntegerVariable("Conversation_Count");
+        num2 = GameObject.Find("Flowchart").GetComponent<Flowchart>().GetIntegerVariable("Max");
+        str = "(" + num1 + "/" + num2 + ")";
+        test.text = str;
     }
 
     public void Set_Num()
     {
-        num -= 1;
-        GameObject.Find("Flowchart").GetComponent<Flowchart>().SetIntegerVariable("Conversation_Count", num);
-        test.text = num.ToString();
+        num1++;
+        GameObject.Find("Flowchart").GetComponent<Flowchart>().SetIntegerVariable("Conversation_Count", num1);
+        str = "(" + num1 + "/" + num2 + ")";
+        test.text = str;
     }
 }
