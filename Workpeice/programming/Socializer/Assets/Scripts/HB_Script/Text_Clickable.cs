@@ -61,10 +61,10 @@ public class Text_Clickable : MonoBehaviour
                                 int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
 
                                 Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
-                                vertexColors[vertexIndex + 0] = new Color32((byte)(255), (byte)(202), (byte)(24), 0);
-                                vertexColors[vertexIndex + 1] = new Color32((byte)(0), (byte)(0), (byte)(0), 0);
-                                vertexColors[vertexIndex + 2] = new Color32((byte)(0), (byte)(0), (byte)(0), 0);
-                                vertexColors[vertexIndex + 3] = new Color32((byte)(255), (byte)(202), (byte)(24), 0);
+                                vertexColors[vertexIndex + 0] = new Color32(255,204,24,255);
+                                vertexColors[vertexIndex + 1] = new Color32(255, 204, 24, 255);
+                                vertexColors[vertexIndex + 2] = new Color32(255, 204, 24, 255);
+                                vertexColors[vertexIndex + 3] = new Color32(255, 204, 24, 255);
                             }
 
                             text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);

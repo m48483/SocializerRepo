@@ -27,6 +27,7 @@ public class randomflowchart : MonoBehaviour
         else if (SceneName.Equals("Office"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
+            Dylan_Reliability_Scene();
         }
         else if (SceneName.Equals("AM"))
         {
@@ -42,18 +43,17 @@ public class randomflowchart : MonoBehaviour
         Debug.Log(reliability);
         if (reliability >= 60 && reliability <= 100)
         {
-
-            GameObject.Find("BG").transform.Find("집_1_4").gameObject.SetActive(true);
             Debug.Log("실행");
-            int rand = Random.Range(1, 3);
+            int rand = Random.Range(1, 5);
             GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart"+ rand).gameObject.SetActive(true);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand);
+            //GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Morethan60");
 
         }
         else if (reliability >= 0 && reliability < 60)
         {
-            int rand = Random.Range(4, 6);
+            int rand = Random.Range(6, 9);
             GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
+            //GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Lessthan60");
         }
     }
     // 신뢰도에 따른 힐다 Flowchart 호출
@@ -76,13 +76,15 @@ public class randomflowchart : MonoBehaviour
         if (reliability >= 75 && reliability <= 100)
         {
             int rand = Random.Range(1, 3);
-            GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
         }
-        else if (reliability >= 0 && reliability < 75)
+        //딜런은 호감도에 따른 대화 변경이 아닌 혁명루트에 따른 대화 변화
+        /*else if (reliability >= 0 && reliability < 75)
         {
             int rand = Random.Range(4, 6);
-            GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
-        }
+            GameObject.Find("Flowchart_").transform.Find("Lessthan75").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
+        }*/
+        Debug.Log("딜런 대화 시작");
     }
     // 신뢰도에 따른 프랜시스 Flowchart 호출
     public void Frances_Reliability_Scene()

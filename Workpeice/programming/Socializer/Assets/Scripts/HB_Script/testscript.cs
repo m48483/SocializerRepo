@@ -12,9 +12,15 @@ public class testscript : MonoBehaviour
 
 
         GameObject.Find("SayDialog").GetComponent<SayDialog>().enabled = false;
-        //GameObject.Find("Flowchart").GetComponent<Flowchart>().SetStringVariable("Character", "민초단");
-        
-        //int i = GameObject.Find("Flowchart1").GetComponent<Flowchart>().GetIntegerVariable("test");
+       
+    }
+    public void ClickOn()
+    {
+        GameObject go = GameObject.Find("SayDialog");
+
+
+        GameObject.Find("SayDialog").GetComponent<SayDialog>().enabled = true;
+
     }
 
 }

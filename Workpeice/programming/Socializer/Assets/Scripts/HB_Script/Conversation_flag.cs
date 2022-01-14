@@ -53,15 +53,41 @@ public class Conversation_flag : MonoBehaviour
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
         }
     }
-    public void GetFlag(int rand)
+
+    //flowchart 버그 미발견으로 임시적으로 오버로딩
+    public void GetFlag()
     {
         SceneName = SceneManager.GetActiveScene().name;
-
+        if (SceneName.Equals("House"))
+        {
+            
+        }
+        else if (SceneName.Equals("Lobby"))
+        {
+            Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", Hilda_conversation);
+        }
+        else if (SceneName.Equals("Office"))
+        {
+            Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Dylan_conversation");
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", Dylan_conversation);
+        }
+        else if (SceneName.Equals("AM"))
+        {
+            Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
+        }
+    }
+    //대화를 진행했는가 확인하는 플래그
+    public void GetFlag(int rand, string reliability)
+    {
+        SceneName = SceneManager.GetActiveScene().name;
+        
         if (SceneName.Equals("House"))
         {
             //추후 호감도/혁명루트에 따라 코드 수정해야함
             Heather_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Heather_conversation");
-            GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + rand).GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", Heather_conversation);
+            GameObject.Find("Flowchart_").transform.Find(reliability).transform.Find("Flowchart" + rand).GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", Heather_conversation);
             Debug.Log("flag값 얻어옴");
         }
         else if (SceneName.Equals("Lobby"))
