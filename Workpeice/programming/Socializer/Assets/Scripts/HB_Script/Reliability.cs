@@ -9,6 +9,7 @@ public class Reliability : MonoBehaviour
     float Hilda_reliability;
     float Heather_reliability;
     float Frances_reliability;
+    float Dylan_reliability;
     string SceneName;// 씬이름 구별
 
     void Start()
@@ -16,6 +17,7 @@ public class Reliability : MonoBehaviour
         Hilda_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
         Heather_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
         Frances_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
+        Dylan_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
     }
 
     // Update is called once per frame
@@ -41,6 +43,11 @@ public class Reliability : MonoBehaviour
         {
             Hilda_reliability += 1;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
+        }
+        else if (SceneName.Equals("Office"))
+        {
+            Hilda_reliability += 1;
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability", Dylan_reliability);
         }
         else if (SceneName.Equals("AM"))
         {
@@ -71,6 +78,11 @@ public class Reliability : MonoBehaviour
         {
             Hilda_reliability -= 2;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
+        }
+        else if (SceneName.Equals("Office"))
+        {
+            Hilda_reliability -= 2;
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability", Dylan_reliability);
         }
         else if (SceneName.Equals("AM"))
         {
