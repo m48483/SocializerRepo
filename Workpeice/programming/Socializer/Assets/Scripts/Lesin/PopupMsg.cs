@@ -45,11 +45,11 @@ public class PopupMsg : MonoBehaviour
             Debug.Log("일과 종료 체크");
             PopLobbyGo();
         }
-        else if (SceneManager.GetActiveScene().name == "Lobby")
+        else if (SceneManager.GetActiveScene().name == "Lobby 1")
         {
             _notice1.SelectSUB(0, "어디로 이동하시겠습니까?");
         }
-        else if (SceneManager.GetActiveScene().name == "House")
+        else if (SceneManager.GetActiveScene().name == "House 1")
         {
             _notice1.SelectSUB(1, "어디로 이동하시겠습니까?");
         }
