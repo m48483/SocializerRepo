@@ -24,6 +24,7 @@ public class TestVar : MonoBehaviour
     float Hilda_reliability;
     float Heather_reliability;
     float Frances_reliability;
+    float Dylan_reliability;
 
     bool citizen;   //false시 사망
     bool Frances_conversation;   //AM 접촉시 true
@@ -36,6 +37,7 @@ public class TestVar : MonoBehaviour
         Hilda_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
         Heather_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
         Frances_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
+        Dylan_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
         Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
         Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
         
