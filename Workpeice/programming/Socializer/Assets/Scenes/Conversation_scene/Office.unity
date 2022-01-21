@@ -605,7 +605,6 @@ GameObject:
   - component: {fileID: 563632961}
   - component: {fileID: 563632960}
   - component: {fileID: 563632959}
-  - component: {fileID: 563632958}
   - component: {fileID: 563632957}
   - component: {fileID: 563632956}
   m_Layer: 0
@@ -689,23 +688,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &563632958
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563632954}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 30
-  indentLevel: 0
-  targetObject: {fileID: 1964870670}
-  methodName: GetFlag
-  delay: 0
 --- !u!114 &563632959
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1674,7 +1656,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 563632980}
   commandList:
-  - {fileID: 563632958}
   - {fileID: 563632978}
   - {fileID: 563632979}
   - {fileID: 563632973}
@@ -1704,9 +1685,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 563632971}
-  selectedCommands:
-  - {fileID: 563632969}
+  - {fileID: 563632977}
+  selectedCommands: []
   variables:
   - {fileID: 563632964}
   description: 
@@ -1929,7 +1909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 723239589}
+  selectedFlowchart: {fileID: 1033555476}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -1977,7 +1957,6 @@ GameObject:
   - component: {fileID: 723239568}
   - component: {fileID: 723239567}
   - component: {fileID: 723239566}
-  - component: {fileID: 723239565}
   - component: {fileID: 723239564}
   m_Layer: 0
   m_Name: Flowchart4
@@ -2031,23 +2010,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &723239565
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723239562}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 30
-  indentLevel: 0
-  targetObject: {fileID: 1964870670}
-  methodName: GetFlag
-  delay: 0
 --- !u!114 &723239566
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2705,7 +2667,7 @@ MonoBehaviour:
   itemId: 19
   indentLevel: 0
   storyText: "\uD0A4\uB78C \uC12C\uC5D0\uC11C \uBC97\uC5B4\uB098 \uC5D0\uBC84\uD2B8\uC5D0\uC11C
-    \uADFC\uBB34\uD558\uB2C8 \uC0B4 \uAC70 \uAC19\uB124\uC694.\n\uD798\uB4E4\uC5C8\uACA0\uB2E4\uACE0\uC694?
+    \uADFC\uBB34\uD558\uB2C8 \uC0B4 \uAC70 \uAC19\uB124\uC694.\n\uD798\uB4E4\uC5C8\uACA0\uB2E4\uACE0\uC694? 
     \uC774\uAC78 \uC54C\uC544\uC8FC\uB294 \uC0AC\uB78C\uC740 {$PlayerName}\uB2D8\uBC16\uC5D0
     \uC5C6\uC5B4\uC694!"
   description: 
@@ -3017,7 +2979,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 723239587}
   commandList:
-  - {fileID: 723239565}
   - {fileID: 723239585}
   - {fileID: 723239586}
   - {fileID: 723239580}
@@ -3047,7 +3008,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 723239577}
+  - {fileID: 723239584}
   selectedCommands: []
   variables:
   - {fileID: 723239571}
@@ -3094,7 +3055,6 @@ GameObject:
   - component: {fileID: 930800599}
   - component: {fileID: 930800598}
   - component: {fileID: 930800597}
-  - component: {fileID: 930800596}
   - component: {fileID: 930800595}
   m_Layer: 0
   m_Name: Flowchart3
@@ -3145,23 +3105,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &930800596
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930800593}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 30
-  indentLevel: 0
-  targetObject: {fileID: 1964870670}
-  methodName: GetFlag
-  delay: 0
 --- !u!114 &930800597
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4131,7 +4074,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 930800618}
   commandList:
-  - {fileID: 930800596}
   - {fileID: 930800616}
   - {fileID: 930800617}
   - {fileID: 930800611}
@@ -4161,9 +4103,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 930800609}
-  selectedCommands:
-  - {fileID: 930800595}
+  - {fileID: 930800615}
+  selectedCommands: []
   variables:
   - {fileID: 930800602}
   description: 
@@ -4209,7 +4150,6 @@ GameObject:
   - component: {fileID: 1033555455}
   - component: {fileID: 1033555454}
   - component: {fileID: 1033555453}
-  - component: {fileID: 1033555452}
   - component: {fileID: 1033555451}
   - component: {fileID: 1033555478}
   - component: {fileID: 1033555477}
@@ -4264,23 +4204,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1033555452
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033555449}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 30
-  indentLevel: 0
-  targetObject: {fileID: 1964870670}
-  methodName: GetFlag
-  delay: 0
 --- !u!114 &1033555453
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5252,7 +5175,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1033555474}
   commandList:
-  - {fileID: 1033555452}
   - {fileID: 1033555472}
   - {fileID: 1033555473}
   - {fileID: 1033555467}
@@ -5281,8 +5203,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1033555464}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1033555458}
@@ -5547,7 +5468,6 @@ GameObject:
   - component: {fileID: 1622013545}
   - component: {fileID: 1622013544}
   - component: {fileID: 1622013543}
-  - component: {fileID: 1622013542}
   - component: {fileID: 1622013567}
   m_Layer: 0
   m_Name: Flowchart1
@@ -5570,23 +5490,6 @@ Transform:
   m_Father: {fileID: 444513718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1622013542
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622013540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 30
-  indentLevel: 0
-  targetObject: {fileID: 1964870670}
-  methodName: GetFlag
-  delay: 0
 --- !u!114 &1622013543
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6560,7 +6463,6 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1622013564}
   commandList:
-  - {fileID: 1622013542}
   - {fileID: 1622013562}
   - {fileID: 1622013563}
   - {fileID: 1622013557}
@@ -6592,7 +6494,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1622013565}
   selectedCommands:
-  - {fileID: 1622013542}
+  - {fileID: 1622013562}
   variables:
   - {fileID: 1622013548}
   description: 
@@ -7220,7 +7122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3098758867042341305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7502,7 +7404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.50003, y: -100.49997}
+  m_AnchoredPosition: {x: 130.50003, y: -108.99997}
   m_SizeDelta: {x: 372, y: 92}
   m_Pivot: {x: 0.35080647, y: 0.00000029802322}
 --- !u!114 &3098758867068196985
@@ -8076,8 +7978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 486, y: -36.373}
-  m_SizeDelta: {x: 324, y: 109}
+  m_AnchoredPosition: {x: 595, y: -47.7}
+  m_SizeDelta: {x: 372, y: 92}
   m_Pivot: {x: 0.5, y: 0.6663015}
 --- !u!114 &3098758868060295781
 MonoBehaviour:
@@ -8172,7 +8074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9e23094fa9fb3ff418fde3fa79edaaa7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6a1009d472e35a4ba4ce737a2339ad6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9332,8 +9234,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.66, y: -109}
-  m_SizeDelta: {x: 324, y: 109}
+  m_AnchoredPosition: {x: 130.5, y: -109}
+  m_SizeDelta: {x: 372, y: 92}
   m_Pivot: {x: 0.35080647, y: 0.00000029802322}
 --- !u!114 &3098758868833470639
 MonoBehaviour:
@@ -9428,7 +9330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 34f2b9bfecaaced4c9e49725de627de6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba62609fef3b7c643b9117e25ab13e50, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
