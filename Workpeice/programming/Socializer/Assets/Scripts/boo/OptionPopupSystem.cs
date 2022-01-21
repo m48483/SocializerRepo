@@ -2,26 +2,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionPopupSystem : MonoBehaviour
 {
     public GameObject popup;
+    public GameObject btn_popup;
+    public Button btn;
     public static bool isOn = false;
 
-    public static OptionPopupSystem instance { get; private set; }
+    //public static OptionPopupSystem instance { get; private set; }
 
     Action onClickBtn;
 
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().name == "name")
+        {
+            btn_popup.SetActive(false);
+        }
+        else
+        {
+            btn_popup.SetActive(true);
+        }
+    }
     private void Awake()
     {
         isOn = this;
-        instance = this;
+        //instance = this;
     }
 
-    public void OpenPopup(Action onClickBtn)
+    public void OpenPopup()//Action onClickBtn)
     {
-        this.onClickBtn = onClickBtn;
+        //this.onClickBtn = onClickBtn;
         popup.SetActive(true);
         isOn = true;
         Debug.Log("PopupOn");

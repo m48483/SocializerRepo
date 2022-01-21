@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class OptionInstance : MonoBehaviour
 {
-    public void OnClickButton()
-    {
-        OptionPopupSystem.instance.OpenPopup(
-            () =>
-            {
-                Debug.Log("OnClick Btn");
-            });
-    }
+    //public void OnClickButton()
+    //{
+    //    OptionPopupSystem.instance.OpenPopup(
+    //        () =>
+    //        {
+    //            Debug.Log("OnClick Btn");
+    //        });
+    //}
 }
