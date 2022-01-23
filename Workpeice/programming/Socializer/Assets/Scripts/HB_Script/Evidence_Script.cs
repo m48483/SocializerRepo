@@ -19,11 +19,6 @@ public class Evidence_Script : MonoBehaviour
     public int content_3 = 2;
     // Start is called before the first frame update
 
-    public void Start()
-    {
-        
-        
-    }
     public void Activation()
     {
         Txt1 = GameObject.Find("Text(1)").GetComponent<Text>();
@@ -46,7 +41,9 @@ public class Evidence_Script : MonoBehaviour
         Txt2.text = Ev.Saved_conversation[content_2];
         Txt3.text = Ev.Saved_conversation[content_3];
     }
-
+    
+    //폐기
+    /*
     public void L_Arrow()
     {
         if(position == 0)
@@ -78,4 +75,5 @@ public class Evidence_Script : MonoBehaviour
             Txt3.text = Ev.Saved_conversation[content_3];
         }
     }
+    */
 }

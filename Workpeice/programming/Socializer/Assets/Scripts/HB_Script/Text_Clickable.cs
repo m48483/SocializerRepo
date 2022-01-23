@@ -34,20 +34,28 @@ public class Text_Clickable : MonoBehaviour
                     {
                         Debug.Log(TE.str[i]);
 
-                        //증거 중복체크
-                        for (int a = 0; a < Store_index; a++)
+                        if(Store_index < 3)
                         {
-                            if (E.Saved_conversation[a] == TE.str[i])
+                            //증거 중복체크
+                            for (int a = 0; a < Store_index; a++)
                             {
-                                flag = 1;
+                                if (E.Saved_conversation[a] == TE.str[i])
+                                {
+                                    flag = 1;
+                                }
+                            }
+
+                            if (flag == 0)
+                            {
+                                E.Saved_conversation[Store_index] = TE.str[i];
+                                E.size++;
+                                Store_index += 1;
                             }
                         }
-
-                        if (flag == 0)
+                        
+                        else if(Store_index >= 3)
                         {
-                            E.Saved_conversation[Store_index] = TE.str[i];
-                            E.size++;
-                            Store_index += 1;
+                            Debug.Log("저장초과");
                         }
 
                         // 텍스트 색깔
