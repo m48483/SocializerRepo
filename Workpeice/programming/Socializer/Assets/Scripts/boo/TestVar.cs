@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class TestVar : MonoBehaviour
 {
+    SaveManager saveManager;
     public GameObject goodBtn;
     public GameObject badBtn;
     public GameObject dayBtn;
@@ -19,7 +20,7 @@ public class TestVar : MonoBehaviour
     int day;             //일차
     bool done;   //일과
     bool isGameOver;   //게임 오버
-    int passPeople;   //통과시킨 반역자 수
+    int passReactionary;   //통과시킨 반역자 수
 
     float Hilda_reliability;
     float Heather_reliability;
@@ -41,7 +42,7 @@ public class TestVar : MonoBehaviour
         Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
         Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
         
-        passPeople = 2; //임시
+        passReactionary = 2; //임시
         citizen = true;
         //Frances_conversation = false;
         //Hilda_conversation = false;
@@ -106,7 +107,7 @@ public class TestVar : MonoBehaviour
         done = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Daily_schedule");
         if (done)   //일과를 마침, 다음 날로 이동 눌렀을 시
         {
-            if (passPeople <= 7)
+            if (passReactionary <= 7)
             {
                 day++;
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Day", day);
@@ -139,6 +140,7 @@ public class TestVar : MonoBehaviour
                     }
                 }
                 done = false;
+                saveManager.GameSave();
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Daily_schedule", done);
             }
             else
@@ -146,12 +148,13 @@ public class TestVar : MonoBehaviour
                 isGameOver = true;
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Gameover", isGameOver);
                 Debug.Log("게임오버");
+                Ending1();
             }
         }
     }
-    void LastDay()
+    public void LastDay()
     {
-        if (Hilda_reliability == 0 || passPeople == 7 || citizen == false)
+        if (Hilda_reliability == 0 || passReactionary == 7 || citizen == false)
         {
             Ending1();
         }
