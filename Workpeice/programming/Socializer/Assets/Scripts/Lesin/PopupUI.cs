@@ -17,6 +17,7 @@ public class PopupUI : MonoBehaviour
     SceneChange _sceneChange;
     PauseMenu _menu;
     PopUpDebug _pudedug;
+    Fadeout _fadeout;
 
     //코루틴 딜레이 2개 미리 선언
     private WaitForSecondsRealtime _UIDelay1 = new WaitForSecondsRealtime(2.0f);
@@ -137,15 +138,16 @@ public class PopupUI : MonoBehaviour
     }
     public void LobbyButton() //로비 버튼
     {
-        if (SceneManager.GetActiveScene().name == "Office")
+        if (SceneManager.GetActiveScene().name == "Daily_schedule")
         {
+            StopAllCoroutines();
             SetButton();
-            SceneManager.LoadScene("Lobby");
+            _sceneChange.LobbyChange();
         }
         else
         {
             StartCoroutine(SelectOut());
-            SceneManager.LoadScene("Lobby");
+            _sceneChange.LobbyChange();
             SetButton();
         }
     }

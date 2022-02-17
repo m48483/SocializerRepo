@@ -40,16 +40,16 @@ public class PopupMsg : MonoBehaviour
     }
     public void PopMoveGo()
     {
-        if (SceneManager.GetActiveScene().name == "Office")
+        if (SceneManager.GetActiveScene().name == "Daily_schedule")
         {   //if문으로 일이 끝났나 체크
-            Debug.Log("일과 종료 체크");
+            Debug.Log("일과 종료 체크");            
             PopLobbyGo();
         }
-        else if (SceneManager.GetActiveScene().name == "Lobby 1")
+        else if (SceneManager.GetActiveScene().name == "Test_Lobby")
         {
             _notice1.SelectSUB(0, "어디로 이동하시겠습니까?");
         }
-        else if (SceneManager.GetActiveScene().name == "House 1")
+        else if (SceneManager.GetActiveScene().name == "House")
         {
             _notice1.SelectSUB(1, "어디로 이동하시겠습니까?");
         }
