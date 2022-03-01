@@ -140,7 +140,6 @@ public class TestVar : MonoBehaviour
                     }
                 }
                 done = false;
-                saveManager.GameSave();
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Daily_schedule", done);
             }
             else

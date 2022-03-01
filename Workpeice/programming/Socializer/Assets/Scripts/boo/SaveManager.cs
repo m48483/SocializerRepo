@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
     public GameObject continueBtn;
     public GameObject btnImage;
 
-    bool isGameOver;   //게임 오버
+    //bool isGameOver;   //게임 오버
+    bool Daily_schedule;   //일과진행
     bool citizen;   //false시 사망
     bool Frances_conversation;   //AM 접촉시 true
     bool Hilda_conversation;   //정보부 NPC에게 이를 알림
@@ -21,38 +23,45 @@ public class SaveManager : MonoBehaviour
 
     public void Start()
     {
-        if (!PlayerPrefs.HasKey("Day"))
+        if(SceneManager.GetActiveScene().name == "Title")
         {
-            continueBtn.SetActive(false);
-            btnImage.SetActive(true);
-            Debug.Log("저장된 데이터가 없습니다.");
-            return;
-        }
-        else
-        {
-            continueBtn.SetActive(true);
-            btnImage.SetActive(false);
-            //SpriteRenderer spr = GetComponent<SpriteRenderer>();
+            if (!PlayerPrefs.HasKey("Day"))
+            {
+                continueBtn.SetActive(false);
+                btnImage.SetActive(true);
+                Debug.Log("저장된 데이터가 없습니다.");
+                return;
+            }
+            else
+            {
+                continueBtn.SetActive(true);
+                btnImage.SetActive(false);
+                //SpriteRenderer spr = GetComponent<SpriteRenderer>();
 
-            //Color color = spr.color;
-            //color.a = 0.5f;
-            //spr.color = color;
-            //Color color = btnImage.GetComponent<Image>().color;
-            //color.a = 0.5f;
-            //btnImage.GetComponent<Image>().color = color;
+                //Color color = spr.color;
+                //color.a = 0.5f;
+                //spr.color = color;
+                //Color color = btnImage.GetComponent<Image>().color;
+                //color.a = 0.5f;
+                //btnImage.GetComponent<Image>().color = color;
+            }
         }
     }
 
     public void GameSave()
     {
-        isGameOver = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Gameover");
+        Daily_schedule = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Daily_schedule");
+       
+        Debug.Log("데이터를 저장합니다.");
+        //isGameOver = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Gameover");
         citizen = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Citizen");
         Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
         Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
 
         // 0 == true, 1 == false
-        if (isGameOver) { isGameOverInt = 0; }
-        else { isGameOverInt = 1; }
+
+        //if (isGameOver) { isGameOverInt = 0; }
+        //else { isGameOverInt = 1; }
 
         if (citizen) { citizenInt = 0; }
         else { citizenInt = 1; }
@@ -82,6 +91,10 @@ public class SaveManager : MonoBehaviour
             Debug.Log("저장된 데이터가 없습니다.");
             return;
         }
+        else
+        {
+            Debug.Log("데이터를 불러옵니다.");
+        }
 
         int day = PlayerPrefs.GetInt("Day");
         string name = PlayerPrefs.GetString("Name");
@@ -94,8 +107,8 @@ public class SaveManager : MonoBehaviour
         Frances_conversation_Int = PlayerPrefs.GetInt("Frances_conversation");
         Hilda_conversation_Int = PlayerPrefs.GetInt("Hilda_conversation");
 
-        if (isGameOverInt == 0) { isGameOver = true; }
-        else if (isGameOverInt == 1) { isGameOver = false; }
+        //if (isGameOverInt == 0) { isGameOver = true; }
+        //else if (isGameOverInt == 1) { isGameOver = false; }
 
         if (citizenInt == 0) { citizen = true; }
         else if (citizenInt == 1) { citizen = false; }
@@ -112,9 +125,15 @@ public class SaveManager : MonoBehaviour
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability", Dylan_reliability);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", name);
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Gameover", isGameOver);
+        //GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Gameover", isGameOver);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Citizen", citizen);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", Hilda_conversation);
+    }
+
+    public void GameInitialization()    //게임 초기화
+    {
+        PlayerPrefs.DeleteAll();
+        Debug.Log("게임 데이터를 초기화합니다...");
     }
 }
