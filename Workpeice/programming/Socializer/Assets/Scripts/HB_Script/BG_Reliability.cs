@@ -11,15 +11,17 @@ public class BG_Reliability : MonoBehaviour
     float Frances_reliability;
     float Dylan_reliability;
     string SceneName;// 씬이름 구별
-
+    AudioSource audioSource;
     void Start()
     {
         Heather_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
         Dylan_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
-        SetBG();
+        Hilda_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
+        Frances_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
+        SetBGSound();
     }
 
-    public void SetBG()
+    public void SetBGSound()
     {
         SceneName = SceneManager.GetActiveScene().name;
 
@@ -29,16 +31,18 @@ public class BG_Reliability : MonoBehaviour
             if (Heather_reliability > 60)
             {
                 GameObject.Find("BG").transform.Find("집").gameObject.SetActive(true);
+                GameObject.Find("Audio").transform.Find("House1").GetComponent<AudioSource>().Play();
             }
             else if(Heather_reliability <= 60)
             {
                 GameObject.Find("BG").transform.Find("집_호감도 변경").gameObject.SetActive(true);
+                GameObject.Find("Audio").transform.Find("House2").GetComponent<AudioSource>().Play();
             }
         }
 
         else if (SceneName.Equals("Office"))
         {
-            if (Heather_reliability > 60)
+            if (Dylan_reliability > 60)
             {
                 GameObject.Find("BG").transform.Find("사무실").gameObject.SetActive(true);
             }
@@ -47,5 +51,30 @@ public class BG_Reliability : MonoBehaviour
                 GameObject.Find("BG").transform.Find("사무실_호감도 변경").gameObject.SetActive(true);
             }
         }
+        /*
+        else if (SceneName.Equals("Lobby"))
+        {
+            if (Dylan_reliability > 60)
+            {
+                GameObject.Find("BG").transform.Find("사무실").gameObject.SetActive(true);
+            }
+            else if (Heather_reliability <= 60)
+            {
+                GameObject.Find("BG").transform.Find("사무실_호감도 변경").gameObject.SetActive(true);
+            }
+        }
+        
+        else if (SceneName.Equals("AM"))
+        {
+            if (Dylan_reliability > 60)
+            {
+                GameObject.Find("BG").transform.Find("AM").gameObject.SetActive(true);
+            }
+            else if (Heather_reliability <= 60)
+            {
+                GameObject.Find("BG").transform.Find("사무실_호감도 변경").gameObject.SetActive(true);
+            }
+        }
+        */
     }
 }

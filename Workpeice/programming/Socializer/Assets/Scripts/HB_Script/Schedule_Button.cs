@@ -11,7 +11,7 @@ public class Schedule_Button : MonoBehaviour
     public int Evidenceonoff = 0;
     [SerializeField] Texture2D cursorImg1;
     [SerializeField] Texture2D cursorImg2;
-
+    NoticeUI _notice;
 
     public void Clicked()
     {
@@ -27,6 +27,7 @@ public class Schedule_Button : MonoBehaviour
                     GameObject.Find("StoryText").GetComponent<Text_Event>().Store();
                     GameObject.Find("SayDialog").GetComponent<DialogInput>().enabled = false;
                     GameObject.Find("SayDialog").transform.Find("Panel").transform.Find("Button").transform.Find("Evidence_btn").gameObject.SetActive(false);
+                    
                     break;
 
                 case 1:
@@ -38,12 +39,11 @@ public class Schedule_Button : MonoBehaviour
 
                     // DialogInput에서 dialogClickedFlag 가져옴, 관찰 끝내고 버튼 클릭 했을 때 대화가 넘어가는거 방지
                     GameObject.Find("SayDialog").GetComponent<DialogInput>().dialogClickedFlag = false;
-
                     GameObject.Find("SayDialog").transform.Find("Panel").transform.Find("Button").transform.Find("Evidence_btn").gameObject.SetActive(true);
                     break;                
             }
         }
-        
+        /*
         else if(Button.name == "Action_btn")
         {
             GameObject.Find("SayDialog").transform.Find("Panel").transform.Find("Button").transform.Find("Pass_btn").gameObject.SetActive(true);
@@ -51,7 +51,7 @@ public class Schedule_Button : MonoBehaviour
             GameObject.Find("SayDialog").transform.Find("Panel").transform.Find("Button").transform.Find("Kill_btn").gameObject.SetActive(true);
             Debug.Log("행동 버튼 클릭");
 
-        }
+        }*/
         else if (Button.name == "Evidence_btn")
         {
             switch (Evidenceonoff)
@@ -59,12 +59,10 @@ public class Schedule_Button : MonoBehaviour
                 case 0:
                     Debug.Log("증거 활성화");
                     Evidenceonoff = 1;
-                    GameObject.Find("SayDialog").transform.Find("Evidence_UI").gameObject.SetActive(true);
                     break;
                 case 1:
                     Debug.Log("증거 비활성화");
                     Evidenceonoff = 0;
-                    GameObject.Find("SayDialog").transform.Find("Evidence_UI").gameObject.SetActive(false);
                     break;
             }
             

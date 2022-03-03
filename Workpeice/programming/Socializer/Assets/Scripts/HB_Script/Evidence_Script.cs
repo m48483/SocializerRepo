@@ -12,12 +12,15 @@ public class Evidence_Script : MonoBehaviour
     Text_Event TE;
     Evidence Ev;
     public int flag = 0;
-    public int position = 0;
-    public int page = 0;
-    public int content_1 = 0;
-    public int content_2 = 1;
-    public int content_3 = 2;
+    public string message1, message2, message3;
     // Start is called before the first frame update
+
+    NoticeUI _notice;
+
+    void Awake()
+    {
+        _notice = FindObjectOfType<NoticeUI>();
+    }
 
     public void Activation()
     {
@@ -25,21 +28,15 @@ public class Evidence_Script : MonoBehaviour
         Txt2 = GameObject.Find("Text(2)").GetComponent<Text>();
         Txt3 = GameObject.Find("Text(3)").GetComponent<Text>();
         Ev = GameObject.Find("Evidence").GetComponent<Evidence>();
-
-        Debug.Log("시공");
     }
 
     public void E_onoff()
     {
+        message1 = GameObject.Find("Evidence").GetComponent<Evidence>().Saved_conversation[0];
+        message2 = GameObject.Find("Evidence").GetComponent<Evidence>().Saved_conversation[1];
+        message3 = GameObject.Find("Evidence").GetComponent<Evidence>().Saved_conversation[2];
         
-        if (flag == 0)
-        {
-            Activation();
-            flag = 1;           
-        }
-        Txt1.text = Ev.Saved_conversation[content_1];
-        Txt2.text = Ev.Saved_conversation[content_2];
-        Txt3.text = Ev.Saved_conversation[content_3];
+        _notice.SUB(message1, message2, message3);
     }
     
     //폐기
