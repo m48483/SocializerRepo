@@ -8,12 +8,18 @@ public class Fadeout : MonoBehaviour
     public Animator subani;
     SceneChange _sceneChange;
     PauseMenu _menu;
-    PopUpDebug _pudedug;
+    PopUpDebug _pudebug;
 
     //코루틴 딜레이 2개 미리 선언
     private WaitForSecondsRealtime _UIDelay1 = new WaitForSecondsRealtime(2.0f);
-    private WaitForSecondsRealtime _UIDelay2 = new WaitForSecondsRealtime(0.3f);
-    
+
+    private void Awake()
+    {
+        _sceneChange = FindObjectOfType<SceneChange>();
+        _menu = FindObjectOfType<PauseMenu>();
+        _pudebug = FindObjectOfType<PopUpDebug>();
+    }
+
     void Start()
     {
         subbox.SetActive(false);
@@ -34,10 +40,11 @@ public class Fadeout : MonoBehaviour
 
     IEnumerator InDelay()
     {
+        subbox.SetActive(true);
         Debug.Log("페이드 인");
         subani.SetBool("isOn", false);
         yield return _UIDelay1;
-        subbox.SetActive(false);
+        Invoke("safc", 2);
     }
 
     IEnumerator OutDelay()
@@ -46,6 +53,10 @@ public class Fadeout : MonoBehaviour
         subbox.SetActive(true);
         subani.SetBool("isOn", true);
         yield return _UIDelay1;
+    }
+    public void safc()
+    {
+        subbox.SetActive(false);
     }
 
 }

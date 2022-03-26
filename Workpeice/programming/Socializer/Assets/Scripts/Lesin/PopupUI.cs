@@ -121,19 +121,19 @@ public class PopupUI : MonoBehaviour
     public void OfficeButton() //오피스 버튼
     {
         StartCoroutine(SelectOut());
-        SceneManager.LoadScene("Office");
+        _sceneChange.OfficeFadeChange();
         SetButton();
     }
     public void AmButton() //AM 버튼
     {
         StartCoroutine(SelectOut());
-        SceneManager.LoadScene("Am");
+        _sceneChange.AmFadeChange();
         SetButton();
     }
     public void HouseButton() //집 버튼
     {
         StartCoroutine(SelectOut());
-        SceneManager.LoadScene("House");
+        _sceneChange.HouseFadeChange();
         SetButton();
     }
     public void LobbyButton() //로비 버튼
@@ -142,12 +142,12 @@ public class PopupUI : MonoBehaviour
         {
             StopAllCoroutines();
             SetButton();
-            _sceneChange.LobbyChange();
+            _sceneChange.LobbyFadeChange();
         }
         else
         {
             StartCoroutine(SelectOut());
-            _sceneChange.LobbyChange();
+            _sceneChange.LobbyFadeChange();
             SetButton();
         }
     }
