@@ -36,9 +36,9 @@ public class PauseMenu : MonoBehaviour
 
     public void MenuOff()  //취소버튼
     {
-        _msgrcv.PauseMenuOff();
-        _notice.Cancel();
         btn.interactable = true; // 버튼 클릭을 활성
+        _msgrcv.PauseMenuOff();
+        _notice.Cancel(); 
         _pudebug.MenuFActiveLog();
     }
 }
