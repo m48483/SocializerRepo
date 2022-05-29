@@ -1562,7 +1562,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 71420151
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1680,7 +1680,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.96906
     y: 73.09279
-    width: 72.8866
+    width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 575382131}
   selectedCommands:
-  - {fileID: 575382130}
+  - {fileID: 575382134}
   variables: []
   description: 
   stepPause: 0
@@ -2609,6 +2609,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1104239269}
   LastClickedWord: 
+  flag: 0
+  i: 0
 --- !u!114 &1104239272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2624,7 +2626,7 @@ MonoBehaviour:
   Conversation_text: {fileID: 0}
   Observation_Text: []
   str: []
-  separatorChar: 2e0021003f00
+  num: 0
 --- !u!1 &1110172993
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +3071,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1197968879
@@ -3462,6 +3464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Button: {fileID: 0}
   Actiononoff: 0
+  Evidenceonoff: 0
   cursorImg1: {fileID: 0}
   cursorImg2: {fileID: 0}
 --- !u!1 &1411337955
@@ -4479,6 +4482,7 @@ MonoBehaviour:
   nextClickDelay: 0
   cancelEnabled: 1
   ignoreMenuClicks: 1
+  dialogClickedFlag: 0
 --- !u!114 &1929731218
 MonoBehaviour:
   m_ObjectHideFlags: 0

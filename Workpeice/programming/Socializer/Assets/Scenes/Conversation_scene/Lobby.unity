@@ -309,7 +309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &292487116
 Transform:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &292487117
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -355,7 +355,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &292487118
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -383,7 +383,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &292487119
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -415,7 +415,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &292487120
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -443,7 +443,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &292487121
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -485,13 +485,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 331.58084
+    x: 332.64468
     y: 158.04895
     width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 41
+  itemId: 47
   blockName: "..._\uC120\uD0DD\uC9C0"
   description: 
   eventHandler: {fileID: 0}
@@ -862,7 +862,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 292487122}
   selectedCommands:
-  - {fileID: 292487119}
+  - {fileID: 292487117}
   variables:
   - {fileID: 292487132}
   description: 
@@ -1017,7 +1017,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 575382144}
   selectedCommands: []
   variables:
   - {fileID: 575382157}
@@ -3047,7 +3048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 575382132}
+  selectedFlowchart: {fileID: 292487136}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
