@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DontDestroyScript : MonoBehaviour
 {
     public static DontDestroyScript instance = null;
     OpenSliders openSliders;
+    public GameObject btn;
     void Awake()
     {
         openSliders = GetComponent<OpenSliders>();
@@ -26,8 +28,13 @@ public class DontDestroyScript : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Title")
         {
+            btn.SetActive(false);
             if (SceneManager.GetActiveScene().name != "name")
                 Destroy(gameObject);
+        }
+        else
+        {
+            btn.SetActive(true);
         }
     }
 }
