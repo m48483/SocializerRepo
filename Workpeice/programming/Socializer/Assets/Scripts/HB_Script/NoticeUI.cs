@@ -28,29 +28,35 @@ public class NoticeUI : MonoBehaviour
         subintext1.text = message1;
         subintext2.text = message2;
         subintext3.text = message3;
-        subbox.SetActive(false);
+        //subbox.SetActive(false);
         StopAllCoroutines();
-        StartCoroutine(SUBDelay());
-        f *= -1;
+
+        if(f==1)
+            StartCoroutine(SUBDelay1());
+        else if(f==-1)
+            StartCoroutine(SUBDelay2());
+
+        f = f * -1;
     }
 
     // 반복 되지 않게 하기 위해서 딜레이 설정
-    IEnumerator SUBDelay()
+    IEnumerator SUBDelay1()
     {
-        if (f == 1)
-        {
+
             subbox.SetActive(true);
             btn.SetActive(true);
             subani.SetBool("isOn", true);
             yield return _UIDelay1;
-        }
-        
-        else if (f == -1)
-        {
-            subani.SetBool("isOn", false);
-            btn.SetActive(false);
-            yield return _UIDelay2;
-            subbox.SetActive(false);
-        }
+
     }
+    IEnumerator SUBDelay2()
+    {
+
+        subani.SetBool("isOn", false);
+        btn.SetActive(false);
+        yield return _UIDelay2;
+        subbox.SetActive(false);
+
+    }
+
 }
