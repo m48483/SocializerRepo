@@ -51,7 +51,7 @@ public class SaveManager : MonoBehaviour
     public void GameSave()
     {
         Daily_schedule = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Daily_schedule");
-       
+
         Debug.Log("데이터를 저장합니다.");
         //isGameOver = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Gameover");
         citizen = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Citizen");
