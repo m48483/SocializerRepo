@@ -14,6 +14,10 @@ public class PopupUI : MonoBehaviour
     public GameObject am_button;
     public GameObject Lobby_button;
     public GameObject House_button;
+    public GameObject Lobbygo_button;
+    public GameObject move_button;
+
+
     SceneChange _sceneChange;
     PauseMenu _menu;
     PopUpDebug _pudedug;
@@ -79,6 +83,8 @@ public class PopupUI : MonoBehaviour
                 Lobby_button.SetActive(true);
                 House_button.SetActive(false);
                 am_button.SetActive(false);
+                Lobbygo_button.SetActive(false);
+                move_button.SetActive(true);
                 break;
             case 1://집
                 Lobby_button.SetActive(false);
@@ -123,6 +129,8 @@ public class PopupUI : MonoBehaviour
         StartCoroutine(SelectOut());
         _sceneChange.OfficeFadeChange();
         SetButton();
+        Lobbygo_button.SetActive(true);
+        move_button.SetActive(false);
     }
     public void AmButton() //AM 버튼
     {
@@ -141,15 +149,16 @@ public class PopupUI : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Daily_schedule")
         {
             StopAllCoroutines();
-            SetButton();
-            _sceneChange.LobbyFadeChange();
         }
         else
         {
             StartCoroutine(SelectOut());
-            _sceneChange.LobbyFadeChange();
-            SetButton();
         }
+        _sceneChange.LobbyFadeChange();
+        SetButton();
+        Lobbygo_button.SetActive(false);
+        move_button.SetActive(true);
+
     }
     public void SetButton()
     {

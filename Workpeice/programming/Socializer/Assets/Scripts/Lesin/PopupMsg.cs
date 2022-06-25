@@ -25,7 +25,7 @@ public class PopupMsg : MonoBehaviour
     public void PopLobbyGo()
     {
         btn.SetActive(true);
-        _notice1.SelectSUB(3, "로비로 이동합니다.");
+        _notice1.SelectSUB(0, "로비로 이동합니다.");
         _notice1.LobbyButton();
     }
     public void PopLobbyNo()
@@ -45,7 +45,7 @@ public class PopupMsg : MonoBehaviour
             Debug.Log("일과 종료 체크");            
             PopLobbyGo();
         }
-        else if (SceneManager.GetActiveScene().name == "Test_Lobby")
+        else if (SceneManager.GetActiveScene().name == "Lobby")
         {
             _notice1.SelectSUB(0, "어디로 이동하시겠습니까?");
         }

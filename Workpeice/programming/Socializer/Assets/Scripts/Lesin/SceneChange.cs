@@ -31,7 +31,7 @@ public class SceneChange : MonoBehaviour
     }
     public void LobbyChange()
     {
-        SceneManager.LoadScene("Test_Lobby");
+        SceneManager.LoadScene("Lobby");
         _fadeout.FadeIn();
 
     }    
@@ -88,14 +88,14 @@ public class SceneChange : MonoBehaviour
     public void Init_UiFadeChange()
     {
         SceneManager.LoadScene("Init_Ui");
-    }
+    }*/
 
     public void Init_UIFadeChange()
     {
         _fadeout.FadeOut();
         Invoke("Init_UI", 2);
     }
-    */
+    
 
     public void LobbyFadeChange()
     {

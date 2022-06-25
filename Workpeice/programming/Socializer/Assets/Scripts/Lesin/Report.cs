@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Report : MonoBehaviour
@@ -10,10 +11,23 @@ public class Report : MonoBehaviour
     SceneChange _sceneChange;
     bool rm = false;
 
+    public Text PassTxt;
+    public Text SpecialTxt;
+    public Text CitizenTxt;
+    public Text DieTxt;
+    public Text reactionistTxt;
+
     // Start is called before the first frame update
     void Awake()
     {
         _sceneChange = FindObjectOfType<SceneChange>();
+        /*
+        PassTxt = FindObjectOfType<pass>();
+        SpecialTxt = FindObjectOfType<special>();
+        CitizenTxt = FindObjectOfType<citizen>();
+        DieTxt = FindObjectOfType<reactionist>();
+        reactionistTxt = FindObjectOfType<die>();
+        */
     }
 
     void Start()
