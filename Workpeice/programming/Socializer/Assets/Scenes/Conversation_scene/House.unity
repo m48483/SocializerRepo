@@ -375,7 +375,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\uACFC\uAC70\uC5D0\uB3C4 \uC9C0\uAE08\uB3C4 \uC544\uC774\uC758 \uD589\uBCF5\uC744
     \uBC14\uB780\uB2E4. \uD5E4\uB354\uAC00 \uBAA8\uB4E0 \uAC83\uC744 \uB204\uB9AC\uBA74\uC11C
-    \uC0B4\uAE30\uB97C.\\\rn\uADF8\uAC83\uC774 \uACFC\uBD84\uD55C \uC695\uC2EC\uC77C\uC9C0\uB77C\uB3C4
+    \uC0B4\uAE30\uB97C.\n\uADF8\uAC83\uC774 \uACFC\uBD84\uD55C \uC695\uC2EC\uC77C\uC9C0\uB77C\uB3C4
     \uB0B4\uAC00 \uADF8\uB807\uAC8C \uB9CC\uB4E4 \uAC83\uC774\uB2E4."
   description: 
   character: {fileID: 1822042584}
@@ -404,9 +404,9 @@ MonoBehaviour:
   itemId: 10
   indentLevel: 0
   storyText: "\uD5E4\uB354\uB294 \uC804\uBCF4\uB2E4\uB294 \uB098\uC544\uC84C\uC9C0\uB9CC,
-    \uC5EC\uC804\uD788 \uAE30\uC6B4\uC744 \uCC28\uB9AC\uC9C0 \uBABB\uD558\uACE0 \uC788\uB2E4.\\\rn\uC608\uC804\uCC98\uB7FC
+    \uC5EC\uC804\uD788 \uAE30\uC6B4\uC744 \uCC28\uB9AC\uC9C0 \uBABB\uD558\uACE0 \uC788\uB2E4.\n\uC608\uC804\uCC98\uB7FC
     \uC9D1\uC774 \uC881\uC544\uC84C\uB2E4\uACE0 \uBD88\uD3C9\uC774\uB77C\uB3C4 \uD588\uC73C\uBA74
-    \uC2F6\uB2E4.\\\rn\uCC3D\uBC16\uC73C\uB85C \uC800 \uBA40\uB9AC \uBCF4\uC774\uB294
+    \uC2F6\uB2E4.\n\uCC3D\uBC16\uC73C\uB85C \uC800 \uBA40\uB9AC \uBCF4\uC774\uB294
     \uBE48\uBBFC\uCD0C\uC744 \uB0B4\uB824\uB2E4\uBCF4\uBA70 \uC791\uACE0 \uB530\uB73B\uD55C
     \uC544\uC774\uC758 \uC190\uC744 \uC950\uC5C8\uB2E4."
   description: 
@@ -451,9 +451,9 @@ MonoBehaviour:
   itemId: 9
   indentLevel: 0
   storyText: "\uBCC4\uB2E4\uB978 \uD2B9\uC0C9\uC774 \uC5C6\uB294 \uD3C9\uBC94\uD55C
-    2\uACC4\uCE35 \uC2DC\uBBFC\uB4E4\uC758 \uC9D1\uC774\uB2E4.\\\rn\uB2E8 \uD558\uB098\uC758
+    2\uACC4\uCE35 \uC2DC\uBBFC\uB4E4\uC758 \uC9D1\uC774\uB2E4.\n\uB2E8 \uD558\uB098\uC758
     \uD2B9\uC0C9\uC774 \uC788\uB2E4\uBA74 \uC5D0\uBC84\uD2B8\uC758 \uBE48\uBBFC\uCD0C\uC774
-    \uB0B4\uB824\uB2E4\uBCF4\uC778\uB2E4\uB294 \uAC83.\\\rn\uADF8\uACF3\uC5D0\uC11C
+    \uB0B4\uB824\uB2E4\uBCF4\uC778\uB2E4\uB294 \uAC83.\n\uADF8\uACF3\uC5D0\uC11C
     \uD558\uB8E8\uB97C \uC5F0\uBA85\uD558\uB358 \uB0B4\uAC00 \uC9C0\uAE08\uC740 \uADF8\uACF3\uC744
     \uB0B4\uB824\uB2E4\uBCF4\uACE0 \uC788\uB2E4\uB2C8. \uAE30\uBD84\uC774 \uBB18\uD588\uB2E4."
   description: 
@@ -497,8 +497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 64.969055
-    y: 70.12372
+    x: 65.969055
+    y: 77.12372
     width: 97
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -536,8 +536,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 61275693}
+  selectedCommands:
+  - {fileID: 61275688}
   variables:
   - {fileID: 61275690}
   description: 
@@ -1266,7 +1268,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &149343363
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2101,7 +2103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329484749}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 568bd76b090486642af4ab97bd78751e, type: 3}
   m_Name: 
@@ -2772,7 +2774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1807695770}
+  selectedFlowchart: {fileID: 61275694}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -2942,7 +2944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &748598967
 Transform:
   m_ObjectHideFlags: 0
@@ -4478,7 +4480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &883906094
 Transform:
   m_ObjectHideFlags: 0
@@ -4510,7 +4512,7 @@ MonoBehaviour:
   storyText: "\uB124\uAC00 \uBCC4 \uBCFC \uC77C \uC5C6\uB294 \uC0AC\uB78C\uC774\uBA74
     \uB098\uB294 \uC5B4\uB5A4 \uC0AC\uB78C\uC778 \uAC83\uC77C\uAE4C....\n\uC9C0\uB0B4\uB294
     \uC9D1, \uC785\uACE0 \uC788\uB294 \uC637, \uC74C\uC2DD, \uC0AC\uB78C\uB4E4\uC758
-    \uC2DC\uC120 \uBAA8\uB4E0 \uAC83\uC774 \uBC14\uB00C\uC5C8\uC9C0\uB9CC \uC5EC\uC804\uD788
+    \uC2DC\uC120 \uBAA8\uB4E0 \uAC83\uC774 \uBC14\uB00C\uC5C8\uC9C0\uB9CC \n\uC5EC\uC804\uD788
     \uB098\uB294 \uADF8 \uC5B4\uB514\uC5D0\uB3C4 \uB07C\uC9C0 \uBABB\uD55C\uB2E4.\n\uAD6C\uC5ED\uC9C8\uC774
     \uC62C\uB77C\uC654\uB2E4."
   description: 
@@ -4629,8 +4631,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 59.969055
-    y: 74.12372
+    x: 67.969055
+    y: 72.12372
     width: 99
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4673,7 +4675,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 883906100}
   selectedCommands:
-  - {fileID: 883906103}
+  - {fileID: 883906098}
   variables:
   - {fileID: 883906097}
   description: 
@@ -5364,7 +5366,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 441.7216
     y: 200.52065
-    width: 74
+    width: 74.74226
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5558,7 +5560,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 594.4741
     y: 120.89694
-    width: 74
+    width: 74.74226
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5587,7 +5589,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 596.0412
     y: 83.14433
-    width: 74
+    width: 74.74226
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5735,7 +5737,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 439.92783
     y: 60.195854
-    width: 113
+    width: 114.94845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5836,9 +5838,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 64.969055
+    x: 70.1237
     y: 70.12372
-    width: 74
+    width: 74.74226
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5863,11 +5865,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 224.27841, y: 75.479355}
+  scrollPos: {x: 149.73195, y: -26.417566}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
-  zoom: 1
+  zoom: 0.97
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -5875,9 +5877,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1014830417}
-  selectedCommands:
-  - {fileID: 1014830405}
+  - {fileID: 1014830411}
+  selectedCommands: []
   variables:
   - {fileID: 1014830404}
   description: 
@@ -6461,7 +6462,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 263.7216
     y: 66.520645
-    width: 98
+    width: 99.484535
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10093,8 +10094,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 596.0412
-    y: 83.14433
+    x: 597.0412
+    y: 82.14433
     width: 74
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -10322,7 +10323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 224.27841, y: 75.479355}
+  scrollPos: {x: 145.27841, y: 41.479355}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
@@ -10334,9 +10335,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1469496063}
+  - {fileID: 1469496058}
   selectedCommands:
-  - {fileID: 1469496070}
+  - {fileID: 1469496040}
   variables:
   - {fileID: 1469496052}
   description: 
@@ -12718,7 +12719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1807695742
 Transform:
   m_ObjectHideFlags: 0
@@ -12735,7 +12736,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1807695743
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12764,7 +12765,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695744
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12792,7 +12793,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695745
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12822,7 +12823,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695746
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12850,7 +12851,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695747
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12880,7 +12881,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695748
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12911,7 +12912,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695749
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12940,7 +12941,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695750
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12967,7 +12968,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695751
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -12997,7 +12998,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695752
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13027,7 +13028,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695753
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13056,7 +13057,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695754
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13086,7 +13087,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695755
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13115,7 +13116,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695756
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13144,7 +13145,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695757
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13171,7 +13172,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695758
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13198,7 +13199,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695759
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13225,7 +13226,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695760
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13256,7 +13257,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695761
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13286,7 +13287,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695762
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13314,7 +13315,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695763
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13341,7 +13342,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695764
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13368,7 +13369,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1807695765
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13535,7 +13536,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1807695769}
   selectedCommands:
-  - {fileID: 1807695744}
+  - {fileID: 1807695746}
   variables:
   - {fileID: 1807695766}
   description: 
