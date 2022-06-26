@@ -7,6 +7,8 @@ public class Scene_Change : MonoBehaviour
 {
     Random rand = new Random();
 
+
+    // 폐기
     public void OfficeChange()
     {
         SceneManager.LoadScene("Office");
@@ -25,5 +27,12 @@ public class Scene_Change : MonoBehaviour
     public void AMChange()
     {
         SceneManager.LoadScene("AM");
+    }
+    //
+
+
+    public void ReportScene()
+    {
+        SceneManager.LoadScene("Report");
     }
 }

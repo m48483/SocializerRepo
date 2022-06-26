@@ -44,11 +44,11 @@ public class BG_Reliability : MonoBehaviour
         {
             if (Dylan_reliability > 60)
             {
-                GameObject.Find("BG").transform.Find("사무실").gameObject.SetActive(true);
+                GameObject.Find("BG").transform.Find("사무실_호감도 변경").gameObject.SetActive(true);
             }
             else if (Heather_reliability <= 60)
             {
-                GameObject.Find("BG").transform.Find("사무실_호감도 변경").gameObject.SetActive(true);
+                GameObject.Find("BG").transform.Find("사무실").gameObject.SetActive(true);
             }
         }
         /*

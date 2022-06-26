@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Fungus;
 
 public class PopupMsg : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PopupMsg : MonoBehaviour
     MsgReceive _msgrcv;
     PauseMenu _menu;
     public GameObject btn;
-    
+    public bool DailyScheduleCheck;
     
     public static bool MenuOn = false;
     public static bool MenuOff = true; //평소에 트루, 메세지 들어오면 false로 변경되고, 메뉴종료 함수 호출시 false로 변경과 함께 메세지 전달 
@@ -21,6 +22,13 @@ public class PopupMsg : MonoBehaviour
     public void PopupMenu()
     {
         MenuOn = true;
+    }
+    public void ScheduleCheck()
+    {
+        if (DailyScheduleCheck)
+            PopLobbyGo();
+        else
+            PopLobbyNo();
     }
     public void PopLobbyGo()
     {
@@ -76,6 +84,7 @@ public class PopupMsg : MonoBehaviour
 
     void Update()
     {
+        DailyScheduleCheck = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Daily_schedule");
         if (MenuOn == true) //메뉴를 키도록 하는 부분
         {
             MenuOn = false;

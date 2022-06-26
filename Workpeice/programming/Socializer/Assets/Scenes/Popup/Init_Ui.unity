@@ -553,7 +553,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1130426476}
-        m_MethodName: PopMoveGo
+        m_MethodName: ScheduleCheck
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 537a62b6be6e0464db7051373b65a7ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df07a36ad96fa2b4b97731103715b639, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1264,6 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1865755958}
+  DailyScheduleCheck: 0
 --- !u!1 &1194063363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,7 +2825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1966639252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2917,7 +2918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f901fb3d6bc53d148a6736f9dea5d7eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d3c5d626bafb3542a438aae137e3eef, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3076,6 +3077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 1865755958}
+  DailyScheduleCheck: 0
 --- !u!1001 &6684618814538774197
 PrefabInstance:
   m_ObjectHideFlags: 0

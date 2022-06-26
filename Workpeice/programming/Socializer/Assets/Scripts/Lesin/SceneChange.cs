@@ -31,23 +31,26 @@ public class SceneChange : MonoBehaviour
     }
     public void LobbyChange()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("Variables");
+        SceneManager.LoadScene("Lobby", LoadSceneMode.Additive);
         _fadeout.FadeIn();
 
     }    
     public void OfficeChange()
     {
-        SceneManager.LoadScene("Office");
+        SceneManager.LoadScene("Variables");
+        SceneManager.LoadScene("Office", LoadSceneMode.Additive);
         _fadeout.FadeIn();
     }
     public void HouseChange()
     {
-        SceneManager.LoadScene("House");
+        SceneManager.LoadScene("Variables");
+        SceneManager.LoadScene("House", LoadSceneMode.Additive);
         _fadeout.FadeIn();
     }
     public void AmChange()
     {
-        SceneManager.LoadScene("AM");
+        SceneManager.LoadScene("AM", LoadSceneMode.Additive);
         _fadeout.FadeIn();
     }
 
@@ -58,7 +61,8 @@ public class SceneChange : MonoBehaviour
 
     public void Daily_scheduleChange()
     {
-        SceneManager.LoadScene("Daily_schedule");
+        SceneManager.LoadScene("Variables");
+        SceneManager.LoadScene("Daily_schedule", LoadSceneMode.Additive);
         _fadeout.FadeIn();
     }
 

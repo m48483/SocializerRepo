@@ -7,15 +7,19 @@ using UnityEngine;
 public class RandomNPC_Count : MonoBehaviour
 {
     Reactionary_Check RC;
-    int Pass;
-    int Arrest;
-    int kill;
+    public int Pass;
+    public int Arrest;
+    public int kill;
 
     void Start()
     {
         Pass = 0;
         Arrest = 0;
         kill = 0;
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Pass", Pass);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Arrest", Arrest);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("kill", kill);
+        //Daily_Schdule로 이동 시 초기화
     }
 
     public void NPC_Pass()

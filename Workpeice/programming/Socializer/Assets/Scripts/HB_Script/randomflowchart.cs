@@ -48,14 +48,14 @@ public class randomflowchart : MonoBehaviour
         if (reliability >= 60 && reliability <= 100)
         {
             Debug.Log("실행");
-            int rand = Random.Range(1, 5);
+            int rand = Random.Range(1, 6);
             GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart"+ rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Morethan60", SceneName);
 
         }
         else if (reliability >= 0 && reliability < 60)
         {
-            int rand = Random.Range(6, 9);
+            int rand = Random.Range(6, 10);
             GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Lessthan60", SceneName);
         }
@@ -66,13 +66,13 @@ public class randomflowchart : MonoBehaviour
         //힐다, 딜런은 호감도에 따른 대화 변경이 아닌 혁명루트에 따른 대화 변화
         if (Revolutionary_route == false)
         {
-            int rand = Random.Range(1, 3);
+            int rand = Random.Range(1, 8);
             GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
         }
         else if (Revolutionary_route == true)
         {
-            int rand = Random.Range(4, 6);
+            int rand = Random.Range(8, 10);// 대사 추가시 수정 요구
             GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
         }
@@ -83,13 +83,13 @@ public class randomflowchart : MonoBehaviour
         //힐다, 딜런은 호감도에 따른 대화 변경이 아닌 혁명루트에 따른 대화 변화
         if (Revolutionary_route == false)
         {
-            int rand = 1;
+            int rand = Random.Range(1, 6);
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
         }
         else if (Revolutionary_route == true)
         {
-            int rand = Random.Range(6, 9);
+            int rand = Random.Range(6, 10);
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
         }
@@ -99,15 +99,16 @@ public class randomflowchart : MonoBehaviour
     public void Frances_Reliability_Scene()
     {
         // 헤더, 프랜시스는 신뢰도에 따라 대화 변화가 이뤄짐
-        if (reliability >= 80 && reliability <= 100)
+        //if (reliability >= 80 && reliability <= 100)
+        if (Revolutionary_route == false)
         {
-            int rand = Random.Range(1, 3);
+            int rand = Random.Range(1, 8);
             GameObject.Find("Flowchart_").transform.Find("Morethan80").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Morethan80", SceneName);
         }
-        else if (reliability >= 0 && reliability < 80)
+        else if (Revolutionary_route == true)
         {
-            int rand = Random.Range(4, 6);
+            int rand = Random.Range(8, 10);// 혁명 루트 추가시 수정 요구
             GameObject.Find("Flowchart_").transform.Find("Lessthan80").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Lessthan80", SceneName);
         }

@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &47922827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &265102180
 Transform:
   m_ObjectHideFlags: 0
@@ -620,8 +620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 62.876274
-    y: 73.09279
+    x: 63.907204
+    y: 71.03093
     width: 135.56702
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -664,8 +664,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 265102188}
-  selectedCommands:
-  - {fileID: 265102181}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2490,8 +2489,6 @@ GameObject:
   - component: {fileID: 563632971}
   - component: {fileID: 563632970}
   - component: {fileID: 563632969}
-  - component: {fileID: 563632968}
-  - component: {fileID: 563632967}
   - component: {fileID: 563632966}
   - component: {fileID: 563632965}
   - component: {fileID: 563632964}
@@ -2502,6 +2499,10 @@ GameObject:
   - component: {fileID: 563632959}
   - component: {fileID: 563632957}
   - component: {fileID: 563632956}
+  - component: {fileID: 563632983}
+  - component: {fileID: 563632968}
+  - component: {fileID: 563632967}
+  - component: {fileID: 563632958}
   m_Layer: 0
   m_Name: Flowchart2
   m_TagString: Untagged
@@ -2583,6 +2584,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &563632958
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563632954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  targetObject: {fileID: 1964870670}
+  methodName: Negative_conversation
+  delay: 0
 --- !u!114 &563632959
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -3203,10 +3221,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 41
   indentLevel: 0
   targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  methodName: ClickOn
   delay: 0
 --- !u!114 &563632968
 MonoBehaviour:
@@ -3220,10 +3238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
+  itemId: 39
   indentLevel: 0
-  targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  targetObject: {fileID: 1964870670}
+  methodName: Positive_conversation
   delay: 0
 --- !u!114 &563632969
 MonoBehaviour:
@@ -3278,8 +3296,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 563632965}
   - {fileID: 563632967}
+  - {fileID: 563632958}
+  - {fileID: 563632965}
   suppressAllAutoSelections: 0
 --- !u!114 &563632971
 MonoBehaviour:
@@ -3295,7 +3314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 497.0412
+    x: 495.90485
     y: 38.10075
     width: 75
     height: 40
@@ -3306,10 +3325,11 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 563632983}
+  - {fileID: 563632968}
   - {fileID: 563632969}
   - {fileID: 563632957}
   - {fileID: 563632956}
-  - {fileID: 563632968}
   suppressAllAutoSelections: 0
 --- !u!114 &563632972
 MonoBehaviour:
@@ -3393,7 +3413,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -3418,7 +3438,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -3507,7 +3527,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758867042341307}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -3580,7 +3600,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 563632977}
+  - {fileID: 563632970}
   selectedCommands: []
   variables:
   - {fileID: 563632964}
@@ -3594,6 +3614,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &563632983
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563632954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  targetObject: {fileID: 1839884347}
+  methodName: ClickOn
+  delay: 0
 --- !u!1 &575382129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,7 +3832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &648047865
 Transform:
   m_ObjectHideFlags: 0
@@ -3951,7 +3988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1312618441}
+  selectedFlowchart: {fileID: 723239589}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -3989,8 +4026,6 @@ GameObject:
   - component: {fileID: 723239578}
   - component: {fileID: 723239577}
   - component: {fileID: 723239576}
-  - component: {fileID: 723239575}
-  - component: {fileID: 723239574}
   - component: {fileID: 723239573}
   - component: {fileID: 723239572}
   - component: {fileID: 723239571}
@@ -4000,6 +4035,10 @@ GameObject:
   - component: {fileID: 723239567}
   - component: {fileID: 723239566}
   - component: {fileID: 723239564}
+  - component: {fileID: 723239590}
+  - component: {fileID: 723239575}
+  - component: {fileID: 723239574}
+  - component: {fileID: 723239565}
   m_Layer: 0
   m_Name: Flowchart4
   m_TagString: Untagged
@@ -4052,6 +4091,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &723239565
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723239562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  targetObject: {fileID: 1964870670}
+  methodName: Negative_conversation
+  delay: 0
 --- !u!114 &723239566
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4672,10 +4728,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 41
   indentLevel: 0
   targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  methodName: ClickOn
   delay: 0
 --- !u!114 &723239575
 MonoBehaviour:
@@ -4689,10 +4745,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
+  itemId: 39
   indentLevel: 0
-  targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  targetObject: {fileID: 1964870670}
+  methodName: Positive_conversation
   delay: 0
 --- !u!114 &723239576
 MonoBehaviour:
@@ -4749,8 +4805,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 723239572}
   - {fileID: 723239574}
+  - {fileID: 723239565}
+  - {fileID: 723239572}
   suppressAllAutoSelections: 0
 --- !u!114 &723239578
 MonoBehaviour:
@@ -4777,9 +4834,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 723239590}
+  - {fileID: 723239575}
   - {fileID: 723239576}
   - {fileID: 723239564}
-  - {fileID: 723239575}
   suppressAllAutoSelections: 0
 --- !u!114 &723239579
 MonoBehaviour:
@@ -4863,7 +4921,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -4888,7 +4946,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -4977,7 +5035,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758867042341307}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -5064,6 +5122,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &723239590
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723239562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  targetObject: {fileID: 1839884347}
+  methodName: ClickOn
+  delay: 0
 --- !u!1 &930800593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,8 +5162,6 @@ GameObject:
   - component: {fileID: 930800609}
   - component: {fileID: 930800608}
   - component: {fileID: 930800607}
-  - component: {fileID: 930800606}
-  - component: {fileID: 930800605}
   - component: {fileID: 930800604}
   - component: {fileID: 930800603}
   - component: {fileID: 930800602}
@@ -5098,6 +5171,10 @@ GameObject:
   - component: {fileID: 930800598}
   - component: {fileID: 930800597}
   - component: {fileID: 930800595}
+  - component: {fileID: 930800621}
+  - component: {fileID: 930800606}
+  - component: {fileID: 930800605}
+  - component: {fileID: 930800596}
   m_Layer: 0
   m_Name: Flowchart3
   m_TagString: Untagged
@@ -5147,6 +5224,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &930800596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930800593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  targetObject: {fileID: 1964870670}
+  methodName: Negative_conversation
+  delay: 0
 --- !u!114 &930800597
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5756,7 +5850,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &930800605
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5766,10 +5860,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 41
   indentLevel: 0
   targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  methodName: ClickOn
   delay: 0
 --- !u!114 &930800606
 MonoBehaviour:
@@ -5783,10 +5877,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
+  itemId: 39
   indentLevel: 0
-  targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  targetObject: {fileID: 1964870670}
+  methodName: Positive_conversation
   delay: 0
 --- !u!114 &930800607
 MonoBehaviour:
@@ -5844,8 +5938,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 930800603}
   - {fileID: 930800605}
+  - {fileID: 930800596}
+  - {fileID: 930800603}
   suppressAllAutoSelections: 0
 --- !u!114 &930800609
 MonoBehaviour:
@@ -5872,9 +5967,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 930800621}
+  - {fileID: 930800606}
   - {fileID: 930800607}
   - {fileID: 930800595}
-  - {fileID: 930800606}
   suppressAllAutoSelections: 0
 --- !u!114 &930800610
 MonoBehaviour:
@@ -5958,7 +6054,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -5983,7 +6079,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -6072,7 +6168,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758867042341307}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -6145,8 +6241,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 930800615}
-  selectedCommands: []
+  - {fileID: 930800608}
+  selectedCommands:
+  - {fileID: 930800603}
   variables:
   - {fileID: 930800602}
   description: 
@@ -6159,6 +6256,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &930800621
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930800593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  targetObject: {fileID: 1839884347}
+  methodName: ClickOn
+  delay: 0
 --- !u!1 &1033555449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6182,8 +6296,6 @@ GameObject:
   - component: {fileID: 1033555465}
   - component: {fileID: 1033555464}
   - component: {fileID: 1033555463}
-  - component: {fileID: 1033555462}
-  - component: {fileID: 1033555461}
   - component: {fileID: 1033555460}
   - component: {fileID: 1033555459}
   - component: {fileID: 1033555458}
@@ -6195,6 +6307,10 @@ GameObject:
   - component: {fileID: 1033555451}
   - component: {fileID: 1033555478}
   - component: {fileID: 1033555477}
+  - component: {fileID: 1033555479}
+  - component: {fileID: 1033555462}
+  - component: {fileID: 1033555461}
+  - component: {fileID: 1033555452}
   m_Layer: 0
   m_Name: Flowchart5
   m_TagString: Untagged
@@ -6246,6 +6362,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1033555452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033555449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  targetObject: {fileID: 1964870670}
+  methodName: Negative_conversation
+  delay: 0
 --- !u!114 &1033555453
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6855,7 +6988,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1033555461
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6865,14 +6998,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 40
   indentLevel: 0
   targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  methodName: ClickOn
   delay: 0
 --- !u!114 &1033555462
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6882,10 +7015,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
+  itemId: 39
   indentLevel: 0
-  targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  targetObject: {fileID: 1964870670}
+  methodName: Positive_conversation
   delay: 0
 --- !u!114 &1033555463
 MonoBehaviour:
@@ -6943,8 +7076,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1033555459}
   - {fileID: 1033555461}
+  - {fileID: 1033555452}
+  - {fileID: 1033555459}
   suppressAllAutoSelections: 0
 --- !u!114 &1033555465
 MonoBehaviour:
@@ -6971,11 +7105,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1033555479}
+  - {fileID: 1033555462}
   - {fileID: 1033555463}
   - {fileID: 1033555451}
   - {fileID: 1033555478}
   - {fileID: 1033555477}
-  - {fileID: 1033555462}
   suppressAllAutoSelections: 0
 --- !u!114 &1033555466
 MonoBehaviour:
@@ -7059,7 +7194,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -7084,7 +7219,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -7173,7 +7308,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758867042341307}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -7246,9 +7381,10 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1033555465}
+  - {fileID: 1033555464}
   selectedCommands:
-  - {fileID: 1033555477}
+  - {fileID: 1033555461}
+  - {fileID: 1033555452}
   variables:
   - {fileID: 1033555458}
   description: 
@@ -7320,6 +7456,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1033555479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033555449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  targetObject: {fileID: 1839884347}
+  methodName: ClickOn
+  delay: 0
 --- !u!1 &1039939033
 GameObject:
   m_ObjectHideFlags: 0
@@ -8356,6 +8509,80 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!1001 &1519218637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2151897929492555760, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_Name
+      value: LoadVar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555760, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.7194676
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7200758
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.952217
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151897929492555775, guid: dbe1fd35cf157df4ea1053dc006b5d02,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbe1fd35cf157df4ea1053dc006b5d02, type: 3}
 --- !u!1 &1622013540
 GameObject:
   m_ObjectHideFlags: 0
@@ -8379,8 +8606,6 @@ GameObject:
   - component: {fileID: 1622013555}
   - component: {fileID: 1622013554}
   - component: {fileID: 1622013553}
-  - component: {fileID: 1622013552}
-  - component: {fileID: 1622013551}
   - component: {fileID: 1622013550}
   - component: {fileID: 1622013549}
   - component: {fileID: 1622013548}
@@ -8390,6 +8615,10 @@ GameObject:
   - component: {fileID: 1622013544}
   - component: {fileID: 1622013543}
   - component: {fileID: 1622013567}
+  - component: {fileID: 1622013568}
+  - component: {fileID: 1622013552}
+  - component: {fileID: 1622013551}
+  - component: {fileID: 1622013542}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -8411,6 +8640,23 @@ Transform:
   m_Father: {fileID: 444513718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622013542
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622013540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  targetObject: {fileID: 1964870670}
+  methodName: Negative_conversation
+  delay: 0
 --- !u!114 &1622013543
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9030,10 +9276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 41
   indentLevel: 0
   targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  methodName: ClickOn
   delay: 0
 --- !u!114 &1622013552
 MonoBehaviour:
@@ -9047,10 +9293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
+  itemId: 38
   indentLevel: 0
-  targetObject: {fileID: 1839884347}
-  methodName: Click_D
+  targetObject: {fileID: 1964870670}
+  methodName: Positive_conversation
   delay: 0
 --- !u!114 &1622013553
 MonoBehaviour:
@@ -9112,8 +9358,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1622013549}
   - {fileID: 1622013551}
+  - {fileID: 1622013542}
+  - {fileID: 1622013549}
   suppressAllAutoSelections: 0
 --- !u!114 &1622013555
 MonoBehaviour:
@@ -9140,9 +9387,10 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 1622013568}
+  - {fileID: 1622013552}
   - {fileID: 1622013553}
   - {fileID: 1622013567}
-  - {fileID: 1622013552}
   suppressAllAutoSelections: 0
 --- !u!114 &1622013556
 MonoBehaviour:
@@ -9226,7 +9474,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -9251,7 +9499,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758868229421507}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -9269,7 +9517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 357.9714
+    x: 359.10776
     y: 71.09042
     width: 115.90908
     height: 40
@@ -9340,7 +9588,7 @@ MonoBehaviour:
   interactable:
     booleanRef: {fileID: 0}
     booleanVal: 1
-  setMenuDialog: {fileID: 0}
+  setMenuDialog: {fileID: 3098758867042341307}
   hideThisOption:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -9457,6 +9705,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1622013568
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622013540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 37
+  indentLevel: 0
+  targetObject: {fileID: 1839884347}
+  methodName: ClickOn
+  delay: 0
 --- !u!1 &1628488716
 GameObject:
   m_ObjectHideFlags: 0
@@ -9623,7 +9888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1706047465
 Transform:
   m_ObjectHideFlags: 0
@@ -10404,6 +10669,7 @@ GameObject:
   - component: {fileID: 1763734426}
   - component: {fileID: 1763734425}
   - component: {fileID: 1763734424}
+  - component: {fileID: 1763734427}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10476,6 +10742,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1763734427
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763734423}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 96f1632066fc3de48b156a2b9ec97b4c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1839127781
 GameObject:
   m_ObjectHideFlags: 0
@@ -11098,10 +11460,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1931632644}
-  selectedCommands:
-  - {fileID: 1931632634}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 1931632640}
   description: 
@@ -11217,7 +11577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2143208838
 Transform:
   m_ObjectHideFlags: 0
@@ -11664,7 +12024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3098758867042341305
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12420,7 +12780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3098758868000893621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13063,8 +13423,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

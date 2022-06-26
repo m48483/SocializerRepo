@@ -61,7 +61,7 @@ public class Reliability : MonoBehaviour
         }
     }
 
-    public void Nagative_conversation()
+    public void Negative_conversation()
     {
         SceneName = SceneManager.GetActiveScene().name;
 
@@ -96,4 +96,14 @@ public class Reliability : MonoBehaviour
         }
     }
 
+    public void Day3Positive()
+    {
+        Heather_reliability = Heather_reliability + 5;
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
+    }
+    public void Day3Negative()
+    {
+        Heather_reliability = Heather_reliability - 5;
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
+    }
 }

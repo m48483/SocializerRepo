@@ -6,6 +6,7 @@ using Fungus;
 public class RandomNPC : MonoBehaviour
 {
     TestVar testVar;
+    public GameObject callNPC;
     int day;             //일차
     int reactionaryNPC;    //반동분자
     int citizen;        //일반 시민
@@ -30,7 +31,7 @@ public class RandomNPC : MonoBehaviour
             citizen = 1;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
-
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day >= 8 && day < 13)      // 8~12일차
         {

@@ -24,46 +24,41 @@ public class Reactionarymolecule_Check : MonoBehaviour
 
     public void Pass_Check()
     {
-        if(Reactionary_molecule == true)
+        // 반동분자 라면 호감도 감소
+        Hilda_reliability -= 5;
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
+        if (Revolutionary_route == true)
         {
-            Hilda_reliability -= 5;
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
-            if (Revolutionary_route == true)
-            {
-                Frances_reliability += 4;
-                GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
-            }
+            Frances_reliability += 4;
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
+        }
+
+    }
+    public void Arrest_Citizen()
+    {
+        Hilda_reliability -= (float)0.5;
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
+        if (Revolutionary_route == true)
+        {
+            Frances_reliability -= (float)0.5;
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
         }
     }
-    public void Arrest_Check()
+    public void Arrest_ReactionaryNPC()
     {
-        if (Reactionary_molecule == true)
-        {
-            Hilda_reliability += (float)0.5;
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
-        }
-        else if (Reactionary_molecule == false)
-        {
-            Hilda_reliability -= (float)0.5;
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
-            if (Revolutionary_route == true)
-            {
-                Frances_reliability -= (float)0.5;
-                GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
-            }
-        }
+        Hilda_reliability += (float)0.5;
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
     }
     public void Kill_Check()
     {
-        if (Reactionary_molecule == true)
+        //반동분자 사살, 시민 사살시에는 호감도 변경 x??
+        Hilda_reliability += 3;
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
+        if (Revolutionary_route == true)
         {
-            Hilda_reliability += 3;
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
-            if (Revolutionary_route == true)
-            {
-                Frances_reliability -= 1;
-                GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
-            }
+            Frances_reliability -= 1;
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
         }
+
     }
 }
