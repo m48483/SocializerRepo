@@ -23,9 +23,17 @@ public class PopupSystem : MonoBehaviour
         Action onClickYes,
         Action onClickNo)
     {
-        this.onClickYes = onClickYes;
-        this.onClickNo = onClickNo;
-        popup.SetActive(true);
+        if (!PlayerPrefs.HasKey("Day"))
+        {
+            SceneManager.LoadScene("name");
+
+        }
+        else
+        {
+            this.onClickYes = onClickYes;
+            this.onClickNo = onClickNo;
+            popup.SetActive(true);
+        }
     }
 
     public void OnClickYes()
