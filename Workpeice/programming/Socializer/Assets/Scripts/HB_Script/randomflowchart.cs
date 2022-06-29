@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 // 신뢰도에 따른 Flowchart 호출 스크립트
 public class randomflowchart : MonoBehaviour
 {
-    Conversation_flag cf;
     float reliability;// 호감도에 따른 다른 대화 호출
     string SceneName;// 씬이름 구별
     bool Revolutionary_route;
@@ -16,6 +15,7 @@ public class randomflowchart : MonoBehaviour
     void Start()
     {
         SceneName = SceneManager.GetActiveScene().name;
+        Debug.Log("randomflowchart 스크립트, 장소 : " + SceneName);
 
         Revolutionary_route = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route");
         if (SceneName.Equals("House"))
@@ -26,6 +26,7 @@ public class randomflowchart : MonoBehaviour
         else if (SceneName.Equals("Lobby"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
+            Hilda_Reliability_Scene();
         }
         else if (SceneName.Equals("Office"))
         {
@@ -67,6 +68,19 @@ public class randomflowchart : MonoBehaviour
         if (Revolutionary_route == false)
         {
             int rand = Random.Range(1, 8);
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
+        }
+        else if (Revolutionary_route == true)
+        {
+            int rand = Random.Range(8, 10);// 대사 추가시 수정 요구
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
+        }
+        /*
+        if (Revolutionary_route == false)
+        {
+            int rand = Random.Range(1, 8);
             GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
         }
@@ -75,7 +89,7 @@ public class randomflowchart : MonoBehaviour
             int rand = Random.Range(8, 10);// 대사 추가시 수정 요구
             GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
-        }
+        }*/
     }
     // 딜런 Flowchart 호출
     public void Dylan_Reliability_Scene()

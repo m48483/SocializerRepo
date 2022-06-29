@@ -22,9 +22,13 @@ public class RandomNPC : MonoBehaviour
     void Start()
     {
         day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");
+
+        GameObject.Find("Variables").GetComponent<Conversation_flag>().Flag_Initialization();
+        //하루 시작마다 메인 NPC와의 대화 초기화
+
         //reactionaryNPC = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("ReactionaryNPC");
         //citizen = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Citizen");
-        
+
         if (day >= 1 && day < 6)            // 1~5일차
         {
             reactionaryNPC = 1;

@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Fungus;
 
 public class NickName : MonoBehaviour
 {
@@ -42,12 +43,14 @@ public class NickName : MonoBehaviour
             Debug.Log("이름을 입력하지 않음 초기값으로 실행");
             PlayerPrefs.SetString("Name", "아스트리드");
             Debug.Log(string.Format("입력된 이름은 {0} 입니다.", PlayerPrefs.GetString("Name")));
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", PlayerPrefs.GetString("Name"));
             _sceneChange.TutoChange();
         }
         else
         {
             Debug.Log("이름이 입력됨.");
             Debug.Log(string.Format("입력된 이름은 {0} 입니다.", PlayerPrefs.GetString("Name")));
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", PlayerPrefs.GetString("Name"));
 
             // 한글, 영어, 숫자로만 닉네임을 만들었는지 체크
             if (CheckNickname() == false)

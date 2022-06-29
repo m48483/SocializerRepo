@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class RandomNPC_Count : MonoBehaviour
 {
-    Reactionary_Check RC;
     public int Pass;
     public int Arrest;
     public int kill;

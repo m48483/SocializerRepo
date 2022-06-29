@@ -64,7 +64,7 @@ namespace Fungus
         /// <summary>
         /// Character name as displayed in Say Dialog.
         /// </summary>
-        public virtual string NameText { get { return nameText; } }
+        public virtual string NameText { get { return nameText; } set{ nameText = PlayerPrefs.GetString("Name"); }}
 
         /// <summary>
         /// Color to display the character name in Say Dialog.
@@ -199,5 +199,7 @@ namespace Fungus
                 portraits.Sort(PortraitUtil.PortraitCompareTo);
             }
         }
+
+
     }
 }

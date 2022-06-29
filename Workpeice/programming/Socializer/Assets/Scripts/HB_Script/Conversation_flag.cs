@@ -31,25 +31,21 @@ public class Conversation_flag : MonoBehaviour
         {
             Heather_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", Heather_conversation);
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", Heather_conversation);
 
         }
         else if (SceneName.Equals("Lobby"))
         {
             Hilda_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", Hilda_conversation);
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", Hilda_conversation);
         }
         else if (SceneName.Equals("Office"))
         {
             Hilda_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", Dylan_conversation);
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", Dylan_conversation);
         }
         else if (SceneName.Equals("AM"))
         {
             Heather_conversation = true;
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
         }
     }
@@ -80,11 +76,13 @@ public class Conversation_flag : MonoBehaviour
     }
     */
     //대화를 진행했는가 확인하는 플래그
+
+
     public void GetFlag(int rand, string str, string place)
     {
         //str : 호감도 또는 혁명루트
         SceneName = SceneManager.GetActiveScene().name;
-        
+        Debug.Log("Conversation_flag 스크립트, 장소 : " + SceneName);
         if (place.Equals("House"))
         {
             //추후 호감도/혁명루트에 따라 코드 수정해야함
@@ -95,18 +93,15 @@ public class Conversation_flag : MonoBehaviour
         else if (place.Equals("Lobby"))
         {
             Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
-            Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
             GameObject.Find("Flowchart_").transform.Find(str).transform.Find("Flowchart" + rand).GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", Hilda_conversation);
         }
         else if (place.Equals("Office"))
         {
             Dylan_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Dylan_conversation");
-            Dylan_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Dylan_conversation");
             GameObject.Find("Flowchart_").transform.Find(str).transform.Find("Flowchart" + rand).GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", Dylan_conversation);
         }
         else if (place.Equals("AM"))
         {
-            Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
             Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
             GameObject.Find("Flowchart_").transform.Find(str).transform.Find("Flowchart" + rand).GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
         }
