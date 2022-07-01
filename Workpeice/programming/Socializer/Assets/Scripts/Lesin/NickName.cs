@@ -15,8 +15,8 @@ public class NickName : MonoBehaviour
     {
         msg = FindObjectOfType<NoticeMsg>();
         _sceneChange = FindObjectOfType<SceneChange>();
-        PlayerPrefs.DeleteAll();
-        Debug.Log("prefs 초기화");
+        //PlayerPrefs.DeleteAll();
+        //Debug.Log("prefs 초기화");
     }
     public InputField NickNameInput;
 
