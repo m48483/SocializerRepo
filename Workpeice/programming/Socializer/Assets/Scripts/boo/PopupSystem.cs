@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fungus;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,8 @@ public class PopupSystem : MonoBehaviour
         Action onClickYes,
         Action onClickNo)
     {
-        if (!PlayerPrefs.HasKey("Day"))
+        int day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");
+        if (day < 2)
         {
             SceneManager.LoadScene("name");
 

@@ -25,7 +25,16 @@ public class SaveManager : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Title")
         {
-            if (!PlayerPrefs.HasKey("Day"))
+            //if (!PlayerPrefs.HasKey("Day"))
+            //{
+            //    continueBtn.SetActive(false);
+            //    btnImage.SetActive(true);
+            //    Debug.Log("저장된 데이터가 없습니다.");
+            //    return;
+            //}
+            int day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");
+
+            if (day<2)
             {
                 continueBtn.SetActive(false);
                 btnImage.SetActive(true);
