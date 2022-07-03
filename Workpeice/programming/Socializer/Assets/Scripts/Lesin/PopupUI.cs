@@ -16,6 +16,7 @@ public class PopupUI : MonoBehaviour
     public GameObject House_button;
     public GameObject Lobbygo_button;
     public GameObject move_button;
+    public GameObject menu_button;
 
 
     SceneChange _sceneChange;
@@ -39,7 +40,18 @@ public class PopupUI : MonoBehaviour
     }
     // 서브 메세지 >> string값을 매개변수로 받아와서 2초간 출력
     // 사용법 : _notice.SUB("문자열"); notice는 참조된 변수 이름
-
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Report")
+        {
+            am_button.SetActive(false);
+            Lobby_button.SetActive(false);
+            House_button.SetActive(false);
+            Lobbygo_button.SetActive(false);
+            move_button.SetActive(false);
+            menu_button.SetActive(false);
+        }
+    }
     //바로 사라지는 팝업
     public void SUB(string message) //
     {

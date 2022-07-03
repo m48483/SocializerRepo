@@ -917,6 +917,7 @@ MonoBehaviour:
   House_button: {fileID: 1562323033}
   Lobbygo_button: {fileID: 232979165}
   move_button: {fileID: 1774547669}
+  menu_button: {fileID: 6684618814538774201}
 --- !u!114 &1130426471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,7 +1797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1774547670
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1805,7 +1806,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774547669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1130426474}
@@ -3059,7 +3060,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 6684618814538774197}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6684618814538774201}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -3080,6 +3081,12 @@ MonoBehaviour:
 --- !u!82 &6684618814538774200 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5564029179050891553, guid: c1f458505b7835844a100c00c3c1b79b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6684618814538774197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6684618814538774201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8417633593097574232, guid: c1f458505b7835844a100c00c3c1b79b,
     type: 3}
   m_PrefabInstance: {fileID: 6684618814538774197}
   m_PrefabAsset: {fileID: 0}

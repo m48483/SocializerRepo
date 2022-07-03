@@ -92,6 +92,8 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("Hilda_conversation", Hilda_conversation_Int);
 
         PlayerPrefs.Save();
+
+        SceneManager.LoadScene("Report");
     }
     public void GameLoad()
     {

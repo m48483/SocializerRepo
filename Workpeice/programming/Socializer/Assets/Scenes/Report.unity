@@ -135,6 +135,9 @@ GameObject:
   - component: {fileID: 126489262}
   - component: {fileID: 126489266}
   - component: {fileID: 126489267}
+  - component: {fileID: 126489268}
+  - component: {fileID: 126489269}
+  - component: {fileID: 126489270}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -252,6 +255,49 @@ MonoBehaviour:
   CitizenTxt: {fileID: 1095513566}
   DieTxt: {fileID: 1853447036}
   reactionistTxt: {fileID: 0}
+--- !u!114 &126489268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126489261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4965dc33bf0a294a9ec0aca6078d7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &126489269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126489261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d33e93bf626e945bcb32ae7dab7910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continueBtn: {fileID: 0}
+  btnImage: {fileID: 0}
+--- !u!114 &126489270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126489261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7a906d3f844e143adc5f3ee1e692c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PassTxt: {fileID: 1356745888}
+  SpecialTxt: {fileID: 1470698142}
+  CitizenTxt: {fileID: 1095513566}
+  DieTxt: {fileID: 222733171}
+  reactionistTxt: {fileID: 1853447036}
 --- !u!1 &222733169
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +538,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 581001770}
         m_MethodName: Reportmove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 126489269}
+        m_MethodName: GameSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1525,11 +1582,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec8cc77ef623674f8fa243e714d85ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PassTxt: {fileID: 0}
-  SpecialTxt: {fileID: 0}
-  CitizenTxt: {fileID: 0}
-  DieTxt: {fileID: 0}
-  reactionistTxt: {fileID: 0}
+  PassTxt: {fileID: 1356745888}
+  SpecialTxt: {fileID: 1470698142}
+  CitizenTxt: {fileID: 1095513566}
+  DieTxt: {fileID: 222733171}
+  reactionistTxt: {fileID: 1853447036}
 --- !u!114 &1610748046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1719,7 +1776,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 400}
+  m_AnchoredPosition: {x: -18.5, y: 400}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853447036

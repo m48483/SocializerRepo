@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SetDay : MonoBehaviour
@@ -10,6 +11,11 @@ public class SetDay : MonoBehaviour
     // Start is called before the first frame update
     public void Update()
     {
-        text.text =  GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day") + "일차";
+        if(SceneManager.GetActiveScene().name != "Report")
+            text.text =  GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day") + "일차";
+        else
+        {
+            text.text = " ";
+        }
     }
 }
