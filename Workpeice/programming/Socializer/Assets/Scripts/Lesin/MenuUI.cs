@@ -93,7 +93,7 @@ public class MenuUI : MonoBehaviour
         subani.SetInteger("Select", 3);
         _menu.MenuOff();
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false; //유니티 에디터에서 플레이모드 false로, 나중에 지울 부분
+        //UnityEditor.EditorApplication.isPlaying = false; //유니티 에디터에서 플레이모드 false로, 나중에 지울 부분
     }
 
     public void Cancel() //취소 버튼
