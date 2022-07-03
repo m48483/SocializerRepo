@@ -9,6 +9,11 @@ public class DayStart : MonoBehaviour
     void Start()
     {
         setVariables();
+
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", false);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", false);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", false);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", false);
     }
 
     // Update is called once per frame

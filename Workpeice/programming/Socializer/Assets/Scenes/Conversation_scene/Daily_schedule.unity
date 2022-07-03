@@ -4043,9 +4043,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 429047760}
-  selectedCommands:
-  - {fileID: 429047741}
+  - {fileID: 429047765}
+  selectedCommands: []
   variables:
   - {fileID: 429047764}
   - {fileID: 429047763}
@@ -8118,7 +8117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 429047770}
+  selectedFlowchart: {fileID: 793647683}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -9150,8 +9149,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 793647675}
   - {fileID: 793647676}
-  - {fileID: 793647684}
   - {fileID: 793647685}
+  - {fileID: 793647684}
   - {fileID: 793647680}
   suppressAllAutoSelections: 0
 --- !u!114 &793647683
@@ -9181,7 +9180,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 793647682}
   selectedCommands:
-  - {fileID: 793647684}
+  - {fileID: 793647685}
   variables:
   - {fileID: 793647679}
   - {fileID: 793647678}
@@ -9203,7 +9202,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793647673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
@@ -10231,6 +10230,7 @@ GameObject:
   - component: {fileID: 1184359522}
   - component: {fileID: 1184359523}
   - component: {fileID: 1184359524}
+  - component: {fileID: 1184359525}
   m_Layer: 0
   m_Name: FC
   m_TagString: Untagged
@@ -10325,6 +10325,18 @@ MonoBehaviour:
   Pass: 0
   Arrest: 0
   kill: 0
+--- !u!114 &1184359525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184359518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3148f07a0a7b224581ac2d1804f55f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1217289176
 GameObject:
   m_ObjectHideFlags: 0
@@ -15910,14 +15922,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: 1
   loop: 1
-  targetAudioSource: {fileID: 0}
+  targetAudioSource: {fileID: 1929731216}
   audioMode: 1
   beepSounds:
   - {fileID: 8300000, guid: 774486030b696474e8b3cf7f178123da, type: 3}
   - {fileID: 8300000, guid: f637c5ce9d10e45c7855ed89bfc6b97e, type: 3}
   - {fileID: 8300000, guid: c53b7c20372e444c6bd7f2ac0729bbe2, type: 3}
   soundEffect: {fileID: 8300000, guid: 3d5b88ca0cfde3244ac373561f1202c0, type: 3}
-  inputSound: {fileID: 8300000, guid: 3d5b88ca0cfde3244ac373561f1202c0, type: 3}
+  inputSound: {fileID: 8300000, guid: 14a396b1562834718b2d52b9c4639264, type: 3}
 --- !u!114 &1929731219
 MonoBehaviour:
   m_ObjectHideFlags: 0
