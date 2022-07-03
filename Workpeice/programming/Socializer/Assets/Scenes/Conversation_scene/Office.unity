@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 265102183}
   - component: {fileID: 265102182}
   - component: {fileID: 265102181}
+  - component: {fileID: 265102190}
   m_Layer: 0
   m_Name: Day1
   m_TagString: Untagged
@@ -621,7 +622,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 63.907204
-    y: 71.03093
+    y: 70
     width: 135.56702
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -637,6 +638,7 @@ MonoBehaviour:
   - {fileID: 265102183}
   - {fileID: 265102182}
   - {fileID: 265102181}
+  - {fileID: 265102190}
   suppressAllAutoSelections: 0
 --- !u!114 &265102189
 MonoBehaviour:
@@ -676,6 +678,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &265102190
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265102179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  targetObject: {fileID: 1964870670}
+  methodName: Dylan_Day1
+  delay: 2
 --- !u!1 &286029142
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,6 +3845,7 @@ GameObject:
   - component: {fileID: 648047868}
   - component: {fileID: 648047867}
   - component: {fileID: 648047866}
+  - component: {fileID: 648047870}
   m_Layer: 0
   m_Name: Day2
   m_TagString: Untagged
@@ -3919,6 +3939,7 @@ MonoBehaviour:
   eventHandler: {fileID: 648047867}
   commandList:
   - {fileID: 648047866}
+  - {fileID: 648047870}
   suppressAllAutoSelections: 0
 --- !u!114 &648047869
 MonoBehaviour:
@@ -3946,8 +3967,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 648047868}
-  selectedCommands:
-  - {fileID: 648047866}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -3959,6 +3979,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &648047870
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648047864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  targetObject: {fileID: 1964870670}
+  methodName: Dylan_Day2
+  delay: 2
 --- !u!1 &690185500
 GameObject:
   m_ObjectHideFlags: 1
@@ -3988,7 +4025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 723239589}
+  selectedFlowchart: {fileID: 1312618441}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -8005,7 +8042,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 127.33269
-    y: 74.12372
+    y: 72.98736
     width: 117.04545
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -8048,7 +8085,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1312618440}
   selectedCommands:
-  - {fileID: 1312618437}
+  - {fileID: 1312618438}
   variables:
   - {fileID: 1312618436}
   description: 
