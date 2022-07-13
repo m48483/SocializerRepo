@@ -12,24 +12,12 @@ public class Report : MonoBehaviour
     SceneChange _sceneChange;
     bool rm = false;
 
-    public Text PassTxt;
-    public Text SpecialTxt;
-    public Text CitizenTxt;
-    public Text DieTxt;
-    public Text reactionistTxt;
-    TestEnding testEnding;
+    public GameObject btn;
 
     // Start is called before the first frame update
     void Awake()
     {
         _sceneChange = FindObjectOfType<SceneChange>();
-        /*
-        PassTxt = FindObjectOfType<pass>();
-        SpecialTxt = FindObjectOfType<special>();
-        CitizenTxt = FindObjectOfType<citizen>();
-        DieTxt = FindObjectOfType<reactionist>();
-        reactionistTxt = FindObjectOfType<die>();
-        */
     }
 
     void Start()
@@ -46,7 +34,7 @@ public class Report : MonoBehaviour
             transform.position -= new Vector3(0, 4f, 0);
         }
         rm = true;
-
+        btn.SetActive(true);
     }
 
     void Update()
