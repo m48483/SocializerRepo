@@ -578,7 +578,6 @@ namespace Fungus
             PortraitOptions options = new PortraitOptions(true);
             options.character = character;
             options.portrait = character.GetPortrait(portrait);
-
             if (character.State.position == null)
             {
                 options.toPosition = options.fromPosition = stage.GetPosition("middle");
