@@ -15,6 +15,7 @@ public class Conversation_flag : MonoBehaviour
     // 하루일과를 진행하면서 NPC와 대화를 진행하였는지 체크
     public void Flag_Initialization()
     {
+        Debug.Log("NPC 대화 초기화");
         // 하루가 지나면 대화 플래그 false로 초기화, 일과 Scene을 시작할 때 메소드 호출
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", false);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", false);
@@ -77,6 +78,41 @@ public class Conversation_flag : MonoBehaviour
     */
     //대화를 진행했는가 확인하는 플래그
 
+    public void GetConversationFlag(int i)
+    {
+        SceneName = SceneManager.GetActiveScene().name;
+
+        if (SceneName.Equals("House"))
+        {
+            float H_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
+            if (H_reliability > 60)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetBooleanVariable("Heather_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Heather_conversation"));
+            }
+            else if (H_reliability <= 60)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetBooleanVariable("Heather_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Heather_conversation"));
+            }
+
+        }
+        else if (SceneName.Equals("Lobby"))
+        {
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetBooleanVariable("Hilda_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation"));
+        }
+        else if (SceneName.Equals("Office"))
+        {
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetBooleanVariable("Dylan_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Dylan_conversation"));
+        }
+        else if (SceneName.Equals("AM"))
+        {
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                     .SetBooleanVariable("Frances_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation"));
+        }
+    }
 
     public void GetFlag(int rand, string str, string place)
     {

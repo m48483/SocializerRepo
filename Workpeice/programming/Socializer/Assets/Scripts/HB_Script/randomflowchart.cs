@@ -95,6 +95,7 @@ public class randomflowchart : MonoBehaviour
             int rand = Random.Range(1, 6);
             GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Morethan60", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
 
         }
         else if (reliability >= 0 && reliability < 60)
@@ -102,6 +103,7 @@ public class randomflowchart : MonoBehaviour
             int rand = Random.Range(6, 10);
             GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Lessthan60", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
     }
 
@@ -122,12 +124,14 @@ public class randomflowchart : MonoBehaviour
             int rand = Random.Range(1, 8);
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
         else if (Revolutionary_route == true)
         {
             int rand = Random.Range(8, 10);// 대사 추가시 수정 요구
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
         /*
         if (Revolutionary_route == false)
@@ -156,12 +160,14 @@ public class randomflowchart : MonoBehaviour
             int rand = Random.Range(1, 6);
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
         else if (Revolutionary_route == true)
         {
             int rand = Random.Range(6, 10);
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
         Debug.Log("딜런 대화 시작");
     }
@@ -182,17 +188,19 @@ public class randomflowchart : MonoBehaviour
     {
         // 헤더, 프랜시스는 신뢰도에 따라 대화 변화가 이뤄짐
         //if (reliability >= 80 && reliability <= 100)
-        if (Revolutionary_route == false)
+        if (reliability >= 0&& reliability<80)
         {
-            int rand = Random.Range(1, 8);
+            int rand = Random.Range(1, 7);
             GameObject.Find("Flowchart_").transform.Find("Morethan80").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Morethan80", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
-        else if (Revolutionary_route == true)
+        else if (reliability >= 80 && reliability <= 100)
         {
-            int rand = Random.Range(8, 10);// 혁명 루트 추가시 수정 요구
+            int rand = Random.Range(7, 14);// 혁명 루트 추가시 수정 요구
             GameObject.Find("Flowchart_").transform.Find("Lessthan80").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Lessthan80", SceneName);
+            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
     }
 

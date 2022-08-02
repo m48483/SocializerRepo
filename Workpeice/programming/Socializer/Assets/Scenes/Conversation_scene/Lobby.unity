@@ -2646,7 +2646,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 331.58084
     y: 158.04895
-    width: 101.06383
+    width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2677,7 +2677,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 330.72974
     y: 49.53837
-    width: 102.76595
+    width: 102.127655
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2979,7 +2979,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.96906
     y: 75.15465
-    width: 134.25531
+    width: 134.04254
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3563,6 +3563,7 @@ GameObject:
   - component: {fileID: 575382150}
   - component: {fileID: 575382152}
   - component: {fileID: 575382146}
+  - component: {fileID: 575382158}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -3603,7 +3604,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.96906
     y: 75.15465
-    width: 111.276596
+    width: 112.76595
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3644,7 +3645,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 575382140}
   selectedCommands:
-  - {fileID: 575382156}
+  - {fileID: 575382158}
   variables:
   - {fileID: 575382157}
   description: 
@@ -3830,8 +3831,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 359.92783
-    y: 70.13203
-    width: 112.978714
+    y: 71.195854
+    width: 111.702126
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3843,6 +3844,7 @@ MonoBehaviour:
   - {fileID: 575382156}
   - {fileID: 575382137}
   - {fileID: 575382134}
+  - {fileID: 575382158}
   - {fileID: 575382142}
   - {fileID: 575382141}
   - {fileID: 575382148}
@@ -3934,7 +3936,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 548.7082
     y: 134.2799
-    width: 73.82979
+    width: 73.40425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3961,9 +3963,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 552.7114
-    y: 16.556705
-    width: 73.82979
+    x: 554.8391
+    y: 13.365215
+    width: 73.40425
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4652,6 +4654,23 @@ MonoBehaviour:
   scope: 1
   key: Hilda_conversation
   value: 0
+--- !u!114 &575382158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575382129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  indentLevel: 1
+  targetObject: {fileID: 959725828}
+  methodName: FlagtoTrue
+  delay: 0
 --- !u!1 &634989770
 GameObject:
   m_ObjectHideFlags: 0
@@ -4687,6 +4706,7 @@ GameObject:
   - component: {fileID: 634989774}
   - component: {fileID: 634989773}
   - component: {fileID: 634989772}
+  - component: {fileID: 634989798}
   m_Layer: 0
   m_Name: Flowchart5
   m_TagString: Untagged
@@ -5610,6 +5630,7 @@ MonoBehaviour:
   - {fileID: 634989780}
   - {fileID: 634989787}
   - {fileID: 634989789}
+  - {fileID: 634989798}
   - {fileID: 634989791}
   - {fileID: 634989790}
   - {fileID: 634989783}
@@ -5741,9 +5762,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 634989785}
+  - {fileID: 634989792}
   selectedCommands:
-  - {fileID: 634989782}
+  - {fileID: 634989789}
   variables:
   - {fileID: 634989781}
   description: 
@@ -5756,6 +5777,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &634989798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634989770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 1
+  targetObject: {fileID: 959725828}
+  methodName: FlagtoTrue
+  delay: 0
 --- !u!1 &666385465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6110,7 +6148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 575382132}
+  selectedFlowchart: {fileID: 779867562}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -6823,6 +6861,7 @@ GameObject:
   - component: {fileID: 779867565}
   - component: {fileID: 779867564}
   - component: {fileID: 779867563}
+  - component: {fileID: 779867567}
   m_Layer: 0
   m_Name: Flowchart7
   m_TagString: Untagged
@@ -7668,7 +7707,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 359.92783
     y: 71.195854
-    width: 115.15463
+    width: 114.94845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7680,6 +7719,7 @@ MonoBehaviour:
   - {fileID: 779867545}
   - {fileID: 779867552}
   - {fileID: 779867554}
+  - {fileID: 779867567}
   - {fileID: 779867556}
   - {fileID: 779867555}
   - {fileID: 779867548}
@@ -7773,7 +7813,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.96906
     y: 74.12372
-    width: 110.20618
+    width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7811,8 +7851,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 779867551}
-  selectedCommands: []
+  - {fileID: 779867557}
+  selectedCommands:
+  - {fileID: 779867554}
   variables:
   - {fileID: 779867546}
   description: 
@@ -7892,6 +7933,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1134986462}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &779867567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779867539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 1
+  targetObject: {fileID: 959725828}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &821565182
 GameObject:
@@ -8920,6 +8978,7 @@ GameObject:
   - component: {fileID: 1188597631}
   - component: {fileID: 1188597630}
   - component: {fileID: 1188597629}
+  - component: {fileID: 1188597633}
   m_Layer: 0
   m_Name: Flowchart2
   m_TagString: Untagged
@@ -9502,7 +9561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 1
   key: Hilda_conversation
-  value: 1
+  value: 0
 --- !u!114 &1188597609
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9821,7 +9880,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 359.92783
     y: 71.195854
-    width: 115.15463
+    width: 114.94845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9833,6 +9892,7 @@ MonoBehaviour:
   - {fileID: 1188597607}
   - {fileID: 1188597616}
   - {fileID: 1188597618}
+  - {fileID: 1188597633}
   - {fileID: 1188597620}
   - {fileID: 1188597619}
   - {fileID: 1188597610}
@@ -9926,7 +9986,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.96906
     y: 74.12372
-    width: 110.20618
+    width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9964,8 +10024,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1188597614}
-  selectedCommands: []
+  - {fileID: 1188597621}
+  selectedCommands:
+  - {fileID: 1188597618}
   variables:
   - {fileID: 1188597608}
   description: 
@@ -10100,6 +10161,23 @@ MonoBehaviour:
   targetObject: {fileID: 1134986462}
   methodName: ClickOn
   delay: 0
+--- !u!114 &1188597633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188597601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 1
+  targetObject: {fileID: 959725828}
+  methodName: FlagtoTrue
+  delay: 0
 --- !u!1 &1255436732
 GameObject:
   m_ObjectHideFlags: 0
@@ -10135,6 +10213,7 @@ GameObject:
   - component: {fileID: 1255436758}
   - component: {fileID: 1255436757}
   - component: {fileID: 1255436756}
+  - component: {fileID: 1255436760}
   m_Layer: 0
   m_Name: Flowchart6
   m_TagString: Untagged
@@ -10979,7 +11058,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 359.92783
     y: 71.195854
-    width: 115.15463
+    width: 114.94845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10991,6 +11070,7 @@ MonoBehaviour:
   - {fileID: 1255436739}
   - {fileID: 1255436745}
   - {fileID: 1255436747}
+  - {fileID: 1255436760}
   - {fileID: 1255436749}
   - {fileID: 1255436748}
   - {fileID: 1255436741}
@@ -11084,7 +11164,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 63.90721
     y: 75.15465
-    width: 110.20618
+    width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11122,8 +11202,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1255436743}
-  selectedCommands: []
+  - {fileID: 1255436750}
+  selectedCommands:
+  - {fileID: 1255436760}
   variables:
   - {fileID: 1255436740}
   description: 
@@ -11203,6 +11284,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1134986462}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &1255436760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255436732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 1
+  targetObject: {fileID: 959725828}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &1258683291
 GameObject:
@@ -12111,6 +12209,7 @@ GameObject:
   - component: {fileID: 1445237937}
   - component: {fileID: 1445237912}
   - component: {fileID: 1445237911}
+  - component: {fileID: 1445237939}
   m_Layer: 0
   m_Name: Flowchart4
   m_TagString: Untagged
@@ -13049,7 +13148,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 359.92783
     y: 71.195854
-    width: 115.15463
+    width: 114.94845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13061,6 +13160,7 @@ MonoBehaviour:
   - {fileID: 1445237919}
   - {fileID: 1445237926}
   - {fileID: 1445237928}
+  - {fileID: 1445237939}
   - {fileID: 1445237930}
   - {fileID: 1445237929}
   - {fileID: 1445237922}
@@ -13154,7 +13254,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.96906
     y: 74.12372
-    width: 110.20618
+    width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13192,9 +13292,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1445237924}
+  - {fileID: 1445237931}
   selectedCommands:
-  - {fileID: 1445237921}
+  - {fileID: 1445237928}
   variables:
   - {fileID: 1445237920}
   description: 
@@ -13241,6 +13341,23 @@ MonoBehaviour:
   targetObject: {fileID: 1134986462}
   methodName: ClickOn
   delay: 0
+--- !u!114 &1445237939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445237909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 1
+  targetObject: {fileID: 959725828}
+  methodName: FlagtoTrue
+  delay: 0
 --- !u!1 &1447126071
 GameObject:
   m_ObjectHideFlags: 0
@@ -13278,6 +13395,7 @@ GameObject:
   - component: {fileID: 1447126099}
   - component: {fileID: 1447126098}
   - component: {fileID: 1447126074}
+  - component: {fileID: 1447126101}
   m_Layer: 0
   m_Name: Flowchart3
   m_TagString: Untagged
@@ -14167,7 +14285,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 359.92783
     y: 71.195854
-    width: 115.15463
+    width: 114.94845
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14179,6 +14297,7 @@ MonoBehaviour:
   - {fileID: 1447126079}
   - {fileID: 1447126086}
   - {fileID: 1447126088}
+  - {fileID: 1447126101}
   - {fileID: 1447126090}
   - {fileID: 1447126089}
   - {fileID: 1447126082}
@@ -14272,7 +14391,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.96906
     y: 74.12372
-    width: 110.20618
+    width: 112.8866
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14310,9 +14429,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1447126084}
+  - {fileID: 1447126091}
   selectedCommands:
-  - {fileID: 1447126073}
+  - {fileID: 1447126088}
   variables:
   - {fileID: 1447126080}
   description: 
@@ -14405,6 +14524,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1134986462}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &1447126101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447126071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 1
+  targetObject: {fileID: 959725828}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &1448681294
 GameObject:
