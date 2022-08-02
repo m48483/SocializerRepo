@@ -2822,6 +2822,7 @@ GameObject:
   - component: {fileID: 563632968}
   - component: {fileID: 563632967}
   - component: {fileID: 563632958}
+  - component: {fileID: 563632984}
   m_Layer: 0
   m_Name: Flowchart2
   m_TagString: Untagged
@@ -3789,6 +3790,7 @@ MonoBehaviour:
   - {fileID: 563632963}
   - {fileID: 563632972}
   - {fileID: 563632974}
+  - {fileID: 563632984}
   - {fileID: 563632976}
   - {fileID: 563632975}
   - {fileID: 563632966}
@@ -3919,8 +3921,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 563632970}
-  selectedCommands: []
+  - {fileID: 563632977}
+  selectedCommands:
+  - {fileID: 563632974}
   variables:
   - {fileID: 563632964}
   description: 
@@ -3949,6 +3952,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1839884347}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &563632984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563632954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 1
+  targetObject: {fileID: 1964870670}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &569241708
 GameObject:
@@ -4742,7 +4762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1494737717}
+  selectedFlowchart: {fileID: 1033555476}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -4793,6 +4813,7 @@ GameObject:
   - component: {fileID: 723239575}
   - component: {fileID: 723239574}
   - component: {fileID: 723239565}
+  - component: {fileID: 723239591}
   m_Layer: 0
   m_Name: Flowchart4
   m_TagString: Untagged
@@ -5732,6 +5753,7 @@ MonoBehaviour:
   - {fileID: 723239570}
   - {fileID: 723239579}
   - {fileID: 723239581}
+  - {fileID: 723239591}
   - {fileID: 723239583}
   - {fileID: 723239582}
   - {fileID: 723239573}
@@ -5863,7 +5885,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 723239584}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 723239581}
   variables:
   - {fileID: 723239571}
   description: 
@@ -5892,6 +5915,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1839884347}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &723239591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723239562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 1
+  targetObject: {fileID: 1964870670}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &772308560
 GameObject:
@@ -6213,6 +6253,7 @@ GameObject:
   - component: {fileID: 930800606}
   - component: {fileID: 930800605}
   - component: {fileID: 930800596}
+  - component: {fileID: 930800622}
   m_Layer: 0
   m_Name: Flowchart3
   m_TagString: Untagged
@@ -6264,7 +6305,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &930800596
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6888,7 +6929,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &930800605
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -7149,6 +7190,7 @@ MonoBehaviour:
   - {fileID: 930800601}
   - {fileID: 930800610}
   - {fileID: 930800612}
+  - {fileID: 930800622}
   - {fileID: 930800614}
   - {fileID: 930800613}
   - {fileID: 930800604}
@@ -7279,9 +7321,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 930800608}
+  - {fileID: 930800615}
   selectedCommands:
-  - {fileID: 930800603}
+  - {fileID: 930800612}
   variables:
   - {fileID: 930800602}
   description: 
@@ -7310,6 +7352,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1839884347}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &930800622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930800593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 1
+  targetObject: {fileID: 1964870670}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &944884279
 GameObject:
@@ -8168,6 +8227,7 @@ GameObject:
   - component: {fileID: 1033555462}
   - component: {fileID: 1033555461}
   - component: {fileID: 1033555452}
+  - component: {fileID: 1033555480}
   m_Layer: 0
   m_Name: Flowchart5
   m_TagString: Untagged
@@ -8221,7 +8281,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1033555452
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8845,7 +8905,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1033555461
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -8862,7 +8922,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1033555462
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9095,7 +9155,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 357.9714
-    y: 71.09042
+    y: 72.22678
     width: 115.90908
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9108,6 +9168,7 @@ MonoBehaviour:
   - {fileID: 1033555457}
   - {fileID: 1033555466}
   - {fileID: 1033555468}
+  - {fileID: 1033555480}
   - {fileID: 1033555470}
   - {fileID: 1033555469}
   - {fileID: 1033555460}
@@ -9238,10 +9299,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1033555464}
+  - {fileID: 1033555471}
   selectedCommands:
-  - {fileID: 1033555461}
-  - {fileID: 1033555452}
+  - {fileID: 1033555468}
   variables:
   - {fileID: 1033555458}
   description: 
@@ -9315,7 +9375,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1033555479
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -9329,6 +9389,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1839884347}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &1033555480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033555449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 1
+  targetObject: {fileID: 1964870670}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &1039939033
 GameObject:
@@ -11289,7 +11366,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 68
     y: 69
-    width: 109.78021
+    width: 109.34065
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12022,6 +12099,7 @@ GameObject:
   - component: {fileID: 1622013552}
   - component: {fileID: 1622013551}
   - component: {fileID: 1622013542}
+  - component: {fileID: 1622013569}
   m_Layer: 0
   m_Name: Flowchart1
   m_TagString: Untagged
@@ -12921,7 +12999,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 359.10776
-    y: 71.09042
+    y: 72.22678
     width: 115.90908
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12934,6 +13012,7 @@ MonoBehaviour:
   - {fileID: 1622013547}
   - {fileID: 1622013556}
   - {fileID: 1622013558}
+  - {fileID: 1622013569}
   - {fileID: 1622013560}
   - {fileID: 1622013559}
   - {fileID: 1622013550}
@@ -13064,9 +13143,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1622013554}
+  - {fileID: 1622013561}
   selectedCommands:
-  - {fileID: 1622013551}
+  - {fileID: 1622013569}
   variables:
   - {fileID: 1622013548}
   description: 
@@ -13125,6 +13204,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1839884347}
   methodName: ClickOn
+  delay: 0
+--- !u!114 &1622013569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622013540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 1
+  targetObject: {fileID: 1964870670}
+  methodName: FlagtoTrue
   delay: 0
 --- !u!1 &1628488716
 GameObject:
