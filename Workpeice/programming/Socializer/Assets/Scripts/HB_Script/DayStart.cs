@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class DayStart : MonoBehaviour
 {
+    /// <summary>
+    ///  임시로 작성한 스크립트 사용x
+    /// </summary>
     // Start is called before the first frame update
     void Start()
     {
         setVariables();
-
+        Debug.Log("하루 시작\n대화 초기화");
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", false);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", false);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", false);
@@ -66,6 +69,8 @@ public class DayStart : MonoBehaviour
         PlayerPrefs.SetFloat("RevolutionaryNPC", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("RevolutionaryNPC"));
         PlayerPrefs.SetFloat("RevolutionaryPass", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("RevolutionaryPass"));
         PlayerPrefs.SetFloat("Tier1NPC", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Tier1NPC"));
+
+        
 
     }
 
