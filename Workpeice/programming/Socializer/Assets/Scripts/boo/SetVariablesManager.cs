@@ -40,6 +40,82 @@ public class SetVariablesManager : MonoBehaviour
         PlayerPrefs.SetInt("RevolutionaryPass", 0);
         PlayerPrefs.SetInt("Tier1NPC", 0);
 
+
+        // 특정 날짜에 장소에서 대화했는가를 저장하는 변수들
+        // 변수명 작성 기준 : Day_Place_Before/Middle/After_ RevolutionaryRoute
+
+        //사무실_Before
+        PlayerPrefs.SetInt("Day1_Office_Before", 0);
+        PlayerPrefs.SetInt("Day8_Office_Before", 0);
+        PlayerPrefs.SetInt("Day12_Office_Before", 0);
+        PlayerPrefs.SetInt("Day17_Office_Before", 0);
+        PlayerPrefs.SetInt("Day36_Office_Before", 0);
+        PlayerPrefs.SetInt("Day36_Office_Before_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day38_Office_Before_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day39_Office_Before", 0);
+        PlayerPrefs.SetInt("Day39_Office_Before_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day51_Office_Before", 0);
+        PlayerPrefs.SetInt("Day53_Office_Before", 0);
+        PlayerPrefs.SetInt("Day54_Office_Before", 0);
+        PlayerPrefs.SetInt("Day57_Office_Before", 0);
+
+        //사무실_Middle
+        PlayerPrefs.SetInt("Day19_Office_After", 0);
+        PlayerPrefs.SetInt("Day19_Office_After_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day25_Office_After", 0);
+        PlayerPrefs.SetInt("Day25_Office_After_RevolutionaryRoute", 0);
+
+        //사무실_After
+        PlayerPrefs.SetInt("Day1_Office_After", 0);
+        PlayerPrefs.SetInt("Day2_Office_After", 0);
+        PlayerPrefs.SetInt("Day5_Office_After", 0);
+        PlayerPrefs.SetInt("Day12_Office_After", 0);
+        PlayerPrefs.SetInt("Day17_Office_After_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day59_Office_After_RevolutionaryRoute", 0);
+
+        //로비
+        PlayerPrefs.SetInt("Day3_Lobby", 0);
+        PlayerPrefs.SetInt("Day17_Lobby", 0);
+        PlayerPrefs.SetInt("Day38_Lobby", 0);
+        PlayerPrefs.SetInt("Day38_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day39_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day50_Lobby", 0);
+        PlayerPrefs.SetInt("Day52_Lobby", 0);
+        PlayerPrefs.SetInt("Day54_Lobby", 0);
+        PlayerPrefs.SetInt("Day57_Lobby", 0);
+        PlayerPrefs.SetInt("Day58_Lobby", 0);
+        PlayerPrefs.SetInt("Day59_Lobby", 0);
+        PlayerPrefs.SetInt("Day60_Lobby", 0);
+
+        //집
+        PlayerPrefs.SetInt("Day1_Lobby", 0);
+        PlayerPrefs.SetInt("Day4_Lobby", 0);
+        PlayerPrefs.SetInt("Day8_Lobby", 0);
+        PlayerPrefs.SetInt("Day15_Lobby", 0);
+        PlayerPrefs.SetInt("Day22_Lobby", 0);
+        PlayerPrefs.SetInt("Day22_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day29_Lobby", 0);
+        PlayerPrefs.SetInt("Day29_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day31_Lobby", 0);
+        PlayerPrefs.SetInt("Day32_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day33_Lobby", 0);
+        PlayerPrefs.SetInt("Day33_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day36_Lobby", 0);
+        PlayerPrefs.SetInt("Day36_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day51_Lobby", 0);
+        PlayerPrefs.SetInt("Day54_Lobby", 0);
+
+        //AM
+        PlayerPrefs.SetInt("Day19_Lobby", 0);
+        PlayerPrefs.SetInt("Day24_Lobby", 0);
+        PlayerPrefs.SetInt("Day39_Lobby_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day45_Lobby", 0);
+        PlayerPrefs.SetInt("Day47_Lobby", 0);
+        PlayerPrefs.SetInt("Day50_Lobby", 0);
+        PlayerPrefs.SetInt("Day59_Lobby", 0);
+        PlayerPrefs.SetInt("Day60_Lobby", 0);
+
+
         //int day = PlayerPrefs.GetInt("Day");
         //string name = PlayerPrefs.GetString("Name");
         //float Hilda_reliability = PlayerPrefs.GetFloat("Hilda_reliability");
