@@ -10,6 +10,7 @@ public class OptionPopupSystem : MonoBehaviour
     public GameObject popup;
     public GameObject btn_popup;
     public GameObject panel;
+    public GameObject menu;
     public Button btn;
     public static bool isOn = false;
 
@@ -40,6 +41,7 @@ public class OptionPopupSystem : MonoBehaviour
         popup.SetActive(true);
         isOn = true;
         panel.SetActive(true);
+        menu.SetActive(false);
         Debug.Log("PopupOn");
     }
 
