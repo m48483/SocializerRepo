@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HelpManager : MonoBehaviour
@@ -19,6 +20,7 @@ public class HelpManager : MonoBehaviour
         day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");
         if(day == 1)
         {
+            SceneManager.LoadScene("Help", LoadSceneMode.Additive);
             count = 0;
             printHelp();
         }
