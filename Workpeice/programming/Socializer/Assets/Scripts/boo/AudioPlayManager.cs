@@ -48,7 +48,29 @@ public class AudioPlayManager : MonoBehaviour
                 audioSource[1].Play();
             }
         }
-        else if (SceneName.Equals("Lobby") || SceneName.Equals("Office"))
+        else if (SceneName.Equals("Daily_schedule"))
+        {
+            if (Day >= 57 && Day < 61)
+            {
+                audioSource[3].Play();
+            }
+            else
+            {
+                audioSource[2].Play();
+            }
+        }
+        else if (SceneName.Equals("Lobby"))
+        {
+            if (Day >= 57 && Day < 61)
+            {
+                audioSource[3].Play();
+            }
+            else
+            {
+                audioSource[2].Play();
+            }
+        }
+        else if (SceneName.Equals("Office"))
         {
             if (Day >= 57 && Day < 61)
             {
@@ -69,6 +91,10 @@ public class AudioPlayManager : MonoBehaviour
             {
                 audioSource[5].Play();
             }
+        }
+        else if (SceneName.Equals("Tutorial"))
+        {
+            audioSource[6].Play();
         }
     }
 

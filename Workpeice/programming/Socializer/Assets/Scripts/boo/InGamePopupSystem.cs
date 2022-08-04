@@ -8,6 +8,7 @@ public class InGamePopupSystem : MonoBehaviour
 {
     public GameObject popup;
     public GameObject panel;
+    public GameObject panelBtn;
     public Text txt;
     public GameObject houseBtn;
     public GameObject lobbyBtn;
@@ -46,6 +47,7 @@ public class InGamePopupSystem : MonoBehaviour
         else if (SceneName.Equals("Daily_schedule"))
         {
             txt.text = "\n로비로 이동합니다";
+            panelBtn.SetActive(true);
         }
     }
 
