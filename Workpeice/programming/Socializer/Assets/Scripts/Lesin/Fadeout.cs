@@ -10,8 +10,10 @@ public class Fadeout : MonoBehaviour
     PauseMenu _menu;
     PopUpDebug _pudebug;
 
-    //코루틴 딜레이 2개 미리 선언
+    //코루틴 딜레이 선언
     private WaitForSecondsRealtime _UIDelay1 = new WaitForSecondsRealtime(2.0f);
+    private WaitForSecondsRealtime _UIDelay2 = new WaitForSecondsRealtime(0.3f);
+
 
     private void Awake()
     {
@@ -54,6 +56,20 @@ public class Fadeout : MonoBehaviour
         subani.SetBool("isOn", true);
         yield return _UIDelay1;
     }
+
+    //페이드인아웃 효과만 주기
+    IEnumerator SelectOut()
+    {
+        subani.SetBool("isOn", false);
+        yield return _UIDelay2;
+        subbox.SetActive(false);
+    }
+    public void FadeEffect() 
+    {
+        StartCoroutine(SelectOut());
+        _sceneChange.FadeOut();
+    }
+
     public void safc()
     {
         subbox.SetActive(false);

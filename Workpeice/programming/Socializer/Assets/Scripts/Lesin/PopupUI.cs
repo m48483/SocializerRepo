@@ -136,6 +136,12 @@ public class PopupUI : MonoBehaviour
         yield return _UIDelay2;
         subbox.SetActive(false);
     }
+    public void textbutton() //오피스 버튼
+    {
+        StartCoroutine(SelectOut());
+        _sceneChange.OfficeFadeChange();
+        SetButton();
+    }
     public void OfficeButton() //오피스 버튼
     {
         StartCoroutine(SelectOut());

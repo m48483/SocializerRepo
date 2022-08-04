@@ -56,17 +56,9 @@ public class randomflowchart : MonoBehaviour
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
             
-            if (Day == 1)
+            if (Day == 1 || Day == 2 || Day == 5 || Day == 12 || Day == 17 || Day == 59)
             {
-                Dylan_Day1();
-            }
-            else if (Day == 2)
-            {
-                Dylan_Day2();
-            }
-            else if (Day == 2)
-            {
-                Dylan_Day5();
+                Dylan_Day();
             }
             else
             {
@@ -171,17 +163,9 @@ public class randomflowchart : MonoBehaviour
         }
         Debug.Log("딜런 대화 시작");
     }
-    public void Dylan_Day1()
+    public void Dylan_Day()
     {
-        GameObject.Find("Flowchart_").transform.Find("Day1").gameObject.SetActive(true);
-    }
-    public void Dylan_Day2()
-    {
-        GameObject.Find("Flowchart_").transform.Find("Day2").gameObject.SetActive(true);
-    }
-    public void Dylan_Day5()
-    {
-        GameObject.Find("Flowchart_").transform.Find("Day5(After)").gameObject.SetActive(true);
+        GameObject.Find("Flowchart_").transform.Find("Day"+Day).gameObject.SetActive(true);
     }
     // 프랜시스 Flowchart 호출
     public void Frances_Reliability_Scene()

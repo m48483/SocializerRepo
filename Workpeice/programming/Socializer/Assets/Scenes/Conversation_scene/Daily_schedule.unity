@@ -5017,9 +5017,7 @@ GameObject:
   - component: {fileID: 490543192}
   - component: {fileID: 490543191}
   - component: {fileID: 490543190}
-  - component: {fileID: 490543189}
   - component: {fileID: 490543188}
-  - component: {fileID: 490543187}
   - component: {fileID: 490543186}
   - component: {fileID: 490543185}
   - component: {fileID: 490543184}
@@ -5027,6 +5025,7 @@ GameObject:
   - component: {fileID: 490543196}
   - component: {fileID: 490543195}
   - component: {fileID: 490543198}
+  - component: {fileID: 490543187}
   m_Layer: 0
   m_Name: Day1 (Before)
   m_TagString: Untagged
@@ -5116,16 +5115,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490543182}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 13
+  itemId: 20
   indentLevel: 0
-  targetObject: {fileID: 496040975}
-  methodName: Set_Num
-  delay: 0
+  storyText: "\uC870\uC0AC\uC6D0\uBD84\uB4E4\uC740 \uAD00\uCC30 \uBC84\uD2BC\uC744
+    \uD1B5\uD574 \uB300\uC0C1\uC758 \uBC1C\uC5B8\uC744 \uC99D\uAC70\uB85C \uBAA8\uC744
+    \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n\uC99D\uAC70\uB294 3\uAC1C\uAE4C\uC9C0 \uBAA8\uC744
+    \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  description: 
+  character: {fileID: 839233089}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &490543188
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5141,23 +5153,6 @@ MonoBehaviour:
   scope: 1
   key: Conversation_Count
   value: 1
---- !u!114 &490543189
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490543182}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 11
-  indentLevel: 0
-  targetObject: {fileID: 496040975}
-  methodName: Get_Num
-  delay: 0
 --- !u!114 &490543190
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5237,10 +5232,9 @@ MonoBehaviour:
   eventHandler: {fileID: 490543192}
   commandList:
   - {fileID: 490543191}
-  - {fileID: 490543189}
-  - {fileID: 490543187}
   - {fileID: 490543196}
   - {fileID: 490543184}
+  - {fileID: 490543187}
   - {fileID: 490543197}
   - {fileID: 490543195}
   - {fileID: 490543198}
@@ -5272,7 +5266,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 490543193}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 490543195}
   variables:
   - {fileID: 490543188}
   - {fileID: 490543186}
@@ -5303,9 +5298,9 @@ MonoBehaviour:
   indentLevel: 0
   storyText: "\uBAA8\uB4E0 \uB300\uD654\uAC00 \uCD9C\uB825\uB418\uBA74 \uC790\uB3D9\uC73C\uB85C
     \uAC01\uAC01\uC758 \uD589\uB3D9 \uBC84\uD2BC\uC774 \uB098\uC635\uB2C8\uB2E4.\n\uC77C\uBC18
-    \uC2DC\uBBFC\uC774\uB77C \uC0AC\uB8CC\uB420 \uACBD\uC6B0 \uD1B5\uACFC, \uC99D\uAC70\uB97C
-    2\uAC1C\uBC16\uC5D0 \uCC3E\uC9C0 \uBABB\uD558\uC600\uC744 \uACBD\uC6B0 \uAD6C\uC18D\uC744
-    \uD1B5\uD574 \uC784\uC2DC \uC720\uCE58\uB97C \uC2DC\uD0AC \uC218 \uC788\uC2B5\uB2C8\uB2E4. "
+    \uC2DC\uBBFC\uC774\uB77C \uC0AC\uB8CC\uB420 \uACBD\uC6B0 \uD1B5\uACFC, \uC758\uC2EC\uC2A4\uB7EC\uC6B4
+    \uC778\uBB3C\uC744 \uAD6C\uC18D\uD574 \uC784\uC2DC \uC720\uCE58\uB97C \uC2DC\uD0AC
+    \uC218 \uC788\uC2B5\uB2C8\uB2E4."
   description: 
   character: {fileID: 839233089}
   portrait: {fileID: 0}
@@ -5393,11 +5388,10 @@ MonoBehaviour:
   itemId: 19
   indentLevel: 0
   storyText: "\uC784\uC2DC \uC720\uCE58\uB41C \uC2DC\uBBFC\uC740 \uCD94\uAC00\uC801\uC778
-    \uC870\uC0AC\uB97C \uBC1B\uAC8C \uB429\uB2C8\uB2E4.\n\uC99D\uAC70 3\uAC1C\uB97C
-    \uBAA8\uC558\uB2E4\uBA74 \uAD50\uC815 \uBC84\uD2BC\uC73C\uB85C \uAD50\uC815\uC18C\uC5D0
-    \uBCF4\uB0BC \uC218 \uC788\uC2B5\uB2C8\uB2E4. \uAD50\uC815\uC18C\uC5D0 \uAC00\uAC8C
-    \uB41C \uC2DC\uBBFC\uB4E4\uC740\u2026 \uC4F8\uBAA8 \uC788\uAC8C \uBCC0\uD560
-    \uAC83\uC785\uB2C8\uB2E4!"
+    \uC870\uC0AC\uB97C \uBC1B\uAC8C \uB429\uB2C8\uB2E4.\n\uAD50\uC815\uC18C\uB85C
+    \uBCF4\uB0B4\uAE30 \uC704\uD574\uC11C\uB294 \uC99D\uAC70\uB97C 3\uAC1C \uBAA8\uC544\uC57C
+    \uD569\uB2C8\uB2E4. \uAD50\uC815\uC18C\uC5D0 \uAC00\uAC8C \uB41C \uC2DC\uBBFC\uB4E4\uC740\u2026
+    \uC4F8\uBAA8 \uC788\uAC8C \uBCC0\uD560 \uAC83\uC785\uB2C8\uB2E4!"
   description: 
   character: {fileID: 839233089}
   portrait: {fileID: 0}
@@ -8001,7 +7995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 793647683}
+  selectedFlowchart: {fileID: 490543194}
 --- !u!4 &690185502
 Transform:
   m_ObjectHideFlags: 1
@@ -9445,87 +9439,6 @@ MonoBehaviour:
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
---- !u!1 &871259356
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 871259357}
-  - component: {fileID: 871259358}
-  m_Layer: 0
-  m_Name: "\uC0AC\uBB34\uC2E4"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &871259357
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871259356}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45273533, y: 0.34898525, z: 10.134554}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1806181300}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &871259358
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 871259356}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78dfea538005919468d30634bb95f615, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &912257525
 GameObject:
   m_ObjectHideFlags: 0
@@ -12099,6 +12012,87 @@ Transform:
   m_Father: {fileID: 1114804489}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1664113238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664113239}
+  - component: {fileID: 1664113240}
+  m_Layer: 0
+  m_Name: "\uC0AC\uBB34\uC2E4"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1664113239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664113238}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.45273533, y: 0.34898525, z: 10.134554}
+  m_LocalScale: {x: 0.93, y: 0.93, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1806181300}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1664113240
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664113238}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c0d61e829e37ce94fb798f8d0063f725, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1689955525
 GameObject:
   m_ObjectHideFlags: 0
@@ -15270,7 +15264,7 @@ Transform:
   m_LocalPosition: {x: 0.45273533, y: -0.34898525, z: -10.134554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 871259357}
+  - {fileID: 1664113239}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -50,6 +50,56 @@ public class Conversation_flag : MonoBehaviour
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
         }
     }
+
+    public void FlagtoTrue_Office_Before_RevolutionaryRoute()
+    {
+        PlayerPrefs.SetInt("Day"+PlayerPrefs.GetInt("Day")+ "_Office_Before", 1);
+    }
+    public void FlagtoTrue_Office_Before()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Office_Before_RevolutionaryRoute", 1);
+    }
+    public void FlagtoTrue_Office_Middle()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Office_Middle", 1);
+    }
+    public void FlagtoTrue_Office_Middle_RevolutionaryRoute()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Office_Middle_RevolutionaryRoute", 1);
+    }
+    public void FlagtoTrue_Office_After()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Office_After", 1);
+    }
+    public void FlagtoTrue_Office_Afte_RevolutionaryRouter()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Office_After_RevolutionaryRoute", 1);
+    }
+    public void FlagtoTrue_Lobby()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Lobby", 1);
+    }
+    public void FlagtoTrue_Lobby_RevolutionaryRoute()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Lobby_RevolutionaryRoute", 1);
+    }
+    public void FlagtoTrue_Office()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Office", 1);
+    }
+    public void FlagtoTrue_Office_RevolutionaryRoute()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_Office_RevolutionaryRoute", 1);
+    }
+    public void FlagtoTrue_AM()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_AM", 1);
+    }
+    public void FlagtoTrue_AM_RevolutionaryRoute()
+    {
+        PlayerPrefs.SetInt("Day" + PlayerPrefs.GetInt("Day") + "_AM_RevolutionaryRoute", 1);
+    }
+
     /*
     //flowchart 버그 미발견으로 임시적으로 오버로딩
     public void GetFlag()

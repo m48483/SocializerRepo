@@ -11,7 +11,6 @@ public class BG_Reliability : MonoBehaviour
     float Frances_reliability;
     float Dylan_reliability;
     string SceneName;// 씬이름 구별
-    AudioSource audioSource;
     void Start()
     {
         Heather_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
@@ -31,12 +30,10 @@ public class BG_Reliability : MonoBehaviour
             if (Heather_reliability > 60)
             {
                 GameObject.Find("BG").transform.Find("집").gameObject.SetActive(true);
-                GameObject.Find("Audio").transform.Find("House1").GetComponent<AudioSource>().Play();
             }
             else if(Heather_reliability <= 60)
             {
                 GameObject.Find("BG").transform.Find("집_호감도 변경").gameObject.SetActive(true);
-                GameObject.Find("Audio").transform.Find("House2").GetComponent<AudioSource>().Play();
             }
         }
 
