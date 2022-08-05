@@ -28,13 +28,11 @@ public class randomflowchart : MonoBehaviour
         if (SceneName.Equals("House"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
-            if (Day == 1)
+            
+            if (Day == 1 || Day == 4 || Day == 8 || Day == 15 || Day == 22 || Day == 29 || Day == 31
+                || Day == 32 || Day == 33 || Day == 36 || Day == 51 || Day == 54)
             {
-                Heather_Day1();
-            }
-            else if(Day == 4)
-            {
-                Heather_Day4();
+                Heather_Day();
             }
             else
             {
@@ -58,7 +56,7 @@ public class randomflowchart : MonoBehaviour
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
             
-            if (Day == 1 || Day == 2 || Day == 5 || Day == 12 || Day == 17 || Day == 59 || Day == 60)
+            if (Day == 1 || Day == 2 || Day == 5 || Day == 12 || Day == 17 || Day == 18 || Day == 39 || Day == 59 || Day == 60)
             {
                 Dylan_Day();
             }
@@ -70,11 +68,19 @@ public class randomflowchart : MonoBehaviour
         else if (SceneName.Equals("AM"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
-            Frances_Reliability_Scene();
+
+            if (Day == 18 || Day == 19 || Day == 24 || Day == 36 || Day == 39 || Day == 45 || Day == 47 || Day == 59 || Day == 60)
+            {
+                Frances_Day();
+            }
+            else
+            {
+                Frances_Reliability_Scene();
+            }
         }
         else if (SceneName.Equals("Daily_schedule"))
         {
-            if (Day == 1 || Day == 8 || Day == 17 || Day == 18 || Day == 36 || Day == 51
+            if (Day == 1 || Day == 8 || Day == 17 || Day == 18 || Day == 36 || Day == 38 || Day == 39 || Day == 51
                 || Day == 52 || Day == 53 || Day == 54 || Day == 57 || Day == 58)//일과 중 안넣은 상태
             {
                 Dailyschedule_Day();
@@ -90,6 +96,86 @@ public class randomflowchart : MonoBehaviour
     {
         _fadeout.FadeIn();
     }
+
+    public void Heather_Day()
+    {
+        if (Revolutionary_route == true && Day == 22)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day22").gameObject.SetActive(true);
+        }
+        else if (Revolutionary_route == true && Day == 29)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day29").gameObject.SetActive(true);
+        }
+        else if (Revolutionary_route == true && Day == 32)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day32").gameObject.SetActive(true);
+        }
+        else if (Revolutionary_route == true && Day == 33)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day33").gameObject.SetActive(true);
+        }
+        else if (Revolutionary_route == true && Day == 36)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day36").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+        }
+    }
+    public void Dylan_Day()
+    {
+        
+        if (Revolutionary_route == true && Day == 39)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+        }
+    }
+    public void Hilda_Day()
+    {
+
+        if (Revolutionary_route == true && Day == 38)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day38").gameObject.SetActive(true);
+        }
+        else if (Revolutionary_route == true && Day == 39)
+        {
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+        }
+    }
+    public void Frances_Day()
+    {
+        GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+    }
+    public void Dailyschedule_Day()
+    {
+        if (Revolutionary_route == true && Day == 36)
+        {
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day36").gameObject.SetActive(true);
+        }
+        else if (Revolutionary_route == true && Day == 38)
+        {
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day38").gameObject.SetActive(true);
+        }
+        else if (Revolutionary_route == true && Day == 39)
+        {
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
+        }
+        else
+        {
+            GameObject.Find("FC").transform.Find("Day" + Day).gameObject.SetActive(true);
+        }
+    }
+
     // 헤더(딸) Flowchart 호출
     public void Heather_Reliability_Scene()
     {
@@ -111,46 +197,16 @@ public class randomflowchart : MonoBehaviour
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
     }
-
-    public void Heather_Day1()
-    {
-        GameObject.Find("Flowchart_").transform.Find("Day1").gameObject.SetActive(true);
-    }
-    public void Heather_Day4()
-    {
-        GameObject.Find("Flowchart_").transform.Find("Day4").gameObject.SetActive(true);
-    }
     // 힐다 Flowchart 호출
     public void Hilda_Reliability_Scene()
     {
         //힐다, 딜런은 호감도에 따른 대화 변경이 아닌 혁명루트에 따른 대화 변화
-        if (Revolutionary_route == false)
-        {
-            int rand = Random.Range(1, 8);
-            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
-        }
-        else if (Revolutionary_route == true)
-        {
-            int rand = Random.Range(8, 10);// 대사 추가시 수정 요구
-            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
-        }
-        /*
-        if (Revolutionary_route == false)
-        {
-            int rand = Random.Range(1, 8);
-            GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
-        }
-        else if (Revolutionary_route == true)
-        {
-            int rand = Random.Range(8, 10);// 대사 추가시 수정 요구
-            GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
-        }*/
+        
+        int rand = Random.Range(1, 8);
+        GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
+        GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
+        GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
+        
     }
     public void Hilda_Day3()
     {
@@ -160,43 +216,26 @@ public class randomflowchart : MonoBehaviour
     public void Dylan_Reliability_Scene()
     {
         //힐다, 딜런은 호감도에 따른 대화 변경이 아닌 혁명루트에 따른 대화 변화
-        if (Revolutionary_route == false)
-        {
-            int rand = Random.Range(1, 6);
-            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
-        }
-        else if (Revolutionary_route == true)
-        {
-            int rand = Random.Range(6, 10);
-            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Revolutionary_route", SceneName);
-            GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
-        }
+        int rand = Random.Range(1, 6);
+        GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
+        GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Normal", SceneName);
+        GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         Debug.Log("딜런 대화 시작");
     }
-    public void Dylan_Day()
-    {
-        GameObject.Find("Flowchart_").transform.Find("Day"+Day).gameObject.SetActive(true);
-    }
-    public void Dailyschedule_Day()
-    {
-        GameObject.Find("FC").transform.Find("Day" + Day).gameObject.SetActive(true);
-    }
+    
     // 프랜시스 Flowchart 호출
     public void Frances_Reliability_Scene()
     {
         // 헤더, 프랜시스는 신뢰도에 따라 대화 변화가 이뤄짐
         //if (reliability >= 80 && reliability <= 100)
-        if (reliability >= 0&& reliability<80)
+        if (reliability >= 80 && reliability <= 100)
         {
             int rand = Random.Range(1, 7);
             GameObject.Find("Flowchart_").transform.Find("Morethan80").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetFlag(rand, "Morethan80", SceneName);
             GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         }
-        else if (reliability >= 80 && reliability <= 100)
+        else if (reliability >= 0 && reliability < 80)
         {
             int rand = Random.Range(7, 14);// 혁명 루트 추가시 수정 요구
             GameObject.Find("Flowchart_").transform.Find("Lessthan80").transform.Find("Flowchart" + rand).gameObject.SetActive(true);
