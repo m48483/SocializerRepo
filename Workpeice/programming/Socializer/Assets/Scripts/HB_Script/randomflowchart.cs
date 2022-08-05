@@ -12,6 +12,7 @@ public class randomflowchart : MonoBehaviour
     float reliability;// 호감도에 따른 다른 대화 호출
     string SceneName;// 씬이름 구별
     bool Revolutionary_route;
+    RandomNPC _randomNPC;
 
     int Day;
 
@@ -21,6 +22,7 @@ public class randomflowchart : MonoBehaviour
         Day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");
         SceneName = SceneManager.GetActiveScene().name;
         Debug.Log("randomflowchart 스크립트, 장소 : " + SceneName);
+        _randomNPC = FindObjectOfType<RandomNPC>();
 
         Revolutionary_route = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route");
         if (SceneName.Equals("House"))
@@ -38,7 +40,7 @@ public class randomflowchart : MonoBehaviour
             {
                 Heather_Reliability_Scene();
             }
-        }
+        }// 집 수정 필요
         else if (SceneName.Equals("Lobby"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
@@ -51,12 +53,12 @@ public class randomflowchart : MonoBehaviour
             {
                 Hilda_Reliability_Scene();
             }
-        }
+        }//로비 수정 필요
         else if (SceneName.Equals("Office"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
             
-            if (Day == 1 || Day == 2 || Day == 5 || Day == 12 || Day == 17 || Day == 59)
+            if (Day == 1 || Day == 2 || Day == 5 || Day == 12 || Day == 17 || Day == 59 || Day == 60)
             {
                 Dylan_Day();
             }
@@ -64,13 +66,24 @@ public class randomflowchart : MonoBehaviour
             {
                 Dylan_Reliability_Scene();
             }
-        }
+        }//AM 코드 수정해야하는 상태
         else if (SceneName.Equals("AM"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
             Frances_Reliability_Scene();
         }
-
+        else if (SceneName.Equals("Daily_schedule"))
+        {
+            if (Day == 1 || Day == 8 || Day == 17 || Day == 18 || Day == 36 || Day == 51
+                || Day == 52 || Day == 53 || Day == 54 || Day == 57 || Day == 58)//일과 중 안넣은 상태
+            {
+                Dailyschedule_Day();
+            }
+            else
+            {
+                _randomNPC.SetNPCCount();
+            }
+        }
     }
 
     public void fadein()
@@ -166,6 +179,10 @@ public class randomflowchart : MonoBehaviour
     public void Dylan_Day()
     {
         GameObject.Find("Flowchart_").transform.Find("Day"+Day).gameObject.SetActive(true);
+    }
+    public void Dailyschedule_Day()
+    {
+        GameObject.Find("FC").transform.Find("Day" + Day).gameObject.SetActive(true);
     }
     // 프랜시스 Flowchart 호출
     public void Frances_Reliability_Scene()

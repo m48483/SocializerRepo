@@ -21,6 +21,10 @@ public class RandomNPC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+    public void SetNPCCount()
+    {
         day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");
 
         GameObject.Find("Variables").GetComponent<Conversation_flag>().Flag_Initialization();
@@ -58,7 +62,7 @@ public class RandomNPC : MonoBehaviour
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
         }
-        else if(day >= 15 && day < 20)      // 15~19일차
+        else if (day >= 15 && day < 20)      // 15~19일차
         {
             if (day == 17)
             {

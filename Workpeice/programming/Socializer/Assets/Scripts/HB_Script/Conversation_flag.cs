@@ -21,6 +21,11 @@ public class Conversation_flag : MonoBehaviour
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", false);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", false);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", false);
+
+        PlayerPrefs.SetInt("Heather_conversation", 0);
+        PlayerPrefs.SetInt("Frances_conversation", 0);
+        PlayerPrefs.SetInt("Hilda_conversation", 0);
+        PlayerPrefs.SetInt("Dylan_conversation", 0);
     }
 
     // 대화를 마치면 대화 플래그 값 true로 변경
