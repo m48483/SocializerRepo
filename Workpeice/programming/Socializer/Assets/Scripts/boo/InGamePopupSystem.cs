@@ -9,12 +9,14 @@ public class InGamePopupSystem : MonoBehaviour
 {
     public GameObject popup;
     public GameObject panel;
-    public GameObject panelBtn;
+    public GameObject btnMove;
+    public GameObject btnDont;
     public Text txt;
     public GameObject houseBtn;
     public GameObject lobbyBtn;
     public GameObject AMBtn;
     public GameObject officeBtn;
+    bool setBtn;
 
     public Animator subani;
 
@@ -58,27 +60,37 @@ public class InGamePopupSystem : MonoBehaviour
             if (GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Daily_schedule"))
             {
                 SelectSUB("\n로비로 이동합니다");
-                panelBtn.SetActive(true);
+                btnMove.SetActive(true);
             }
             else
             {
                 SelectSUB("일을 마치기 전에는\n이동할 수 없습니다.");
-                panelBtn.SetActive(true);
+                btnDont.SetActive(true);
             }
         }
     }
 
     public void OpenPopup()
     {
-        popup.SetActive(true);
-        SetPopup();
-        panel.SetActive(true);
-        Debug.Log("PopupOn");
+        if (setBtn)
+        {
+            OnClickBtn();
+            setBtn = false;
+        }
+        else
+        {
+            popup.SetActive(true);
+            SetPopup();
+            panel.SetActive(true);
+            Debug.Log("PopupOn");
+            setBtn = true;
+        }
     }
 
     public void OnClickBtn()
     {
         ClosePopUP();
+        panel.SetActive(false);
     }
 
     void ClosePopUP()
@@ -88,15 +100,13 @@ public class InGamePopupSystem : MonoBehaviour
         officeBtn.SetActive(false);
         AMBtn.SetActive(false);
         houseBtn.SetActive(false);
-
-        panel.SetActive(false);
+        btnDont.SetActive(false);
         Debug.Log("PopupOff");
     }
 
     //바로 사라지는 팝업
-    public void SUB(string message) //
+    public void SUB() //
     {
-        txt.text = message;
         popup.SetActive(false);
         StopAllCoroutines();
         StartCoroutine(SUBDelay());
@@ -110,6 +120,8 @@ public class InGamePopupSystem : MonoBehaviour
         subani.SetBool("isOn", false);
         yield return _UIDelay2;
         popup.SetActive(false);
+        btnDont.SetActive(false);
+        panel.SetActive(false);
     }
 
     public void SelectSUB(string message)
