@@ -45,7 +45,7 @@ public class randomflowchart : MonoBehaviour
             
             if (Day == 3)
             {
-                Hilda_Day3();
+                Hilda_Day();
             }
             else
             {
@@ -208,10 +208,7 @@ public class randomflowchart : MonoBehaviour
         GameObject.Find("Flowchart_").GetComponent<Conversation_flag>().GetConversationFlag(rand);
         
     }
-    public void Hilda_Day3()
-    {
-        GameObject.Find("Flowchart_").transform.Find("Day3").gameObject.SetActive(true);
-    }
+
     //Flowchart 호출
     public void Dylan_Reliability_Scene()
     {
