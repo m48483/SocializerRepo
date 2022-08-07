@@ -172,9 +172,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 26121263257757891, guid: 0f42c8ff30117b54085f15e48def0796,
+    - target: {fileID: 26121264880461041, guid: 0f42c8ff30117b54085f15e48def0796,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 26121265175667332, guid: 0f42c8ff30117b54085f15e48def0796,
@@ -237,6 +237,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RealPopup
       objectReference: {fileID: 0}
+    - target: {fileID: 2479643187483387872, guid: 0f42c8ff30117b54085f15e48def0796,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3690782642851103813, guid: 0f42c8ff30117b54085f15e48def0796,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -244,35 +249,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f42c8ff30117b54085f15e48def0796, type: 3}
---- !u!95 &26121263916448596 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 26121263738138619, guid: 0f42c8ff30117b54085f15e48def0796,
-    type: 3}
-  m_PrefabInstance: {fileID: 26121263916448595}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &26121263916448597 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5851469400165065033, guid: 0f42c8ff30117b54085f15e48def0796,
-    type: 3}
-  m_PrefabInstance: {fileID: 26121263916448595}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &26121263916448598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26121263916448597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e810318621f204aa569c057e4f9ddd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  subbox: {fileID: 26121263916448599}
-  subani: {fileID: 26121263916448596}
---- !u!1 &26121263916448599 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5851469401156701037, guid: 0f42c8ff30117b54085f15e48def0796,
-    type: 3}
-  m_PrefabInstance: {fileID: 26121263916448595}
-  m_PrefabAsset: {fileID: 0}

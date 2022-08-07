@@ -18,9 +18,11 @@ public class HelpManager : MonoBehaviour
     void Start()
     {
         day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");
-        if(day == 1)
+        Debug.Log(day);
+        if (day == 1)
         {
-            SceneManager.LoadScene("Help", LoadSceneMode.Additive);
+            Debug.Log("1일차입니다");
+            canvas.SetActive(true);
             count = 0;
             printHelp();
         }

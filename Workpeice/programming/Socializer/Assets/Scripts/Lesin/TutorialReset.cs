@@ -11,7 +11,7 @@ public class TutorialReset : MonoBehaviour
 
     void Start()
     {
-        SceneManager.LoadScene("Popup", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("Popup", LoadSceneMode.Additive);
         btn = transform.Find("DelayButton").GetComponent<Button>();
     }
 
