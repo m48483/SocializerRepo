@@ -106,14 +106,16 @@ public class SetVariablesManager : MonoBehaviour
         PlayerPrefs.SetInt("Day54_Lobby", 0);
 
         //AM
-        PlayerPrefs.SetInt("Day19_Lobby", 0);
-        PlayerPrefs.SetInt("Day24_Lobby", 0);
-        PlayerPrefs.SetInt("Day39_Lobby_RevolutionaryRoute", 0);
-        PlayerPrefs.SetInt("Day45_Lobby", 0);
-        PlayerPrefs.SetInt("Day47_Lobby", 0);
-        PlayerPrefs.SetInt("Day50_Lobby", 0);
-        PlayerPrefs.SetInt("Day59_Lobby", 0);
-        PlayerPrefs.SetInt("Day60_Lobby", 0);
+        PlayerPrefs.SetInt("Day18_AM", 0);
+        PlayerPrefs.SetInt("Day19_AM", 0);
+        PlayerPrefs.SetInt("Day24_AM", 0);
+        PlayerPrefs.SetInt("Day36_AM", 0);
+        PlayerPrefs.SetInt("Day39_AM", 0);
+        PlayerPrefs.SetInt("Day45_AM", 0);
+        PlayerPrefs.SetInt("Day47_AM", 0);
+        PlayerPrefs.SetInt("Day50_AM", 0);
+        PlayerPrefs.SetInt("Day59_AM", 0);
+        PlayerPrefs.SetInt("Day60_AM", 0);
 
 
         //int day = PlayerPrefs.GetInt("Day");

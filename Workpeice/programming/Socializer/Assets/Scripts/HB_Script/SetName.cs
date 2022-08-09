@@ -8,7 +8,7 @@ public class SetName : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("Player").GetComponent<Character>().
+        GameObject.Find("Character").transform.Find("Player").GetComponent<Character>().
             NameText = PlayerPrefs.GetString("Name");
     }
 

@@ -6,6 +6,7 @@ using TMPro;
 public class Text_Clickable : MonoBehaviour
 {
     public TextMeshProUGUI text;
+    string tmptext;
     Text_Event TE;
     Evidence E;
     public string LastClickedWord;
@@ -57,9 +58,12 @@ public class Text_Clickable : MonoBehaviour
                         {
                             Debug.Log("저장초과");
                         }
+                        tmptext = text.text;
+                        text.text = "<color=#FFEA0F>" + text.text + "</color>";
 
+                        /* 위에 한 줄이면 해결할 것을 난 왜 이렇게 했을까,,,,,
                         // 텍스트 색깔
-                        for (int j = TE.starttoend_index[i, 0]; j <= TE.starttoend_index[i, 1]; j++)
+                        for (int j = 0; j < text.textInfo.wordCount; j++)
                         {
                             TMP_WordInfo info = text.textInfo.wordInfo[j];
                             for (int a = 0; a < info.characterCount; ++a)
@@ -69,7 +73,7 @@ public class Text_Clickable : MonoBehaviour
                                 int vertexIndex = text.textInfo.characterInfo[charIndex].vertexIndex;
 
                                 Color32[] vertexColors = text.textInfo.meshInfo[meshIndex].colors32;
-                                vertexColors[vertexIndex + 0] = new Color32(255,204,24,255);
+                                vertexColors[vertexIndex + 0] = new Color32(255, 204, 24, 255);
                                 vertexColors[vertexIndex + 1] = new Color32(255, 204, 24, 255);
                                 vertexColors[vertexIndex + 2] = new Color32(255, 204, 24, 255);
                                 vertexColors[vertexIndex + 3] = new Color32(255, 204, 24, 255);
@@ -77,6 +81,7 @@ public class Text_Clickable : MonoBehaviour
 
                             text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
                         }
+                        */
                         break;
                     }    
                 }
@@ -87,7 +92,11 @@ public class Text_Clickable : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            for (int j = TE.starttoend_index[i, 0]; j <= TE.starttoend_index[i, 1]; j++)
+            text.text = tmptext;
+
+            /* 위에 한 줄이면 해결할 것을 난 왜 이렇게 했을까,,,,,
+            // 텍스트 색깔
+            for (int j = 0; j <= text.textInfo.wordCount; j++)
             {
                 TMP_WordInfo info = text.textInfo.wordInfo[j];
                 for (int a = 0; a < info.characterCount; ++a)
@@ -105,6 +114,7 @@ public class Text_Clickable : MonoBehaviour
 
                 text.UpdateVertexData(TMP_VertexDataUpdateFlags.All);
             }
+            */
         }
     }
 }

@@ -9108,7 +9108,6 @@ GameObject:
   - component: {fileID: 837399256}
   - component: {fileID: 837399255}
   - component: {fileID: 837399254}
-  - component: {fileID: 837399251}
   - component: {fileID: 837399250}
   - component: {fileID: 837399249}
   - component: {fileID: 837399248}
@@ -9116,6 +9115,7 @@ GameObject:
   - component: {fileID: 837399257}
   - component: {fileID: 837399253}
   - component: {fileID: 837399252}
+  - component: {fileID: 837399251}
   m_Layer: 0
   m_Name: Day33
   m_TagString: Untagged
@@ -9231,31 +9231,21 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &837399251
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837399246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 13
+  itemId: 89
   indentLevel: 0
-  storyText: "\uC2E0\uB8B0\uB3C4 -10"
-  description: 
-  character: {fileID: 2024039504}
-  portrait: {fileID: 21300000, guid: 03f7e85256f7fec4aadaebef5824bb74, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  targetObject: {fileID: 300576466}
+  methodName: callFadeEffect
+  delay: 0
 --- !u!114 &837399252
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9271,7 +9261,7 @@ MonoBehaviour:
   itemId: 88
   indentLevel: 0
   targetObject: {fileID: 300576466}
-  methodName: callFadeEffect
+  methodName: Day33_House_Negative
   delay: 0
 --- !u!114 &837399253
 MonoBehaviour:
@@ -9320,7 +9310,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 67
-    y: 69
+    y: 73
     width: 111
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9330,12 +9320,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 837399254}
   commandList:
-  - {fileID: 837399251}
   - {fileID: 837399250}
   - {fileID: 837399249}
   - {fileID: 837399248}
-  - {fileID: 837399253}
+  - {fileID: 837399251}
   - {fileID: 837399252}
+  - {fileID: 837399253}
   suppressAllAutoSelections: 0
 --- !u!114 &837399256
 MonoBehaviour:
@@ -9364,7 +9354,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 837399255}
   selectedCommands:
-  - {fileID: 837399253}
+  - {fileID: 837399250}
   variables:
   - {fileID: 837399257}
   - {fileID: 837399258}
@@ -13235,7 +13225,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1057725840}
   selectedCommands:
-  - {fileID: 1057725849}
+  - {fileID: 1057725838}
   variables:
   - {fileID: 1057725854}
   - {fileID: 1057725855}
@@ -22421,7 +22411,6 @@ GameObject:
   - component: {fileID: 1770338916}
   - component: {fileID: 1770338915}
   - component: {fileID: 1770338914}
-  - component: {fileID: 1770338913}
   - component: {fileID: 1770338959}
   - component: {fileID: 1770338958}
   - component: {fileID: 1770338957}
@@ -22445,11 +22434,12 @@ GameObject:
   - component: {fileID: 1770338939}
   - component: {fileID: 1770338938}
   - component: {fileID: 1770338937}
-  - component: {fileID: 1770338936}
   - component: {fileID: 1770338935}
   - component: {fileID: 1770338934}
   - component: {fileID: 1770338933}
   - component: {fileID: 1770338932}
+  - component: {fileID: 1770338936}
+  - component: {fileID: 1770338913}
   m_Layer: 0
   m_Name: Day29
   m_TagString: Untagged
@@ -22480,24 +22470,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770338911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 20
+  itemId: 97
   indentLevel: 1
-  storyText: "\uC2E0\uB8B0\uB3C4 +5"
-  description: 
-  character: {fileID: 1822042584}
-  portrait: {fileID: 21300000, guid: 03f7e85256f7fec4aadaebef5824bb74, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  targetObject: {fileID: 300576466}
+  methodName: Day29_House_RevolutionaryRoute_Positive
+  delay: 0
 --- !u!114 &1770338914
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -22990,10 +22970,10 @@ MonoBehaviour:
   - {fileID: 1770338916}
   - {fileID: 1770338915}
   - {fileID: 1770338914}
-  - {fileID: 1770338913}
   - {fileID: 1770338926}
   - {fileID: 1770338956}
   - {fileID: 1770338954}
+  - {fileID: 1770338913}
   - {fileID: 1770338953}
   - {fileID: 1770338952}
   - {fileID: 1770338951}
@@ -23011,9 +22991,9 @@ MonoBehaviour:
   - {fileID: 1770338939}
   - {fileID: 1770338938}
   - {fileID: 1770338937}
-  - {fileID: 1770338936}
   - {fileID: 1770338935}
   - {fileID: 1770338934}
+  - {fileID: 1770338936}
   - {fileID: 1770338933}
   - {fileID: 1770338932}
   suppressAllAutoSelections: 0
@@ -23041,8 +23021,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1770338930}
+  selectedCommands:
+  - {fileID: 1770338935}
   variables:
   - {fileID: 1770338959}
   - {fileID: 1770338958}
@@ -23159,24 +23141,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770338911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 91
+  itemId: 96
   indentLevel: 1
-  storyText: "\uC2E0\uB8B0\uB3C4 +5"
-  description: 
-  character: {fileID: 1822042584}
-  portrait: {fileID: 21300000, guid: 03f7e85256f7fec4aadaebef5824bb74, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
+  targetObject: {fileID: 300576466}
+  methodName: Day29_House_RevolutionaryRoute_Positive
+  delay: 0
 --- !u!114 &1770338937
 MonoBehaviour:
   m_ObjectHideFlags: 2

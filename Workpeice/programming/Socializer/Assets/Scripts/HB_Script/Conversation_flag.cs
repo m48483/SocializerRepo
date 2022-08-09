@@ -37,22 +37,25 @@ public class Conversation_flag : MonoBehaviour
         {
             Heather_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Heather_conversation", Heather_conversation);
-
+            PlayerPrefs.SetInt("Heather_conversation", 1);
         }
         else if (SceneName.Equals("Lobby"))
         {
             Hilda_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", Hilda_conversation);
+            PlayerPrefs.SetInt("Hilda_conversation", 1);
         }
         else if (SceneName.Equals("Office"))
         {
             Hilda_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", Dylan_conversation);
+            PlayerPrefs.SetInt("Dylan_conversation", 1);
         }
         else if (SceneName.Equals("AM"))
         {
             Heather_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
+            PlayerPrefs.SetInt("Frances_conversation", 1);
         }
     }
 
@@ -197,6 +200,8 @@ public class Conversation_flag : MonoBehaviour
             GameObject.Find("Flowchart_").transform.Find(str).transform.Find("Flowchart" + rand).GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
         }
     }
+
+
 }
 
 /*

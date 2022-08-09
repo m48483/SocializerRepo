@@ -28,7 +28,7 @@ public class randomflowchart : MonoBehaviour
         if (SceneName.Equals("House"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
-            
+
             if (Day == 1 || Day == 4 || Day == 8 || Day == 15 || Day == 22 || Day == 29 || Day == 31
                 || Day == 32 || Day == 33 || Day == 36 || Day == 51 || Day == 54)
             {
@@ -42,8 +42,8 @@ public class randomflowchart : MonoBehaviour
         else if (SceneName.Equals("Lobby"))
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
-            
-            if (Day == 3)
+
+            if (Day == 38 || Day == 39 || Day == 50)
             {
                 Hilda_Day();
             }
@@ -99,80 +99,136 @@ public class randomflowchart : MonoBehaviour
 
     public void Heather_Day()
     {
-        if (Revolutionary_route == true && Day == 22)
+        if (Revolutionary_route == true && Day == 22 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day22").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
         }
-        else if (Revolutionary_route == true && Day == 29)
+        else if (Revolutionary_route == true && Day == 29 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day29").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
         }
-        else if (Revolutionary_route == true && Day == 32)
+        else if (Revolutionary_route == true && Day == 32 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day32").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
         }
-        else if (Revolutionary_route == true && Day == 33)
+        else if (Revolutionary_route == true && Day == 33 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day33").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
         }
-        else if (Revolutionary_route == true && Day == 36)
+        else if (Revolutionary_route == true && Day == 36 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day36").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
         }
         else
         {
-            GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+            if (PlayerPrefs.GetInt("Day" + Day + "_House") == 0)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+                PlayerPrefs.SetInt("Day" + Day + "_House", 1);
+            }
+            else
+                Heather_Reliability_Scene();
         }
     }
     public void Dylan_Day()
     {
         
-        if (Revolutionary_route == true && Day == 39)
+        if (Revolutionary_route == true && Day == 39 && PlayerPrefs.GetInt("Day38_Lobby_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day38_Lobby_After_RevolutionaryRoute",1);
         }
         else
         {
-            GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+            if (PlayerPrefs.GetInt("Day"+Day+"_Lobby_After") == 0)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+                PlayerPrefs.SetInt("Day"+Day+"_Lobby_After", 1);
+            }
+            else
+                Dylan_Reliability_Scene();
         }
     }
     public void Hilda_Day()
     {
 
-        if (Revolutionary_route == true && Day == 38)
+        if (Revolutionary_route == true && Day == 38 && PlayerPrefs.GetInt("Day38_Lobby_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day38").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day38_Lobby_RevolutionaryRoute", 1);
         }
-        else if (Revolutionary_route == true && Day == 39)
+        else if (Revolutionary_route == true && Day == 39 && PlayerPrefs.GetInt("Day39_Lobby_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day39_Lobby_RevolutionaryRoute", 1);
+        }
+        else if (Day == 50)
+        {
+            float H_Reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_Reliability");
+            float F_Reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_Reliability");
+            if (H_Reliability >= 80 && F_Reliability >= 80 && PlayerPrefs.GetInt("Day50_Lobby") == 0)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+                PlayerPrefs.SetInt("Day50_Lobby", 1);
+            }
+            else
+                Hilda_Reliability_Scene();
         }
         else
         {
-            GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+            if (PlayerPrefs.GetInt("Day" + Day + "_Lobby") == 0)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+                PlayerPrefs.SetInt("Day" + Day + "_Lobby", 1);
+            }
+            else
+                Hilda_Reliability_Scene();
         }
     }
     public void Frances_Day()
     {
-        GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
-    }
-    public void Dailyschedule_Day()
-    {
-        if (Revolutionary_route == true && Day == 36)
+        if (PlayerPrefs.GetInt("Day"+Day+"_AM") == 0)
         {
-            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day36").gameObject.SetActive(true);
-        }
-        else if (Revolutionary_route == true && Day == 38)
-        {
-            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day38").gameObject.SetActive(true);
-        }
-        else if (Revolutionary_route == true && Day == 39)
-        {
-            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
+            GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day" + Day + "_AM", 1);
         }
         else
         {
-            GameObject.Find("FC").transform.Find("Day" + Day).gameObject.SetActive(true);
+            Frances_Reliability_Scene();
+        }
+    }
+    public void Dailyschedule_Day()
+    {
+        if (Revolutionary_route == true && Day == 36 && PlayerPrefs.GetInt("Day" + Day + "_Office_Before_RevolutionaryRoute") == 0)
+        {
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day36").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day36_Office_Before_RevolutionaryRoute", 1);
+        }
+        else if (Revolutionary_route == true && Day == 38 && PlayerPrefs.GetInt("Day" + Day + "_Office_Before_RevolutionaryRoute") == 0)
+        {
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day38").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day38_Office_Before_RevolutionaryRoute", 1);
+        }
+        else if (Revolutionary_route == true && Day == 39 && PlayerPrefs.GetInt("Day" + Day + "_Office_Before_RevolutionaryRoute") == 0)
+        {
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day39_Office_Before_RevolutionaryRoute", 1);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("Day" + Day + "_Office_Before") == 0)
+            {
+                GameObject.Find("FC").transform.Find("Day" + Day).gameObject.SetActive(true);
+                PlayerPrefs.SetInt("Day" + Day + "_Office_Before", 1);
+            }
+            else
+                _randomNPC.SetNPCCount();
+
         }
     }
 
