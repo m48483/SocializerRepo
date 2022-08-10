@@ -11,6 +11,10 @@ public class InGamePopupSystem : MonoBehaviour
     public GameObject panel;
     public GameObject btnMove;
     public GameObject btnDont;
+    
+    public GameObject btn;
+    public GameObject txtDay;
+
     public Text txt;
     public GameObject houseBtn;
     public GameObject lobbyBtn;
@@ -32,6 +36,12 @@ public class InGamePopupSystem : MonoBehaviour
     {
         SceneName = SceneManager.GetActiveScene().name;
         _sceneChange = FindObjectOfType<SceneChange>();
+
+        if (SceneName.Equals("Tutorial"))
+        {
+            btn.SetActive(false);
+            txtDay.SetActive(false);
+        }
     }
 
     void SetPopup()

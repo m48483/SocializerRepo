@@ -9,6 +9,8 @@ public class HelpManager : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject btn;
+
+    public GameObject btnPopup;
     public Text txt;
     int day;
 
@@ -21,6 +23,8 @@ public class HelpManager : MonoBehaviour
         Debug.Log(day);
         if (day == 1)
         {
+            btnPopup.SetActive(false);
+
             Debug.Log("1일차입니다");
             canvas.SetActive(true);
             count = 0;
@@ -60,7 +64,12 @@ public class HelpManager : MonoBehaviour
         else if (count > 3)
         {
             canvas.SetActive(false);
+            setPopup();
         }
+    }
+    void setPopup()
+    {
+        btnPopup.SetActive(true);
     }
     public void clickBtn()
     {
