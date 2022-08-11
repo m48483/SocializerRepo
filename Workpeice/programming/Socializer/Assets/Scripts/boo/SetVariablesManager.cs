@@ -21,8 +21,8 @@ public class SetVariablesManager : MonoBehaviour
         PlayerPrefs.SetInt("Dylan_conversation", 0);
         PlayerPrefs.SetInt("Frances_conversation", 0);
 
-        PlayerPrefs.SetFloat("Heather_reliability", 50);
-        PlayerPrefs.SetFloat("Hilda_reliability", 80);
+        PlayerPrefs.SetFloat("Heather_reliability", 80);
+        PlayerPrefs.SetFloat("Hilda_reliability", 40);
         PlayerPrefs.SetFloat("Dylan_reliability", 40);
         PlayerPrefs.SetFloat("Frances_reliability", 10);
         PlayerPrefs.SetInt("Day", 1);

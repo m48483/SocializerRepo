@@ -142,7 +142,7 @@ public class Conversation_flag : MonoBehaviour
 
         if (SceneName.Equals("House"))
         {
-            float H_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
+            float H_reliability = PlayerPrefs.GetFloat("Heather_reliability");
             if (H_reliability > 60)
             {
                 GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
@@ -153,22 +153,61 @@ public class Conversation_flag : MonoBehaviour
                 GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
                     .SetBooleanVariable("Heather_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Heather_conversation"));
             }
-
+            GetReliability(i);
         }
         else if (SceneName.Equals("Lobby"))
         {
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
                     .SetBooleanVariable("Hilda_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation"));
+            GetReliability(i);
         }
         else if (SceneName.Equals("Office"))
         {
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
                     .SetBooleanVariable("Dylan_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Dylan_conversation"));
+            GetReliability(i);
         }
         else if (SceneName.Equals("AM"))
         {
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
                      .SetBooleanVariable("Frances_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation"));
+            GetReliability(i);
+        }
+    }
+
+    public void GetReliability(int i)
+    {
+        SceneName = SceneManager.GetActiveScene().name;
+
+        if (SceneName.Equals("House"))
+        {
+            float H_reliability = PlayerPrefs.GetFloat("Heather_reliability");
+            if (H_reliability > 60)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetFloatVariable("Heather_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_conversation"));
+            }
+            else if (H_reliability <= 60)
+            {
+                GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetFloatVariable("Heather_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_conversation"));
+            }
+
+        }
+        else if (SceneName.Equals("Lobby"))
+        {
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetFloatVariable("Hilda_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_conversation"));
+        }
+        else if (SceneName.Equals("Office"))
+        {
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetFloatVariable("Dylan_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_conversation"));
+        }
+        else if (SceneName.Equals("AM"))
+        {
+            GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
+                    .SetFloatVariable("Frances_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_conversation"));
         }
     }
 

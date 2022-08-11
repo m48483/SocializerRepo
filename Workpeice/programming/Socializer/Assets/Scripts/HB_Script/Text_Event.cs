@@ -17,7 +17,7 @@ public class Text_Event : MonoBehaviour
     {
         num = 0;
         Conversation_text = gameObject.GetComponent<TextMeshProUGUI>();
-        str = Conversation_text.text.Split(new string[] {"\n"}, System.StringSplitOptions.RemoveEmptyEntries);
+        str = Conversation_text.text.Split(new string[] {""}, System.StringSplitOptions.RemoveEmptyEntries);
         //str = Conversation_text.text.Split(new string[] { "\n" }, System.StringSplitOptions.RemoveEmptyEntries);
         MatchCollection matches;
         for (int i = 0; i < str.Length; i++)

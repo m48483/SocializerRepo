@@ -15,6 +15,7 @@ public class Evidence_Script : MonoBehaviour
     public string message1, message2, message3;
     // Start is called before the first frame update
 
+
     NoticeUI _notice;
 
     void Awake()

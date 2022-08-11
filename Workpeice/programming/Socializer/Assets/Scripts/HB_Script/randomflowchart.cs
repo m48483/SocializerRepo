@@ -103,26 +103,36 @@ public class randomflowchart : MonoBehaviour
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day22").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day22").GetComponent<Flowchart>().SetFloatVariable("Heather_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
         }
         else if (Revolutionary_route == true && Day == 29 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day29").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day29").GetComponent<Flowchart>().SetFloatVariable("Heather_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
         }
         else if (Revolutionary_route == true && Day == 32 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day32").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day32").GetComponent<Flowchart>().SetFloatVariable("Heather_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
         }
         else if (Revolutionary_route == true && Day == 33 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day33").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day33").GetComponent<Flowchart>().SetFloatVariable("Heather_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
         }
         else if (Revolutionary_route == true && Day == 36 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day36").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day" + Day + "_House_Revolutionary_route", 1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day36").GetComponent<Flowchart>().SetFloatVariable("Heather_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
         }
         else
         {
@@ -130,6 +140,8 @@ public class randomflowchart : MonoBehaviour
             {
                 GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
                 PlayerPrefs.SetInt("Day" + Day + "_House", 1);
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).GetComponent<Flowchart>().SetFloatVariable("Heather_reliability",
+                    GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
             }
             else
                 Heather_Reliability_Scene();
@@ -142,6 +154,8 @@ public class randomflowchart : MonoBehaviour
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day38_Lobby_After_RevolutionaryRoute",1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
         }
         else
         {
@@ -149,6 +163,8 @@ public class randomflowchart : MonoBehaviour
             {
                 GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
                 PlayerPrefs.SetInt("Day"+Day+"_Lobby_After", 1);
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                    GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
             }
             else
                 Dylan_Reliability_Scene();
@@ -161,11 +177,15 @@ public class randomflowchart : MonoBehaviour
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day38").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day38_Lobby_RevolutionaryRoute", 1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day38").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
         }
         else if (Revolutionary_route == true && Day == 39 && PlayerPrefs.GetInt("Day39_Lobby_RevolutionaryRoute") == 0)
         {
             GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day39_Lobby_RevolutionaryRoute", 1);
+            GameObject.Find("Flowchart_").transform.Find("Revolutionary_route").transform.Find("Day39").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability"));
         }
         else if (Day == 50)
         {
@@ -174,6 +194,8 @@ public class randomflowchart : MonoBehaviour
             if (H_Reliability >= 80 && F_Reliability >= 80 && PlayerPrefs.GetInt("Day50_Lobby") == 0)
             {
                 GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).GetComponent<Flowchart>().SetFloatVariable("Hilda_Reliability",
+                    GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_Reliability"));
                 PlayerPrefs.SetInt("Day50_Lobby", 1);
             }
             else
@@ -185,6 +207,8 @@ public class randomflowchart : MonoBehaviour
             {
                 GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
                 PlayerPrefs.SetInt("Day" + Day + "_Lobby", 1);
+                GameObject.Find("Flowchart_").transform.Find("Day" + Day).GetComponent<Flowchart>().SetFloatVariable("Hilda_Reliability",
+                    GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_Reliability"));
             }
             else
                 Hilda_Reliability_Scene();
@@ -196,6 +220,8 @@ public class randomflowchart : MonoBehaviour
         {
             GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day" + Day + "_AM", 1);
+            GameObject.Find("Flowchart_").transform.Find("Day" + Day).GetComponent<Flowchart>().SetFloatVariable("Frances_Reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_Reliability"));
         }
         else
         {
@@ -208,16 +234,22 @@ public class randomflowchart : MonoBehaviour
         {
             GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day36").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day36_Office_Before_RevolutionaryRoute", 1);
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day36").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
         }
         else if (Revolutionary_route == true && Day == 38 && PlayerPrefs.GetInt("Day" + Day + "_Office_Before_RevolutionaryRoute") == 0)
         {
             GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day38").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day38_Office_Before_RevolutionaryRoute", 1);
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day38").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
         }
         else if (Revolutionary_route == true && Day == 39 && PlayerPrefs.GetInt("Day" + Day + "_Office_Before_RevolutionaryRoute") == 0)
         {
             GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day39").gameObject.SetActive(true);
             PlayerPrefs.SetInt("Day39_Office_Before_RevolutionaryRoute", 1);
+            GameObject.Find("FC").transform.Find("Revolutionary_route").transform.Find("Day39").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
         }
         else
         {
@@ -225,6 +257,8 @@ public class randomflowchart : MonoBehaviour
             {
                 GameObject.Find("FC").transform.Find("Day" + Day).gameObject.SetActive(true);
                 PlayerPrefs.SetInt("Day" + Day + "_Office_Before", 1);
+                GameObject.Find("FC").transform.Find("Day" + Day).GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                    GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
             }
             else
                 _randomNPC.SetNPCCount();

@@ -12,22 +12,22 @@ public class Text_Clickable : MonoBehaviour
     public string LastClickedWord;
     public static int Store_index = 0;
     public int flag;
-    public int i; 
-
+    public int i;
+    int wordIndex = -1;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             TE = GameObject.Find("StoryText").GetComponent<Text_Event>();
             E = GameObject.Find("Evidence").GetComponent<Evidence>();
-            var wordIndex = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
+            wordIndex = TMP_TextUtilities.FindIntersectingWord(text, Input.mousePosition, null);
 
+            Debug.Log("asd" + wordIndex);
             //Debug.Log("Clicked on " + wordIndex);
             if (wordIndex != -1)
             { 
                 flag = 0;
                 LastClickedWord = text.textInfo.wordInfo[wordIndex].GetWord();
-                Debug.Log(wordIndex);
                 Debug.Log(TE.starttoend_index[1, 0]);
                 for (i = 0; i < TE.str.Length; i++)
                 {
@@ -60,6 +60,7 @@ public class Text_Clickable : MonoBehaviour
                         }
                         tmptext = text.text;
                         text.text = "<color=#FFEA0F>" + text.text + "</color>";
+                        
 
                         /* 위에 한 줄이면 해결할 것을 난 왜 이렇게 했을까,,,,,
                         // 텍스트 색깔
@@ -92,8 +93,11 @@ public class Text_Clickable : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            text.text = tmptext;
-
+            if(wordIndex != -1)
+            {
+                text.text = tmptext;
+                wordIndex = -1;
+            }
             /* 위에 한 줄이면 해결할 것을 난 왜 이렇게 했을까,,,,,
             // 텍스트 색깔
             for (int j = 0; j <= text.textInfo.wordCount; j++)

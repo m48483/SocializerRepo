@@ -35,11 +35,13 @@ public class DayStart : MonoBehaviour
         GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Day", PlayerPrefs.GetInt("Day"));
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Gameover", setBool(PlayerPrefs.GetInt("Gameover")));
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Revolutionary_route", setBool(PlayerPrefs.GetInt("Revolutionary_route")));
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", PlayerPrefs.GetInt("ReactionaryNPC"));
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", PlayerPrefs.GetInt("Citizen"));
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Pass", PlayerPrefs.GetInt("Pass"));
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Arrest", PlayerPrefs.GetInt("Arrest"));
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Kill", PlayerPrefs.GetInt("Kill"));
+
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC",0);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", 0);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Pass", 0);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Arrest", 0);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Kill", 0);
+
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("RevolutionaryNPC", PlayerPrefs.GetFloat("RevolutionaryNPC"));
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("RevolutionaryPass", PlayerPrefs.GetFloat("RevolutionaryPass"));
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Tier1NPC", PlayerPrefs.GetFloat("Tier1NPC"));

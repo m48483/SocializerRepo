@@ -6,34 +6,30 @@ using UnityEngine;
 
 public class RandomNPC_Count : MonoBehaviour
 {
-    public int Pass;
-    public int Arrest;
-    public int kill;
-
-    void Start()
+    public void CitizenCount()
     {
-        Pass = 0;
-        Arrest = 0;
-        kill = 0;
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Pass", Pass);
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Arrest", Arrest);
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("kill", kill);
-        //Daily_Schdule로 이동 시 초기화
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Citizen") + 1);
+        PlayerPrefs.SetInt("Citizen", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Citizen"));
+    }
+    public void ReactionaryNPCCount()
+    {
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("ReactionaryNPC") + 1);
+        PlayerPrefs.SetInt("ReactionaryNPC", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("ReactionaryNPC"));
     }
 
     public void NPC_Pass()
     {
-        Pass++;
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Pass", Pass);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Pass", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Pass") + 1);
+        PlayerPrefs.SetInt("Pass", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Pass"));
     }
     public void NPC_Arrest()
     {
-        Arrest++;
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Arrest", Arrest);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Arrest", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Arrest") + 1);
+        PlayerPrefs.SetInt("Arrest", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Arrest"));
     }
     public void NPC_Kill()
     {
-        kill++;
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("kill", kill);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Kill", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Kill") + 1);
+        PlayerPrefs.SetInt("Kill", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Kill"));
     }
 }
