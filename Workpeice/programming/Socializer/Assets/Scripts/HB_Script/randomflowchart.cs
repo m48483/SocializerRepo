@@ -92,10 +92,10 @@ public class randomflowchart : MonoBehaviour
         }
     }
 
-    //public void fadein()
-    //{
-    //    StartCoroutine(_fadeout.FadeIn());
-    //}
+    public void fadein()
+    {
+        _fadeout.FadeIn();
+    }
 
     public void Heather_Day()
     {
