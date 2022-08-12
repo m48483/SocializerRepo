@@ -8,6 +8,6 @@ public class CallFadeEffect : MonoBehaviour
     public void callFadeEffect()
     {
         Debug.Log("페이드인아웃");
-        GameObject.Find("RealPopup").transform.Find("fadeCanvas").GetComponent<Fadeout>().FadeEffect();
+        //GameObject.Find("RealPopup").transform.Find("FadeinoutCanvas").GetComponent<FadeEffect>().fadeEffect();
     }
 }

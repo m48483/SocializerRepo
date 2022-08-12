@@ -2266,6 +2266,7 @@ GameObject:
   - component: {fileID: 559167804}
   - component: {fileID: 559167803}
   - component: {fileID: 559167802}
+  - component: {fileID: 559167809}
   m_Layer: 0
   m_Name: Day17
   m_TagString: Untagged
@@ -2737,6 +2738,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &559167809
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559167791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 72
+  indentLevel: 0
+  targetObject: {fileID: 1839884347}
+  methodName: Click_D
+  delay: 0
 --- !u!114 &559167810
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2983,6 +3001,7 @@ MonoBehaviour:
   - {fileID: 559167797}
   - {fileID: 559167798}
   - {fileID: 559167826}
+  - {fileID: 559167809}
   - {fileID: 559167822}
   - {fileID: 559167846}
   suppressAllAutoSelections: 0
@@ -24565,7 +24584,6 @@ GameObject:
   - component: {fileID: 1931632644}
   - component: {fileID: 1931632643}
   - component: {fileID: 1931632642}
-  - component: {fileID: 1931632641}
   - component: {fileID: 1931632640}
   - component: {fileID: 1931632639}
   - component: {fileID: 1931632638}
@@ -24816,23 +24834,6 @@ MonoBehaviour:
   scope: 1
   key: Dylan_conversation
   value: 0
---- !u!114 &1931632641
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931632631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 14
-  indentLevel: 0
-  targetObject: {fileID: 1839884347}
-  methodName: Click_D
-  delay: 0
 --- !u!114 &1931632642
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -24892,7 +24893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 127.33269
+    x: 128.46906
     y: 72.98736
     width: 122.727264
     height: 40
@@ -24911,7 +24912,6 @@ MonoBehaviour:
   - {fileID: 1931632635}
   - {fileID: 1931632636}
   - {fileID: 1931632637}
-  - {fileID: 1931632641}
   suppressAllAutoSelections: 0
 --- !u!114 &1931632645
 MonoBehaviour:
