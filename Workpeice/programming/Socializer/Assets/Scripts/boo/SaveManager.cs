@@ -15,16 +15,25 @@ public class SaveManager : MonoBehaviour
     bool citizen;   //false시 사망
     bool Frances_conversation;   //AM 접촉시 true
     bool Hilda_conversation;   //정보부 NPC에게 이를 알림
+    bool Revolutionary_route; //혁명루트
+
+    float Hilda_reliability;
+    float Heather_reliability;
+    float Frances_reliability;
+    float Dylan_reliability;
 
     int isGameOverInt;
     int citizenInt;
     int Frances_conversation_Int;
-    int Hilda_conversation_Int;   
+    int Hilda_conversation_Int;
+    int Revolutionary_route_Int;
+    float backVol = 1f; // 껐다 켰을 떄도 Slider의 값 유지
 
-    public void Start()
+    public void Awake()
     {
         if(SceneManager.GetActiveScene().name == "Title")
         {
+            GameLoad();
             //if (!PlayerPrefs.HasKey("Day"))
             //{
             //    continueBtn.SetActive(false);
@@ -45,14 +54,6 @@ public class SaveManager : MonoBehaviour
             {
                 continueBtn.SetActive(true);
                 btnImage.SetActive(false);
-                //SpriteRenderer spr = GetComponent<SpriteRenderer>();
-
-                //Color color = spr.color;
-                //color.a = 0.5f;
-                //spr.color = color;
-                //Color color = btnImage.GetComponent<Image>().color;
-                //color.a = 0.5f;
-                //btnImage.GetComponent<Image>().color = color;
             }
         }
     }
@@ -66,30 +67,43 @@ public class SaveManager : MonoBehaviour
         citizen = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Citizen");
         Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
         Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
+        Revolutionary_route = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route");
 
-        // 0 == true, 1 == false
+        Hilda_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
+        Heather_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
+        Frances_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
+        Dylan_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability");
+
+        backVol = PlayerPrefs.GetFloat("backvol", 1f);
+
+        // 1 == true, 0 == false
 
         //if (isGameOver) { isGameOverInt = 0; }
         //else { isGameOverInt = 1; }
 
-        if (citizen) { citizenInt = 0; }
-        else { citizenInt = 1; }
+        if (citizen) { citizenInt = 1; }
+        else { citizenInt = 0; }
 
-        if (Frances_conversation) { Frances_conversation_Int = 0; }
-        else { Frances_conversation_Int = 1; }
+        if (Frances_conversation) { Frances_conversation_Int = 1; }
+        else { Frances_conversation_Int = 0; }
 
-        if (Hilda_conversation) { Hilda_conversation_Int = 0; }
-        else { Hilda_conversation_Int = 1; }
+        if (Hilda_conversation) { Hilda_conversation_Int = 1; }
+        else { Hilda_conversation_Int = 0; }
+        
+        if (Revolutionary_route) { Revolutionary_route_Int = 1; }
+        else { Revolutionary_route_Int = 0; }
 
         PlayerPrefs.SetInt("Day", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day"));
-        PlayerPrefs.SetFloat("Hilda_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability"));
-        PlayerPrefs.SetFloat("Heather_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
-        PlayerPrefs.SetFloat("Frances_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability"));
-        PlayerPrefs.SetFloat("Dylan_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
+        PlayerPrefs.SetFloat("Hilda_reliability", Hilda_reliability);
+        PlayerPrefs.SetFloat("Heather_reliability", Heather_reliability);
+        PlayerPrefs.SetFloat("Frances_reliability", Frances_reliability);
+        PlayerPrefs.SetFloat("Dylan_reliability", Dylan_reliability);
         PlayerPrefs.SetInt("Gameover", isGameOverInt);
         PlayerPrefs.SetInt("Citizen", citizenInt);
         PlayerPrefs.SetInt("Frances_conversation", Frances_conversation_Int);
+        PlayerPrefs.SetInt("Revolutionary_route", Revolutionary_route_Int);
         PlayerPrefs.SetInt("Hilda_conversation", Hilda_conversation_Int);
+        PlayerPrefs.SetFloat("backvol", backVol);
 
         PlayerPrefs.Save();
 
@@ -108,11 +122,12 @@ public class SaveManager : MonoBehaviour
         }
 
         int day = PlayerPrefs.GetInt("Day");
-        string name = PlayerPrefs.GetString("Name");
+        string PlayerName = PlayerPrefs.GetString("PlayerName");
         float Hilda_reliability = PlayerPrefs.GetFloat("Hilda_reliability");
         float Heather_reliability = PlayerPrefs.GetFloat("Heather_reliability");
         float Frances_reliability = PlayerPrefs.GetFloat("Frances_reliability");
         float Dylan_reliability = PlayerPrefs.GetFloat("Dylan_reliability");
+        int Revolutionary_route_int = PlayerPrefs.GetInt("Revolutionary_route");
         isGameOverInt = PlayerPrefs.GetInt("Gameover");
         citizenInt = PlayerPrefs.GetInt("Citizen");
         Frances_conversation_Int = PlayerPrefs.GetInt("Frances_conversation");
@@ -121,23 +136,27 @@ public class SaveManager : MonoBehaviour
         //if (isGameOverInt == 0) { isGameOver = true; }
         //else if (isGameOverInt == 1) { isGameOver = false; }
 
-        if (citizenInt == 0) { citizen = true; }
-        else if (citizenInt == 1) { citizen = false; }
+        if (citizenInt == 1) { citizen = true; }
+        else if (citizenInt == 0) { citizen = false; }
 
-        if (Frances_conversation_Int == 0) { Frances_conversation = true; }
-        else if (Frances_conversation_Int == 1) { Frances_conversation = false; }
+        if (Frances_conversation_Int == 1) { Frances_conversation = true; }
+        else if (Frances_conversation_Int == 0) { Frances_conversation = false; }
 
-        if (Hilda_conversation_Int == 0) { Hilda_conversation = true; }
-        else if (Frances_conversation_Int == 1) { Hilda_conversation = false; }
+        if (Hilda_conversation_Int == 1) { Hilda_conversation = true; }
+        else if (Frances_conversation_Int == 0) { Hilda_conversation = false; }
+
+        if (Revolutionary_route_int == 1) { Revolutionary_route = true; }
+        else if (Revolutionary_route_int == 0) { Revolutionary_route = false; }
 
         GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Day", day);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Hilda_reliability", Hilda_reliability);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Heather_reliability", Heather_reliability);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Frances_reliability", Frances_reliability);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability", Dylan_reliability);
-        GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", name);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", PlayerName);
         //GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Gameover", isGameOver);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Citizen", citizen);
+        GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Revolutionary_route", Revolutionary_route);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
         GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Hilda_conversation", Hilda_conversation);
     }

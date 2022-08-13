@@ -6,7 +6,7 @@ using UnityEngine;
 public class SetDayVar : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public void setDay()
     {
         int day;
         day = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day");

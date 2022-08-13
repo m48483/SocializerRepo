@@ -118,7 +118,6 @@ public class SceneChange : MonoBehaviour
         _fadeout.FadeOut();
         Invoke("AmChange", 2);
     }
-
     public void FadeOut()
     {
         _fadeout.FadeOut();

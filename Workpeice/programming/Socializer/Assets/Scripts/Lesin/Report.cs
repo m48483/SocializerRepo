@@ -10,14 +10,17 @@ public class Report : MonoBehaviour
 {
     private WaitForSecondsRealtime _UIDelay1 = new WaitForSecondsRealtime(0.01f);
     SceneChange _sceneChange;
-    bool rm = false;
+    SaveManager _saveManager;
+    SetDayVar _setDayVar;
 
-    public GameObject btn;
+    bool rm = false;
 
     // Start is called before the first frame update
     void Awake()
     {
         _sceneChange = FindObjectOfType<SceneChange>();
+        _saveManager = FindObjectOfType<SaveManager>();
+        _setDayVar = FindObjectOfType<SetDayVar>();
     }
 
     void Start()
@@ -34,7 +37,6 @@ public class Report : MonoBehaviour
             transform.position -= new Vector3(0, 4f, 0);
         }
         rm = true;
-        btn.SetActive(true);
     }
 
     void Update()
@@ -47,6 +49,8 @@ public class Report : MonoBehaviour
 
     public void Reportmove()
     {
+        _setDayVar.setDay();
+        _saveManager.GameSave();
         if (rm)
         {
             // line 65~76 테스팅
@@ -64,7 +68,7 @@ public class Report : MonoBehaviour
             }
             else
             {
-                _sceneChange.Init_UIChange();
+                _sceneChange.Daily_scheduleChange();
             }
         }
     }

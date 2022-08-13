@@ -26,6 +26,7 @@ public class InGamePopupSystem : MonoBehaviour
 
     public string SceneName;
     SceneChange _sceneChange;
+    SaveManager _saveManager;
 
     //코루틴 딜레이 2개 미리 선언
     private WaitForSecondsRealtime _UIDelay1 = new WaitForSecondsRealtime(2.0f);
@@ -58,6 +59,11 @@ public class InGamePopupSystem : MonoBehaviour
             lobbyBtn.SetActive(true);
             houseBtn.SetActive(true);
         }
+        else if (SceneName.Equals("Office"))
+        {
+            SelectSUB("로비로 이동합니다");
+            btnMove.SetActive(true);
+        }
         else if (SceneName.Equals("Lobby"))
         {
             SelectSUB("어디로 이동하시겠습니까?");
@@ -69,7 +75,7 @@ public class InGamePopupSystem : MonoBehaviour
         {
             if (GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Daily_schedule"))
             {
-                SelectSUB("\n로비로 이동합니다");
+                SelectSUB("로비로 이동합니다");
                 btnMove.SetActive(true);
             }
             else
@@ -79,7 +85,6 @@ public class InGamePopupSystem : MonoBehaviour
             }
         }
     }
-
     public void OpenPopup()
     {
         if (setBtn)
@@ -181,8 +186,19 @@ public class InGamePopupSystem : MonoBehaviour
     }
     public void AmButton() //AM 버튼
     {
-        StartCoroutine(SelectOut());
-        _sceneChange.AmFadeChange();
+        if (GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route"))
+        {
+            StartCoroutine(SelectOut());
+            _sceneChange.AmFadeChange();
+        }
+        else
+        {
+            SelectSUB("조건을 충족하지 못하여\n갈 수 없습니다.");
+            officeBtn.SetActive(false);
+            AMBtn.SetActive(false);
+            houseBtn.SetActive(false);
+            SUB();
+        }
     }
     public void HouseButton() //집 버튼
     {

@@ -28,12 +28,12 @@ public class NickName : MonoBehaviour
     //입력 체크
     public bool CheckInput()
     {
-        return (PlayerPrefs.GetString("Name") == "");
+        return (PlayerPrefs.GetString("PlayerName") == "");
     }
     //인풋 prefs에 저장
     public void Save()
     {
-        PlayerPrefs.SetString("Name", NickNameInput.text);
+        PlayerPrefs.SetString("PlayerName", NickNameInput.text);
     }
 
     public void OnClickCreateName()
@@ -41,16 +41,16 @@ public class NickName : MonoBehaviour
         if (CheckInput())
         {
             Debug.Log("이름을 입력하지 않음 초기값으로 실행");
-            PlayerPrefs.SetString("Name", "아스트리드");
-            Debug.Log(string.Format("입력된 이름은 {0} 입니다.", PlayerPrefs.GetString("Name")));
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", PlayerPrefs.GetString("Name"));
+            PlayerPrefs.SetString("PlayerName", "아스트리드");
+            Debug.Log(string.Format("입력된 이름은 {0} 입니다.", PlayerPrefs.GetString("PlayerName")));
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", PlayerPrefs.GetString("PlayerName"));
             _sceneChange.TutoChange();
         }
         else
         {
             Debug.Log("이름이 입력됨.");
-            Debug.Log(string.Format("입력된 이름은 {0} 입니다.", PlayerPrefs.GetString("Name")));
-            GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", PlayerPrefs.GetString("Name"));
+            Debug.Log(string.Format("입력된 이름은 {0} 입니다.", PlayerPrefs.GetString("PlayerName")));
+            GameObject.Find("Variables").GetComponent<Flowchart>().SetStringVariable("PlayerName", PlayerPrefs.GetString("PlayerName"));
 
             // 한글, 영어, 숫자로만 닉네임을 만들었는지 체크
             if (CheckNickname() == false)

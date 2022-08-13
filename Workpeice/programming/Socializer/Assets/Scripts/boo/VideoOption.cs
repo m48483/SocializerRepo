@@ -8,7 +8,7 @@ public class VideoOption : MonoBehaviour
     public Dropdown dropdown;
     public int dropdownNum;
     FullScreenMode screenMode;
-    public Toggle windowedscreenBtn;
+    static public Toggle windowedscreenBtn;
 
     public void DropboxOptionChange()
     {
@@ -25,10 +25,12 @@ public class VideoOption : MonoBehaviour
                 break;
         }
         Debug.Log(dropdown.value);
-        windowedscreenBtn.isOn = Screen.fullScreenMode.Equals(FullScreenMode.Windowed) ? true : false;
+        windowedscreenBtn.isOn = Screen.fullScreenMode.Equals(FullScreenMode.Windowed) ? false : true;
     }
     public void WindowedScreenBtn(bool isWIndowed)
     {
         screenMode = isWIndowed ? FullScreenMode.Windowed : FullScreenMode.FullScreenWindow;
+
+        Screen.SetResolution(Screen.width, Screen.height, screenMode);
     }
 }

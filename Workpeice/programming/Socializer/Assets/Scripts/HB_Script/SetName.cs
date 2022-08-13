@@ -9,7 +9,7 @@ public class SetName : MonoBehaviour
     void Start()
     {
         GameObject.Find("Character").transform.Find("Player").GetComponent<Character>().
-            NameText = PlayerPrefs.GetString("Name");
+            NameText = PlayerPrefs.GetString("PlayerName");
     }
 
     
