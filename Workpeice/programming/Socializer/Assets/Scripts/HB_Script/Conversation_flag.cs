@@ -139,7 +139,7 @@ public class Conversation_flag : MonoBehaviour
     public void GetConversationFlag(int i)
     {
         SceneName = SceneManager.GetActiveScene().name;
-
+        Debug.Log("플래그 설정");
         if (SceneName.Equals("House"))
         {
             float H_reliability = PlayerPrefs.GetFloat("Heather_reliability");
@@ -159,6 +159,7 @@ public class Conversation_flag : MonoBehaviour
         {
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
                     .SetBooleanVariable("Hilda_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation"));
+            Debug.Log("int" + i);
             GetReliability(i);
         }
         else if (SceneName.Equals("Office"))
@@ -185,29 +186,29 @@ public class Conversation_flag : MonoBehaviour
             if (H_reliability > 60)
             {
                 GameObject.Find("Flowchart_").transform.Find("Morethan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
-                    .SetFloatVariable("Heather_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_conversation"));
+                    .SetFloatVariable("Heather_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
             }
             else if (H_reliability <= 60)
             {
                 GameObject.Find("Flowchart_").transform.Find("Lessthan60").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
-                    .SetFloatVariable("Heather_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_conversation"));
+                    .SetFloatVariable("Heather_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability"));
             }
 
         }
         else if (SceneName.Equals("Lobby"))
         {
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
-                    .SetFloatVariable("Hilda_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_conversation"));
+                    .SetFloatVariable("Hilda_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability"));
         }
         else if (SceneName.Equals("Office"))
         {
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
-                    .SetFloatVariable("Dylan_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_conversation"));
+                    .SetFloatVariable("Dylan_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
         }
         else if (SceneName.Equals("AM"))
         {
             GameObject.Find("Flowchart_").transform.Find("Normal").transform.Find("Flowchart" + i).GetComponent<Flowchart>()
-                    .SetFloatVariable("Frances_conversation", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_conversation"));
+                    .SetFloatVariable("Frances_reliability", GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability"));
         }
     }
 

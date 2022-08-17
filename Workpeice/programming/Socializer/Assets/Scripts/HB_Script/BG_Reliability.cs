@@ -36,14 +36,13 @@ public class BG_Reliability : MonoBehaviour
                 GameObject.Find("BG").transform.Find("집_호감도 변경").gameObject.SetActive(true);
             }
         }
-
         else if (SceneName.Equals("Office"))
         {
             if (Dylan_reliability > 60)
             {
                 GameObject.Find("BG").transform.Find("사무실_호감도 변경").gameObject.SetActive(true);
             }
-            else if (Heather_reliability <= 60)
+            else if (Dylan_reliability <= 60)
             {
                 GameObject.Find("BG").transform.Find("사무실").gameObject.SetActive(true);
             }

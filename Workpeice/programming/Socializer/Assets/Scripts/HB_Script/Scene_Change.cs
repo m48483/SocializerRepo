@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Scene_Change : MonoBehaviour
 {
-    Random rand = new Random();
-
 
     // 폐기
     public void OfficeChange()
@@ -15,7 +13,6 @@ public class Scene_Change : MonoBehaviour
     }
     public void HouseChange()
     {
-        int a = Random.Range(1,6);
         SceneManager.LoadScene("House");
     }
     public void LobbyChange()

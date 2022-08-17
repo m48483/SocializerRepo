@@ -21,15 +21,18 @@ public class RandomNPC_Count : MonoBehaviour
     {
         GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Pass", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Pass") + 1);
         PlayerPrefs.SetInt("Pass", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Pass"));
+        GameObject.Find("SayDialog").transform.Find("Evidence").GetComponent<Evidence>().TextInitialization();
     }
     public void NPC_Arrest()
     {
         GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Arrest", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Arrest") + 1);
         PlayerPrefs.SetInt("Arrest", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Arrest"));
+        GameObject.Find("SayDialog").transform.Find("Evidence").GetComponent<Evidence>().TextInitialization();
     }
     public void NPC_Kill()
     {
         GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Kill", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Kill") + 1);
         PlayerPrefs.SetInt("Kill", GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Kill"));
+        GameObject.Find("SayDialog").transform.Find("Evidence").GetComponent<Evidence>().TextInitialization();
     }
 }

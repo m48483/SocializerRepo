@@ -90,4 +90,10 @@ public class Evidence : MonoBehaviour
     {
 
     }
+    public void TextInitialization()
+    {
+        Saved_conversation[0] = " ";
+        Saved_conversation[1] = " ";
+        Saved_conversation[2] = " ";
+    }
 }

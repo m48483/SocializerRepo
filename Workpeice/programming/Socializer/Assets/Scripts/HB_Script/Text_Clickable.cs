@@ -14,6 +14,8 @@ public class Text_Clickable : MonoBehaviour
     public int flag;
     public int i;
     int wordIndex = -1;
+
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

@@ -40,6 +40,7 @@ public class Evidence_Script : MonoBehaviour
         _notice.SUB(message1, message2, message3);
     }
     
+
     //폐기
     /*
     public void L_Arrow()

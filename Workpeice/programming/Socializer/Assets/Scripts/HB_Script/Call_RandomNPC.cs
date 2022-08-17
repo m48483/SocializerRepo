@@ -31,10 +31,10 @@ public class Call_RandomNPC : MonoBehaviour
     }
 
     // Update is called once per frame
-    void callNPC()
+    public void callNPC()
     {
         int num = Random.Range(0, 2); // 0 = 반동분자, 1 = 시티즌
-
+        Debug.Log("npc호출");
         switch (num)
         {
             case 0:
