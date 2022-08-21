@@ -11,8 +11,14 @@ public class SetDay : MonoBehaviour
     // Start is called before the first frame update
     public void Update()
     {
-        if(SceneManager.GetActiveScene().name != "Report")
-            text.text =  GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day") + "일차";
+        if(SceneManager.GetActiveScene().name != "Report") { 
+            if(SceneManager.GetActiveScene().name.Contains("Ending"))
+            {
+                text.text = "ENDING";
+            }
+            else
+                text.text = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day") + "일차";
+        }
         else
         {
             text.text = " ";

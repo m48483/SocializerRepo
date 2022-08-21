@@ -61,7 +61,7 @@ public class Report : MonoBehaviour
             {
                 SceneManager.LoadScene("Ending1");
             }
-            else if (GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day") > 5)
+            else if (GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Day") > 25)
             {
                 SceneManager.LoadScene("Ending2");
                 //testEnding.AfterDay5();

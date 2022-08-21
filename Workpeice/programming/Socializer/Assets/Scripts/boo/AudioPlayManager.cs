@@ -43,7 +43,7 @@ public class AudioPlayManager : MonoBehaviour
             {
                 audioSource[0].Play();
             }
-            else if (Heather_reliability <= 60)
+            else
             {
                 audioSource[1].Play();
             }
@@ -95,6 +95,15 @@ public class AudioPlayManager : MonoBehaviour
         else if (SceneName.Equals("Tutorial"))
         {
             audioSource[6].Play();
+        }
+        else if (SceneName.Contains("Ending"))
+        {
+            if(SceneName.Equals("Ending5"))
+                audioSource[7].Play();
+            else if(SceneName.Equals("Ending6"))
+                audioSource[8].Play();
+            else
+                audioSource[6].Play();
         }
     }
 

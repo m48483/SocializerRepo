@@ -43,6 +43,10 @@ public class InGamePopupSystem : MonoBehaviour
             btn.SetActive(false);
             txtDay.SetActive(false);
         }
+        else if (SceneName.Contains("Ending"))
+        {
+            btn.SetActive(false);
+        }
     }
 
     void SetPopup()
@@ -61,7 +65,7 @@ public class InGamePopupSystem : MonoBehaviour
         }
         else if (SceneName.Equals("Office"))
         {
-            SelectSUB("로비로 이동합니다");
+            SelectSUB("로비로 이동합니다\n...");
             btnMove.SetActive(true);
         }
         else if (SceneName.Equals("Lobby"))
@@ -75,7 +79,7 @@ public class InGamePopupSystem : MonoBehaviour
         {
             if (GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Daily_schedule"))
             {
-                SelectSUB("로비로 이동합니다");
+                SelectSUB("로비로 이동합니다\n...");
                 btnMove.SetActive(true);
             }
             else
@@ -209,7 +213,8 @@ public class InGamePopupSystem : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Daily_schedule")
         {
-            StopAllCoroutines();
+            //StopAllCoroutines();
+            StartCoroutine(SelectOut());
         }
         else
         {
