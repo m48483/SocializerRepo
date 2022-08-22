@@ -29,6 +29,8 @@ public class SetVariablesManager : MonoBehaviour
 
         PlayerPrefs.SetInt("Gameover", 0);
         PlayerPrefs.SetInt("Revolutionary_route", 0);
+        PlayerPrefs.SetInt("Ending1", 0);
+        PlayerPrefs.SetInt("Ending2", 0);
 
         PlayerPrefs.SetInt("ReactionaryNPC", 0);
         PlayerPrefs.SetInt("Citizen", 0);
@@ -116,6 +118,7 @@ public class SetVariablesManager : MonoBehaviour
         PlayerPrefs.SetInt("Day50_AM", 0);
         PlayerPrefs.SetInt("Day59_AM", 0);
         PlayerPrefs.SetInt("Day60_AM", 0);
+
 
 
         //int day = PlayerPrefs.GetInt("Day");
