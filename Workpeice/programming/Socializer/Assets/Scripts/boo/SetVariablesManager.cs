@@ -88,22 +88,22 @@ public class SetVariablesManager : MonoBehaviour
         PlayerPrefs.SetInt("Day60_Lobby", 0);
 
         //집
-        PlayerPrefs.SetInt("Day1_Lobby", 0);
-        PlayerPrefs.SetInt("Day4_Lobby", 0);
-        PlayerPrefs.SetInt("Day8_Lobby", 0);
-        PlayerPrefs.SetInt("Day15_Lobby", 0);
-        PlayerPrefs.SetInt("Day22_Lobby", 0);
-        PlayerPrefs.SetInt("Day22_Lobby_RevolutionaryRoute", 0);
-        PlayerPrefs.SetInt("Day29_Lobby", 0);
-        PlayerPrefs.SetInt("Day29_Lobby_RevolutionaryRoute", 0);
-        PlayerPrefs.SetInt("Day31_Lobby", 0);
-        PlayerPrefs.SetInt("Day32_Lobby_RevolutionaryRoute", 0);
-        PlayerPrefs.SetInt("Day33_Lobby", 0);
-        PlayerPrefs.SetInt("Day33_Lobby_RevolutionaryRoute", 0);
-        PlayerPrefs.SetInt("Day36_Lobby", 0);
-        PlayerPrefs.SetInt("Day36_Lobby_RevolutionaryRoute", 0);
-        PlayerPrefs.SetInt("Day51_Lobby", 0);
-        PlayerPrefs.SetInt("Day54_Lobby", 0);
+        PlayerPrefs.SetInt("Day1_House", 0);
+        PlayerPrefs.SetInt("Day4_House", 0);
+        PlayerPrefs.SetInt("Day8_House", 0);
+        PlayerPrefs.SetInt("Day15_House", 0);
+        PlayerPrefs.SetInt("Day22_House", 0);
+        PlayerPrefs.SetInt("Day22_House_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day29_House", 0);
+        PlayerPrefs.SetInt("Day29_House_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day31_House", 0);
+        PlayerPrefs.SetInt("Day32_House_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day33_House", 0);
+        PlayerPrefs.SetInt("Day33_House_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day36_House", 0);
+        PlayerPrefs.SetInt("Day36_House_RevolutionaryRoute", 0);
+        PlayerPrefs.SetInt("Day51_House", 0);
+        PlayerPrefs.SetInt("Day54_House", 0);
 
         //AM
         PlayerPrefs.SetInt("Day18_AM", 0);

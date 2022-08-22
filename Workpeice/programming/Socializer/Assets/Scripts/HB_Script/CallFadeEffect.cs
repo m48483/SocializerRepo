@@ -10,4 +10,10 @@ public class CallFadeEffect : MonoBehaviour
         Debug.Log("페이드인아웃");
         GameObject.Find("RealPopup").transform.Find("fadeCanvas").GetComponent<Fadeout>().FadeEffect();
     }
+
+    public void callFadeEffectOffice()
+    {
+        Debug.Log("페이드인아웃");
+        GameObject.Find("RealPopup").transform.Find("SceneManager").GetComponent<SceneChange>().OfficeFadeChange();
+    }
 }

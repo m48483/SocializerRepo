@@ -14,7 +14,7 @@ public class randomflowchart : MonoBehaviour
     bool Revolutionary_route;
     RandomNPC _randomNPC;
 
-    int Day;
+    public int Day;
 
     void Start()
     {
@@ -32,6 +32,7 @@ public class randomflowchart : MonoBehaviour
             if (Day == 1 || Day == 4 || Day == 8 || Day == 15 || Day == 22 || Day == 29 || Day == 31
                 || Day == 32 || Day == 33 || Day == 36 || Day == 51 || Day == 54)
             {
+                Debug.Log("집 도착");
                 Heather_Day();
             }
             else
@@ -43,9 +44,13 @@ public class randomflowchart : MonoBehaviour
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
 
-            if (Day == 38 || Day == 39 || Day == 50)
+            if (Day == 39 || Day == 50)
             {
                 Hilda_Day();
+            }
+            else if (Day == 38)
+            {
+
             }
             else
             {
@@ -69,9 +74,13 @@ public class randomflowchart : MonoBehaviour
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
 
-            if (Day == 18 || Day == 19 || Day == 24 || Day == 36 || Day == 39 || Day == 45 || Day == 47 || Day == 59 || Day == 60)
+            if (Day == 18 || Day == 19 || Day == 24 || Day == 36 || Day == 39 || Day == 45)
             {
                 Frances_Day();
+            }
+            else if (Day >= 47)
+            {
+
             }
             else
             {
@@ -136,8 +145,10 @@ public class randomflowchart : MonoBehaviour
         }
         else
         {
+            
             if (PlayerPrefs.GetInt("Day" + Day + "_House") == 0)
             {
+                Debug.Log(Day + "일차 이벤트");
                 GameObject.Find("Flowchart_").transform.Find("Day" + Day).gameObject.SetActive(true);
                 PlayerPrefs.SetInt("Day" + Day + "_House", 1);
                 GameObject.Find("Flowchart_").transform.Find("Day" + Day).GetComponent<Flowchart>().SetFloatVariable("Heather_reliability",

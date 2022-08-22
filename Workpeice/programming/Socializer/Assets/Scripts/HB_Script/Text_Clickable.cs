@@ -123,4 +123,8 @@ public class Text_Clickable : MonoBehaviour
             */
         }
     }
+    public void SetIndex()
+    {
+        Store_index = 0;
+    }
 }
