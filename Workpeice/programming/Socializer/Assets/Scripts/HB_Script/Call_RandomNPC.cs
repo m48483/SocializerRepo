@@ -60,7 +60,7 @@ public class Call_RandomNPC : MonoBehaviour
         }
         else if (reactionaryNPC > 0)
         {
-            int num = Random.Range(1, 4);
+            int num = Random.Range(1, 8);
             GameObject.Find("FC").transform.Find("ReactionaryNPC").transform.Find("ReactionaryNPC" + num).gameObject.SetActive(true);
             reactionaryNPC--;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
@@ -81,7 +81,7 @@ public class Call_RandomNPC : MonoBehaviour
         }
         else if (citizen > 0)
         {
-            int num = Random.Range(1, 4);
+            int num = Random.Range(1, 7);
             GameObject.Find("FC").transform.Find("Citizen").transform.Find("Citizen" + num).gameObject.SetActive(true);
             citizen--;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
