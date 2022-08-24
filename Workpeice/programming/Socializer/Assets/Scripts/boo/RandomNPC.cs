@@ -5,7 +5,7 @@ using Fungus;
 
 public class RandomNPC : MonoBehaviour
 {
-    TestVar testVar;
+    EndingVar testVar;
     public GameObject callNPC;
     int day;             //일차
     int reactionaryNPC;    //반동분자
