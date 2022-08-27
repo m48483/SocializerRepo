@@ -96,15 +96,16 @@ public class AudioPlayManager : MonoBehaviour
         {
             audioSource[6].Play();
         }
-        else if (SceneName.Contains("Ending"))
-        {
-            if(SceneName.Equals("Ending5"))
-                audioSource[7].Play();
-            else if(SceneName.Equals("Ending6"))
-                audioSource[8].Play();
-            else
-                audioSource[6].Play();
-        }
+        //else if (SceneName.Contains("Ending"))
+        //{
+        //    //if(SceneName.Equals("Ending5"))
+        //    //    audioSource[7].Play();
+        //    //else
+        //    if(SceneName.Equals("Ending6"))
+        //        audioSource[8].Play();
+        //    else
+        //        audioSource[6].Play();
+        //}
     }
 
     void Update()
