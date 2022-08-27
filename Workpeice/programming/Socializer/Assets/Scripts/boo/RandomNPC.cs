@@ -5,7 +5,7 @@ using Fungus;
 
 public class RandomNPC : MonoBehaviour
 {
-    TestVar testVar;
+    EndingVar testVar;
     public GameObject callNPC;
     int day;             //일차
     int reactionaryNPC;    //반동분자
@@ -43,6 +43,7 @@ public class RandomNPC : MonoBehaviour
         }
         else if (day >= 8 && day < 13)      // 8~12일차
         {
+            /*
             if (day == 12)
             {
                 RevolutionaryNPC = true;
@@ -53,17 +54,17 @@ public class RandomNPC : MonoBehaviour
                 RevolutionaryNPC = false;
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("RevolutionaryNPC", RevolutionaryNPC);
             }
-
-            number = Random.Range(2, 3);
-            max = number;   // 최대 NPC 등장 수
-            number = Random.Range(1, max);
-            reactionaryNPC = number;
+            */
+            max = Random.Range(2, 4);   // 최대 NPC 등장 수
+            reactionaryNPC = max - Random.Range(1, max + 1); ;
             citizen = max - reactionaryNPC;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day >= 15 && day < 20)      // 15~19일차
         {
+            /*
             if (day == 17)
             {
                 RevolutionaryNPC = true;
@@ -87,16 +88,17 @@ public class RandomNPC : MonoBehaviour
                 Tier1NPC = true;
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Tier1NPC", Tier1NPC);
             }
-
+            */
             max = 3;   // 최대 NPC 등장 수
-            number = Random.Range(1, max);
-            reactionaryNPC = number;
+            reactionaryNPC = max - Random.Range(1, max + 1); ;
             citizen = max - reactionaryNPC;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day >= 22 && day < 27)      // 22~26일차
         {
+            /*
             if (day == 23)
             {
                 Revolutionary_route = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route");
@@ -125,33 +127,31 @@ public class RandomNPC : MonoBehaviour
                 Tier1NPC = true;
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Tier1NPC", Tier1NPC);
             }
-
-            number = Random.Range(3, 4);
-            max = number;   // 최대 NPC 등장 수
-            number = Random.Range(1, max);
-            reactionaryNPC = number;
+            */
+            max = Random.Range(3, 5);   // 최대 NPC 등장 수
+            reactionaryNPC = max - Random.Range(1, max + 1); ;
             citizen = max - reactionaryNPC;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day >= 29 && day < 34)      // 29~33일차
         {
             max = 4;   // 최대 NPC 등장 수
-            number = Random.Range(1, max);
-            reactionaryNPC = number;
+            reactionaryNPC = max - Random.Range(1, max + 1); ;
             citizen = max - reactionaryNPC;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day >= 36 && day < 41)      // 36~40일차
         {
-            number = Random.Range(4, 5);
-            max = number;   // 최대 NPC 등장 수
-            number = Random.Range(1, max);
-            reactionaryNPC = number;
+            max = Random.Range(4, 6);   // 최대 NPC 등장 수
+            reactionaryNPC = max - Random.Range(1, max + 1); ;
             citizen = max - reactionaryNPC;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day >= 43 && day < 48)      // 43~47일차
         {
@@ -164,16 +164,16 @@ public class RandomNPC : MonoBehaviour
         }
         else if (day >= 50 && day < 55)      // 50~54일차
         {
-            number = Random.Range(5, 6);
-            max = number;   // 최대 NPC 등장 수
-            number = Random.Range(1, max);
-            reactionaryNPC = number;
+            max = 5;   // 최대 NPC 등장 수
+            reactionaryNPC = max - Random.Range(1, max + 1); ;
             citizen = max - reactionaryNPC;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day >= 57 && day < 61)      // 57~60일차
         {
+            /*
             if (day == 59)
             {
                 Revolutionary_route = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route");
@@ -201,13 +201,13 @@ public class RandomNPC : MonoBehaviour
                 Tier1NPC = true;
                 GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Tier1NPC", Tier1NPC);
             }
-
+            */
             max = 6;   // 최대 NPC 등장 수
-            number = Random.Range(1, max);
-            reactionaryNPC = number;
+            reactionaryNPC = max - Random.Range(1, max + 1); ;
             citizen = max - reactionaryNPC;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("ReactionaryNPC", reactionaryNPC);
             GameObject.Find("Variables").GetComponent<Flowchart>().SetIntegerVariable("Citizen", citizen);
+            callNPC.gameObject.GetComponent<Call_RandomNPC>().setCount();
         }
         else if (day == 61)
         {

@@ -47,13 +47,13 @@ public class Conversation_flag : MonoBehaviour
         }
         else if (SceneName.Equals("Office"))
         {
-            Hilda_conversation = true;
+            Dylan_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Dylan_conversation", Dylan_conversation);
             PlayerPrefs.SetInt("Dylan_conversation", 1);
         }
         else if (SceneName.Equals("AM"))
         {
-            Heather_conversation = true;
+            Frances_conversation = true;
             GameObject.Find("Variables").GetComponent<Flowchart>().SetBooleanVariable("Frances_conversation", Frances_conversation);
             PlayerPrefs.SetInt("Frances_conversation", 1);
         }
