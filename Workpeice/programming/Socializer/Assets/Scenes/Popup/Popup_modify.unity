@@ -2803,6 +2803,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 744366664466981085, guid: 0f42c8ff30117b54085f15e48def0796,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 744366664785664063, guid: 0f42c8ff30117b54085f15e48def0796,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2901,6 +2906,11 @@ PrefabInstance:
     - target: {fileID: 1305899477045318713, guid: 0f42c8ff30117b54085f15e48def0796,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1492913132960512130, guid: 0f42c8ff30117b54085f15e48def0796,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1550786506878109404, guid: 0f42c8ff30117b54085f15e48def0796,
@@ -3278,3 +3288,39 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 26121263916448595}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &26121263916448608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1381275820597159639, guid: 0f42c8ff30117b54085f15e48def0796,
+    type: 3}
+  m_PrefabInstance: {fileID: 26121263916448595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &26121263916448609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9060076991924945981, guid: 0f42c8ff30117b54085f15e48def0796,
+    type: 3}
+  m_PrefabInstance: {fileID: 26121263916448595}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &26121263916448610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26121263916448609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b27620806bf29479c80d3b48713cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backVolume: {fileID: 0}
+  backVolume2: {fileID: 26121263916448608}
+  audio: {fileID: 0}
+  effect_audio: {fileID: 26121263916448604}
+  backVol: 1
+  backVol2: 1

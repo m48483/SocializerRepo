@@ -733,6 +733,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3064622733200647710, guid: 8bf180507e9b7e94ba3881d0fd08e56e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d6b1b10356c7544baf2e9de81462b05, type: 3}
     - target: {fileID: 3064622733237289696, guid: 8bf180507e9b7e94ba3881d0fd08e56e,
         type: 3}
       propertyPath: m_PlayOnAwake
@@ -818,6 +823,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3206297355808378707, guid: 8bf180507e9b7e94ba3881d0fd08e56e,
+        type: 3}
+      propertyPath: effect_audio
+      value: 
+      objectReference: {fileID: 1651749288}
+    - target: {fileID: 3206297355808378707, guid: 8bf180507e9b7e94ba3881d0fd08e56e,
+        type: 3}
+      propertyPath: write_audio
+      value: 
+      objectReference: {fileID: 1803340763}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bf180507e9b7e94ba3881d0fd08e56e, type: 3}
 --- !u!1 &566907259
@@ -2427,6 +2442,12 @@ MonoBehaviour:
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
+--- !u!82 &1651749288 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3064622733200647710, guid: 8bf180507e9b7e94ba3881d0fd08e56e,
+    type: 3}
+  m_PrefabInstance: {fileID: 526783147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765204881
 GameObject:
   m_ObjectHideFlags: 0

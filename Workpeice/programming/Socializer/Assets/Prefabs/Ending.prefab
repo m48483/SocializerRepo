@@ -4470,14 +4470,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3064622734310789428}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36b27620806bf29479c80d3b48713cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backVolume: {fileID: 3064622734310789433}
+  backVolume2: {fileID: 0}
   audio: {fileID: 3064622734132526804}
+  effect_audio: {fileID: 0}
   backVol: 1
+  backVol2: 1
 --- !u!1 &3064622734314422659
 GameObject:
   m_ObjectHideFlags: 0
@@ -6379,6 +6382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3064622734908202720}
+  - component: {fileID: 3206297355808378707}
   m_Layer: 0
   m_Name: Sliders
   m_TagString: Untagged
@@ -6407,6 +6411,24 @@ RectTransform:
   m_AnchoredPosition: {x: 320, y: -130}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3206297355808378707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3064622734908202721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b27620806bf29479c80d3b48713cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backVolume: {fileID: 3064622734310789433}
+  backVolume2: {fileID: 3064622735045872220}
+  audio: {fileID: 3064622733237289696}
+  effect_audio: {fileID: 3064622733200647710}
+  backVol: 1
+  backVol2: 1
 --- !u!1 &3064622734923706517
 GameObject:
   m_ObjectHideFlags: 0
@@ -7152,14 +7174,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3064622735045872223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36b27620806bf29479c80d3b48713cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backVolume: {fileID: 3064622735045872220}
+  backVolume2: {fileID: 0}
   audio: {fileID: 3064622733200647710}
+  effect_audio: {fileID: 0}
   backVol: 1
+  backVol2: 1
 --- !u!1 &3064622735048308473
 GameObject:
   m_ObjectHideFlags: 0
