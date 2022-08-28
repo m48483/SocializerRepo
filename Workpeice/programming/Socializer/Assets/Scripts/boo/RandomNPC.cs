@@ -33,7 +33,7 @@ public class RandomNPC : MonoBehaviour
         //reactionaryNPC = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("ReactionaryNPC");
         //citizen = GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Citizen");
 
-        if (day >= 1 && day < 6)            // 1~5일차
+        if (day >= 1 && day < 8)            // 1~5일차
         {
             reactionaryNPC = 1;
             citizen = 1;

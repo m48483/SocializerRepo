@@ -35,4 +35,12 @@ public class DirectorManager : MonoBehaviour
     {
         bg[1].SetActive(false);
     }
+    public void house_load()
+    {
+        bg[2].SetActive(true);
+    }
+    public void house_unload()
+    {
+        bg[2].SetActive(false);
+    }
 }
