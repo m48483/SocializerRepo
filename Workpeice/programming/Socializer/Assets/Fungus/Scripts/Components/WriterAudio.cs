@@ -27,7 +27,7 @@ namespace Fungus
         [SerializeField] protected float volume = 1f;
 
         [Tooltip("Loop the audio when in Sound Effect mode. Has no effect in Beeps mode.")]
-        [SerializeField] protected bool loop = true;
+        [SerializeField] public bool loop = true;
 
         // If none is specifed then we use any AudioSource on the gameobject, and if that doesn't exist we create one.
         [Tooltip("AudioSource to use for playing sound effects. If none is selected then one will be created.")]
@@ -40,7 +40,7 @@ namespace Fungus
         [SerializeField] protected List<AudioClip> beepSounds = new List<AudioClip>();
 
         [Tooltip("Long playing sound effect to play when writing text")]
-        [SerializeField] protected AudioClip soundEffect;
+        [SerializeField] public AudioClip soundEffect;
 
         [Tooltip("Sound effect to play on user input (e.g. a click)")]
         [SerializeField] protected AudioClip inputSound;

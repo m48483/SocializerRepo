@@ -61,6 +61,10 @@ public class HelpManager : MonoBehaviour
         else if (count > 3)
         {
             canvas.SetActive(false);
+            GameObject.Find("FC").transform.Find("Day1").gameObject.SetActive(true);
+            PlayerPrefs.SetInt("Day1_Office_Before", 1);
+            GameObject.Find("FC").transform.Find("Day1").GetComponent<Flowchart>().SetFloatVariable("Dylan_reliability",
+                GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Dylan_reliability"));
         }
     }
     public void clickBtn()
