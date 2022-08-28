@@ -20,7 +20,7 @@ public class CountVarReport : MonoBehaviour
             GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Arrest").ToString() + "명";
         CitizenTxt.text = "\t시민 :\t" + 
             GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Citizen").ToString() + "명";
-        DieTxt.text = "사살한 인원 :\t" + 
+        DieTxt.text = "교정한 인원 :\t" + 
             GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("Kill").ToString() + "명";
         reactionistTxt.text = "\t반동분자 :\t" +
             GameObject.Find("Variables").GetComponent<Flowchart>().GetIntegerVariable("ReactionaryNPC").ToString() + "명";

@@ -11645,17 +11645,15 @@ GameObject:
   - component: {fileID: 666385488}
   - component: {fileID: 666385487}
   - component: {fileID: 666385486}
-  - component: {fileID: 666385485}
   - component: {fileID: 666385484}
   - component: {fileID: 666385483}
   - component: {fileID: 666385482}
   - component: {fileID: 666385481}
   - component: {fileID: 666385480}
-  - component: {fileID: 666385479}
   - component: {fileID: 666385478}
   - component: {fileID: 666385477}
-  - component: {fileID: 666385472}
   - component: {fileID: 666385469}
+  - component: {fileID: 666385472}
   m_Layer: 0
   m_Name: Day38
   m_TagString: Untagged
@@ -11810,7 +11808,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &666385472
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11820,11 +11818,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 82
+  itemId: 84
   indentLevel: 1
   targetObject: {fileID: 959725828}
-  methodName: Hilda_Reliability_Scene
-  delay: 2
+  methodName: Day38_Lobby_Positive
+  delay: 0
 --- !u!114 &666385473
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11883,7 +11881,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -12
     y: 80
-    width: 111
+    width: 71
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11901,14 +11899,12 @@ MonoBehaviour:
   - {fileID: 666385468}
   - {fileID: 666385486}
   - {fileID: 666385469}
-  - {fileID: 666385485}
   - {fileID: 666385487}
   - {fileID: 666385484}
   - {fileID: 666385483}
   - {fileID: 666385482}
   - {fileID: 666385481}
   - {fileID: 666385480}
-  - {fileID: 666385479}
   - {fileID: 666385478}
   - {fileID: 666385477}
   - {fileID: 666385472}
@@ -11940,7 +11936,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 666385475}
   selectedCommands:
-  - {fileID: 666385473}
+  - {fileID: 666385477}
   variables:
   - {fileID: 666385491}
   - {fileID: 666385490}
@@ -12001,33 +11997,6 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
---- !u!114 &666385479
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666385465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 79
-  indentLevel: 1
-  storyText: "\uC2E0\uB8B0\uB3C4 +5"
-  description: 
-  character: {fileID: 1161318434}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &666385480
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12169,23 +12138,6 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
---- !u!114 &666385485
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666385465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 73
-  indentLevel: 1
-  targetObject: {fileID: 959725828}
-  methodName: Hilda_Reliability_Scene
-  delay: 2
 --- !u!114 &666385486
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -13152,7 +13104,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 138
     y: 66
-    width: 179
+    width: 139
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14463,7 +14415,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 125.85333
     y: 147.9065
-    width: 101
+    width: 61
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -14593,7 +14545,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -86.14667
     y: 84.906494
-    width: 117
+    width: 77
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

@@ -159,27 +159,27 @@ public class EndingVar : MonoBehaviour
         {
             Ending1();
         }
-        else if (Frances_conversation == false || Hilda_reliability < 90)
+        else if (PlayerPrefs.GetInt("Revolutionary_route") == 0 && PlayerPrefs.GetInt("Ending1") == 0 && PlayerPrefs.GetInt("Ending2") == 0 && PlayerPrefs.GetFloat("Hilda_reliability") < 90)
         {
             Ending2();
         }
-        else if (Frances_conversation == false || Hilda_reliability >= 90)
+        else if (PlayerPrefs.GetInt("Revolutionary_route") == 0 && PlayerPrefs.GetInt("Ending1") == 0 && PlayerPrefs.GetInt("Ending2") == 0 && PlayerPrefs.GetFloat("Hilda_reliability") >= 90)
         {
             Ending3();
         }
-        else if (Frances_conversation == true || Frances_reliability < 40)
+        else if (PlayerPrefs.GetInt("Revolutionary_route") == 1 && PlayerPrefs.GetInt("Ending1") == 0 && PlayerPrefs.GetInt("Ending2") == 0 && PlayerPrefs.GetFloat("Frances_reliability") < 40)
         {
             Ending4();
         }
-        else if (Frances_conversation == true || Frances_reliability >= 80 || Hilda_conversation == true)
+        else if (PlayerPrefs.GetInt("Revolutionary_route") == 1 && PlayerPrefs.GetInt("Ending1") == 1 && PlayerPrefs.GetInt("Ending2") == 0)
         {
             Ending5();
         }
-        else if (Frances_conversation == true || Frances_reliability >= 80 || Hilda_conversation == false)
+        else if (PlayerPrefs.GetInt("Revolutionary_route") == 1 && PlayerPrefs.GetInt("Ending1") == 0 && PlayerPrefs.GetInt("Ending2") == 1)
         {
             Ending6();
         }
-        else if (Frances_conversation == false || (Frances_reliability >= 40 && Frances_reliability < 80))
+        else if (PlayerPrefs.GetInt("Revolutionary_route") == 1 && PlayerPrefs.GetInt("Ending1") == 0 && PlayerPrefs.GetInt("Ending2") == 0 && PlayerPrefs.GetFloat("Frances_reliability") >= 40)
         {
             Ending7();
         }

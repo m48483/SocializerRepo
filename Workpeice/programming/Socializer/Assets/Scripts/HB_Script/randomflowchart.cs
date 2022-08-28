@@ -37,6 +37,10 @@ public class randomflowchart : MonoBehaviour
             }
             else
             {
+                if(PlayerPrefs.GetInt("Ending1") == 1 || PlayerPrefs.GetInt("Ending2") == 1)
+                {
+                    CallNull();
+                }
                 Heather_Reliability_Scene();
             }
         }
@@ -47,10 +51,6 @@ public class randomflowchart : MonoBehaviour
             if (Day == 3 || Day == 39 || Day == 50 || Day == 52 || Day == 54 || Day == 57 || Day == 58 || Day == 59 || Day == 60)
             {
                 Hilda_Day();
-            }
-            else if (Day == 38)
-            {
-
             }
             else
             {
@@ -78,7 +78,7 @@ public class randomflowchart : MonoBehaviour
             {
                 Frances_Day();
             }
-            else if (Day >= 47)
+            else if (Day >= 47 && Day < 61)
             {
                 if(Day == 58 || Day == 59 || Day == 60)
                 {
@@ -92,7 +92,7 @@ public class randomflowchart : MonoBehaviour
         }
         else if (SceneName.Equals("Daily_schedule"))
         {
-            if (Day == 1 || Day == 8 || Day == 17 || Day == 18 || Day == 36 || Day == 38 || Day == 39 || Day == 51
+            if (Day == 1 || Day == 8 || Day == 12 || Day == 17 || Day == 18 || Day == 36 || Day == 38 || Day == 39 || Day == 51
                 || Day == 52 || Day == 53 || Day == 54 || Day == 57 || Day == 58)//일과 중 안넣은 상태
             {
                 Dailyschedule_Day();
@@ -109,6 +109,10 @@ public class randomflowchart : MonoBehaviour
         _fadeout.FadeIn();
     }
 
+    public void CallNull()
+    {
+        GameObject.Find("Flowchart_").transform.Find("Null").gameObject.SetActive(true);
+    }
     public void Heather_Day()
     {
         if (Revolutionary_route == true && Day == 22 && PlayerPrefs.GetInt("Day" + Day + "_Office_After_RevolutionaryRoute") == 0)
