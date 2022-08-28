@@ -80,7 +80,7 @@ public class Evidence : MonoBehaviour
             }
         }
         Debug.Log("reactionaryNPCCount : "+ reactionaryNPCCount);
-        if (reactionaryNPCCount == 3)
+        if (reactionaryNPCCount <= 2)
         {
             GameObject.Find("ButtonGroup").transform.Find("OptionButton1").gameObject.SetActive(true);
         }
