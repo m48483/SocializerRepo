@@ -730,6 +730,7 @@ GameObject:
   - component: {fileID: 132663582}
   - component: {fileID: 132663581}
   - component: {fileID: 132663580}
+  - component: {fileID: 132663583}
   m_Layer: 0
   m_Name: Citizen2
   m_TagString: Untagged
@@ -1631,6 +1632,7 @@ MonoBehaviour:
   - {fileID: 132663571}
   - {fileID: 132663568}
   - {fileID: 132663567}
+  - {fileID: 132663583}
   - {fileID: 132663581}
   - {fileID: 132663580}
   - {fileID: 132663575}
@@ -1660,8 +1662,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 132663569}
-  selectedCommands: []
+  - {fileID: 132663578}
+  selectedCommands:
+  - {fileID: 132663567}
   variables:
   - {fileID: 132663573}
   - {fileID: 132663572}
@@ -1739,6 +1742,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &132663583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132663538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 68
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: Setfalse
+  delay: 0
 --- !u!1 &138053141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,6 +3085,7 @@ GameObject:
   - component: {fileID: 429047779}
   - component: {fileID: 429047778}
   - component: {fileID: 429047777}
+  - component: {fileID: 429047780}
   m_Layer: 0
   m_Name: ReactionaryNPC3
   m_TagString: Untagged
@@ -3903,6 +3924,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 429047768}
   commandList:
+  - {fileID: 429047780}
   - {fileID: 429047767}
   - {fileID: 429047779}
   - {fileID: 429047735}
@@ -3946,8 +3968,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 429047769}
+  selectedCommands:
+  - {fileID: 429047780}
   variables:
   - {fileID: 429047764}
   - {fileID: 429047763}
@@ -4184,6 +4208,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &429047780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429047730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: reactionaryNPCReset
+  delay: 0
 --- !u!1 &446031549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4571,6 +4612,7 @@ GameObject:
   - component: {fileID: 478843743}
   - component: {fileID: 478843742}
   - component: {fileID: 478843745}
+  - component: {fileID: 478843746}
   m_Layer: 0
   m_Name: ReactionaryNPC1
   m_TagString: Untagged
@@ -4607,7 +4649,7 @@ MonoBehaviour:
   itemId: 62
   indentLevel: 0
   targetObject: {fileID: 1846709149}
-  methodName: reactionaryNPCCheck
+  methodName: reactionaryNPCReset
   delay: 0
 --- !u!114 &478843702
 MonoBehaviour:
@@ -4995,6 +5037,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 478843717}
   commandList:
+  - {fileID: 478843701}
   - {fileID: 478843716}
   - {fileID: 478843744}
   - {fileID: 478843736}
@@ -5006,7 +5049,7 @@ MonoBehaviour:
   - {fileID: 478843711}
   - {fileID: 478843708}
   - {fileID: 478843707}
-  - {fileID: 478843701}
+  - {fileID: 478843746}
   - {fileID: 478843743}
   - {fileID: 478843742}
   - {fileID: 478843715}
@@ -5037,8 +5080,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 478843718}
-  selectedCommands:
-  - {fileID: 478843701}
+  selectedCommands: []
   variables:
   - {fileID: 478843713}
   - {fileID: 478843712}
@@ -5608,6 +5650,23 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &478843746
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478843699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: reactionaryNPCCheck
+  delay: 0
 --- !u!1 &490543182
 GameObject:
   m_ObjectHideFlags: 0
@@ -6711,6 +6770,7 @@ GameObject:
   - component: {fileID: 619552993}
   - component: {fileID: 619552992}
   - component: {fileID: 619552991}
+  - component: {fileID: 619552994}
   m_Layer: 0
   m_Name: ReactionaryNPC2
   m_TagString: Untagged
@@ -7556,6 +7616,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 619552984}
   commandList:
+  - {fileID: 619552994}
   - {fileID: 619552983}
   - {fileID: 619552993}
   - {fileID: 619552951}
@@ -7600,7 +7661,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 619552985}
   selectedCommands:
-  - {fileID: 619552990}
+  - {fileID: 619552994}
   variables:
   - {fileID: 619552980}
   - {fileID: 619552979}
@@ -7780,6 +7841,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &619552994
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619552946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: reactionaryNPCReset
+  delay: 0
 --- !u!1 &619655856
 GameObject:
   m_ObjectHideFlags: 0
@@ -10819,7 +10897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5fb112f2aad26d34e938a9d1618b6708, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e2b337bb67721e246a4c8ecf375b2e2f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10997,6 +11075,7 @@ GameObject:
   - component: {fileID: 1092285728}
   - component: {fileID: 1092285727}
   - component: {fileID: 1092285726}
+  - component: {fileID: 1092285729}
   m_Layer: 0
   m_Name: Citizen5
   m_TagString: Untagged
@@ -12078,6 +12157,7 @@ MonoBehaviour:
   - {fileID: 1092285717}
   - {fileID: 1092285714}
   - {fileID: 1092285713}
+  - {fileID: 1092285729}
   - {fileID: 1092285727}
   - {fileID: 1092285726}
   - {fileID: 1092285721}
@@ -12107,8 +12187,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1092285720}
-  selectedCommands: []
+  - {fileID: 1092285724}
+  selectedCommands:
+  - {fileID: 1092285713}
   variables:
   - {fileID: 1092285719}
   - {fileID: 1092285718}
@@ -12186,6 +12267,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1092285729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092285678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 71
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: Setfalse
+  delay: 0
 --- !u!1 &1104239266
 GameObject:
   m_ObjectHideFlags: 0
@@ -15295,6 +15393,7 @@ GameObject:
   - component: {fileID: 1401503783}
   - component: {fileID: 1401503782}
   - component: {fileID: 1401503781}
+  - component: {fileID: 1401503784}
   m_Layer: 0
   m_Name: ReactionaryNPC5
   m_TagString: Untagged
@@ -16255,6 +16354,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1401503777}
   commandList:
+  - {fileID: 1401503784}
   - {fileID: 1401503776}
   - {fileID: 1401503783}
   - {fileID: 1401503744}
@@ -16300,7 +16400,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1401503778}
   selectedCommands:
-  - {fileID: 1401503762}
+  - {fileID: 1401503784}
   variables:
   - {fileID: 1401503773}
   - {fileID: 1401503772}
@@ -16395,6 +16495,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1401503784
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401503735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: reactionaryNPCReset
+  delay: 0
 --- !u!1 &1460986721
 GameObject:
   m_ObjectHideFlags: 0
@@ -17905,6 +18022,7 @@ GameObject:
   - component: {fileID: 1531759445}
   - component: {fileID: 1531759469}
   - component: {fileID: 1531759468}
+  - component: {fileID: 1531759470}
   m_Layer: 0
   m_Name: ReactionaryNPC6
   m_TagString: Untagged
@@ -18837,6 +18955,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1531759463}
   commandList:
+  - {fileID: 1531759470}
   - {fileID: 1531759462}
   - {fileID: 1531759467}
   - {fileID: 1531759431}
@@ -18881,7 +19000,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1531759464}
   selectedCommands:
-  - {fileID: 1531759426}
+  - {fileID: 1531759470}
   variables:
   - {fileID: 1531759459}
   - {fileID: 1531759458}
@@ -18971,6 +19090,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1184359518}
   methodName: ReactionaryNPCCount
+  delay: 0
+--- !u!114 &1531759470
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531759422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 69
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: reactionaryNPCReset
   delay: 0
 --- !u!1 &1536418082
 GameObject:
@@ -21546,6 +21682,7 @@ GameObject:
   - component: {fileID: 1754397377}
   - component: {fileID: 1754397376}
   - component: {fileID: 1754397375}
+  - component: {fileID: 1754397378}
   m_Layer: 0
   m_Name: ReactionaryNPC4
   m_TagString: Untagged
@@ -22484,7 +22621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 72.52941
+    x: 71.35294
     y: 74.07097
     width: 113.5294
     height: 40
@@ -22495,6 +22632,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1754397371}
   commandList:
+  - {fileID: 1754397378}
   - {fileID: 1754397370}
   - {fileID: 1754397377}
   - {fileID: 1754397340}
@@ -22540,7 +22678,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1754397372}
   selectedCommands:
-  - {fileID: 1754397333}
+  - {fileID: 1754397378}
   variables:
   - {fileID: 1754397367}
   - {fileID: 1754397366}
@@ -22635,6 +22773,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1754397378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754397329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 68
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: reactionaryNPCReset
+  delay: 0
 --- !u!1 &1763734423
 GameObject:
   m_ObjectHideFlags: 0
@@ -23030,6 +23185,7 @@ GameObject:
   - component: {fileID: 1790959469}
   - component: {fileID: 1790959468}
   - component: {fileID: 1790959467}
+  - component: {fileID: 1790959470}
   m_Layer: 0
   m_Name: Citizen1
   m_TagString: Untagged
@@ -23725,6 +23881,7 @@ MonoBehaviour:
   - {fileID: 1790959450}
   - {fileID: 1790959447}
   - {fileID: 1790959446}
+  - {fileID: 1790959470}
   - {fileID: 1790959468}
   - {fileID: 1790959467}
   - {fileID: 1790959454}
@@ -23754,8 +23911,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1790959448}
-  selectedCommands: []
+  - {fileID: 1790959457}
+  selectedCommands:
+  - {fileID: 1790959470}
   variables:
   - {fileID: 1790959452}
   - {fileID: 1790959451}
@@ -24067,6 +24225,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1790959470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790959424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: Setfalse
+  delay: 0
 --- !u!1 &1806181299
 GameObject:
   m_ObjectHideFlags: 0
@@ -28113,6 +28288,7 @@ GameObject:
   - component: {fileID: 2039792659}
   - component: {fileID: 2039792658}
   - component: {fileID: 2039792657}
+  - component: {fileID: 2039792660}
   m_Layer: 0
   m_Name: Citizen4
   m_TagString: Untagged
@@ -28984,6 +29160,7 @@ MonoBehaviour:
   - {fileID: 2039792648}
   - {fileID: 2039792645}
   - {fileID: 2039792644}
+  - {fileID: 2039792660}
   - {fileID: 2039792658}
   - {fileID: 2039792657}
   - {fileID: 2039792652}
@@ -29013,8 +29190,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2039792647}
-  selectedCommands: []
+  - {fileID: 2039792655}
+  selectedCommands:
+  - {fileID: 2039792644}
   variables:
   - {fileID: 2039792650}
   - {fileID: 2039792649}
@@ -29092,6 +29270,23 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &2039792660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039792616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 68
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: Setfalse
+  delay: 0
 --- !u!1 &2054745563
 GameObject:
   m_ObjectHideFlags: 0
@@ -29304,6 +29499,7 @@ GameObject:
   - component: {fileID: 2113630234}
   - component: {fileID: 2113630279}
   - component: {fileID: 2113630278}
+  - component: {fileID: 2113630280}
   m_Layer: 0
   m_Name: ReactionaryNPC7
   m_TagString: Untagged
@@ -30273,6 +30469,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 2113630275}
   commandList:
+  - {fileID: 2113630280}
   - {fileID: 2113630274}
   - {fileID: 2113630236}
   - {fileID: 2113630246}
@@ -30314,8 +30511,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 2113630276}
+  selectedCommands:
+  - {fileID: 2113630280}
   variables:
   - {fileID: 2113630271}
   - {fileID: 2113630270}
@@ -30363,6 +30562,23 @@ MonoBehaviour:
   indentLevel: 0
   targetObject: {fileID: 1184359518}
   methodName: ReactionaryNPCCount
+  delay: 0
+--- !u!114 &2113630280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113630232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 69
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: reactionaryNPCReset
   delay: 0
 --- !u!1 &2116289264
 GameObject:
@@ -30550,6 +30766,7 @@ GameObject:
   - component: {fileID: 2126467663}
   - component: {fileID: 2126467662}
   - component: {fileID: 2126467661}
+  - component: {fileID: 2126467708}
   m_Layer: 0
   m_Name: Citizen3
   m_TagString: Untagged
@@ -31639,6 +31856,7 @@ MonoBehaviour:
   - {fileID: 2126467666}
   - {fileID: 2126467665}
   - {fileID: 2126467664}
+  - {fileID: 2126467708}
   - {fileID: 2126467663}
   - {fileID: 2126467662}
   - {fileID: 2126467661}
@@ -31668,8 +31886,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 2126467701}
-  selectedCommands: []
+  - {fileID: 2126467706}
+  selectedCommands:
+  - {fileID: 2126467664}
   variables:
   - {fileID: 2126467703}
   - {fileID: 2126467702}
@@ -31684,6 +31903,23 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &2126467708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126467659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 85
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: Setfalse
+  delay: 0
 --- !u!1 &2131768814
 GameObject:
   m_ObjectHideFlags: 0
@@ -31740,6 +31976,7 @@ GameObject:
   - component: {fileID: 2131768862}
   - component: {fileID: 2131768861}
   - component: {fileID: 2131768860}
+  - component: {fileID: 2131768863}
   m_Layer: 0
   m_Name: Citizen6
   m_TagString: Untagged
@@ -32755,6 +32992,7 @@ MonoBehaviour:
   - {fileID: 2131768851}
   - {fileID: 2131768848}
   - {fileID: 2131768847}
+  - {fileID: 2131768863}
   - {fileID: 2131768861}
   - {fileID: 2131768860}
   - {fileID: 2131768855}
@@ -32783,8 +33021,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 2131768858}
+  selectedCommands:
+  - {fileID: 2131768847}
   variables:
   - {fileID: 2131768853}
   - {fileID: 2131768852}
@@ -32862,3 +33102,20 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &2131768863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131768814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 69
+  indentLevel: 0
+  targetObject: {fileID: 1846709149}
+  methodName: Setfalse
+  delay: 0

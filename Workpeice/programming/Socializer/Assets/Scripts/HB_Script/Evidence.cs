@@ -43,7 +43,14 @@ public class Evidence : MonoBehaviour
             Saved_conversation[i] = " ";
         }
     }
-
+    public void reactionaryNPCReset()
+    {
+        reactionaryNPCCount = 0;
+    }
+    public void Setfalse()
+    {
+        GameObject.Find("SayDialog").transform.Find("통과구속사살").transform.Find("ButtonGroup").transform.Find("OptionButton1").gameObject.SetActive(false);
+    }
     public void reactionaryNPCCheck()
     {
         for(int i = 0; i < 24; i++)
