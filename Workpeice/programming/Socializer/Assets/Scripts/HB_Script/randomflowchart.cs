@@ -74,7 +74,7 @@ public class randomflowchart : MonoBehaviour
         {
             reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Frances_reliability");
 
-            if (Day == 18 || Day == 19 || Day == 24 || Day == 36 || Day == 39 || Day == 45)
+            if (Day == 17 || Day == 18 || Day == 19 || Day == 24 || Day == 36 || Day == 39 || Day == 45)
             {
                 Frances_Day();
             }
