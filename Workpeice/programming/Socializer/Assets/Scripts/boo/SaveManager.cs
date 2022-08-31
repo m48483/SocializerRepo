@@ -67,7 +67,7 @@ public class SaveManager : MonoBehaviour
         citizen = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Citizen");
         Frances_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Frances_conversation");
         Hilda_conversation = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Hilda_conversation");
-        Revolutionary_route = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route");
+        //Revolutionary_route = GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route");
 
         Hilda_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Hilda_reliability");
         Heather_reliability = GameObject.Find("Variables").GetComponent<Flowchart>().GetFloatVariable("Heather_reliability");
@@ -101,7 +101,7 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("Gameover", isGameOverInt);
         PlayerPrefs.SetInt("Citizen", citizenInt);
         PlayerPrefs.SetInt("Frances_conversation", Frances_conversation_Int);
-        PlayerPrefs.SetInt("Revolutionary_route", Revolutionary_route_Int);
+        //PlayerPrefs.SetInt("Revolutionary_route", Revolutionary_route_Int);
         PlayerPrefs.SetInt("Hilda_conversation", Hilda_conversation_Int);
         PlayerPrefs.SetFloat("backvol", backVol);
 

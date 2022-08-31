@@ -190,13 +190,16 @@ public class InGamePopupSystem : MonoBehaviour
     }
     public void AmButton() //AM 버튼
     {
-        if (GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route"))
+        if (PlayerPrefs.GetInt("Revolutionary_route") == 1) 
+            //GameObject.Find("Variables").GetComponent<Flowchart>().GetBooleanVariable("Revolutionary_route"))
         {
+            Debug.Log(PlayerPrefs.GetInt("Revolutionary_route"));
             StartCoroutine(SelectOut());
             _sceneChange.AmFadeChange();
         }
         else
         {
+            Debug.Log(PlayerPrefs.GetInt("Revolutionary_route"));
             SelectSUB("조건을 충족하지 못하여\n갈 수 없습니다.");
             officeBtn.SetActive(false);
             AMBtn.SetActive(false);
