@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Reactionarymolecule_Check : MonoBehaviour
+public class Reactionary_Check : MonoBehaviour
 {
 
     public void Pass_Check()
